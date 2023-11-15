@@ -1,0 +1,221 @@
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    // layuots:
+    --max-container-width: 140rem;
+    --content-padding: 2rem;
+    // colors:
+    --orange: #ff3f00;
+    --orange-hover: #eb3a00;
+    --black: #212529;
+    --white: #fff;
+    --grey: #8a8f94;
+    --grey-2: #bac9d8;
+    --grey-3: #8e969f;
+    --back: #1b1b1b;
+    --back-2: #f6f8fa;
+    --back-3: #171717;
+    --back-4: #202020;
+    --border-dark: 255, 255, 255;
+    --border-light: 241, 241, 241;
+    --input-back: 233, 238, 243;
+    // fonts:
+    --main-ff: "Manrope", sans-serif;
+    --second-ff: "Arial", sans-serif;
+
+    --font-body: 400 1.5rem/1.33 var(--main-ff);  
+
+    --font-btn-17: 500 1.7rem/1.18 var(--main-ff);    
+    --font-btn-15: 700 1.5rem/1.33 var(--main-ff);    
+
+    --font-text-38: 600 3.8rem/1.19 var(--main-ff);  
+    --font-text-28: 700 2.8rem/1.07 var(--main-ff);  
+    --font-text-24: 600 2.4rem/1.25 var(--main-ff);  
+    --font-text-13: 500 1.3rem/1.54 var(--main-ff);  
+    // etc.
+    --transition: 0.3s ease-out;
+}
+
+html {
+    @include noHighlight();
+    font-size: 10px;
+    font-size: clamp(10px, 0.5vw, 25px);
+
+    box-sizing: border-box;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: var(--black);
+    font: var(--font-body);
+}
+
+main {
+    display: block;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+ol {
+    counter-reset: ordered-list;
+    & > li {
+        counter-increment: ordered-list;
+        &::before {
+            content: counter(ordered-list, decimal-leading-zero) '.';
+        }
+    }
+}
+
+input,
+textarea {
+    border: none;
+    border-radius: 0;
+    font: inherit;
+    outline: none;
+    box-shadow: none;
+    border-radius: 0;
+    width: 100%;
+    background-color: transparent;
+    display: block;
+}
+
+input:not([type='checkbox']):not([type='radio']) {
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+textarea {
+    resize: none;
+    box-shadow: none;
+    display: block;
+    width: 100%;
+    overflow: auto;
+    height: 20rem;
+    @include customScrollbar();
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+input[type='search'] {
+    -webkit-appearance: textfield; /* 1 */
+    outline-offset: -2px; /* 2 */
+}
+
+input[type='search'] {
+    -webkit-appearance: textfield;
+}
+
+input[type='search']::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+input[type='search']::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    display: none;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    user-select: none;
+    -webkit-appearance: none;
+    font: inherit;
+    color: inherit;
+    outline: none;
+    display: inline-flex;
+    position: relative;
+    transition: var(--transition);
+}
+
+a {
+    background-color: transparent;
+    text-decoration: none;
+    transition: var(--transition);
+    &:link,
+    &:visited {
+        color: inherit;
+    }
+}
+
+a:where(:not[class]) {
+    &:link,
+    &:visited {
+        color: var(--primary-color);
+    }
+}
+
+svg {
+    flex-shrink: 0;
+    fill: currentColor;
+    transition: fill 0.2s;
+}
+
+img {
+    border-style: none;
+    max-width: 100%;
+    display: block;
+}
+
+img[data-sizes='auto'] {
+    display: block;
+    width: 100%;
+}
+
+img.lazyload:not([src]) {
+    visibility: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th {
+    font-weight: 400;
+}
+
+td,
+th {
+    text-align: left;
+    vertical-align: top;
+}
+
+::selection {
+    color: white;
+    background-color: var(--primary-color);
+    -webkit-text-fill-color: white;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    background-color: transparent;
+}

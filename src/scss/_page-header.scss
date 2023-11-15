@@ -1,0 +1,144 @@
+.page-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  width: 100%;
+
+  color: var(--white);
+  backface-visibility: hidden;
+  -webkit-overflow-scrolling: touch;
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 1.5rem 0;
+
+    border-style: solid;
+    border-color: rgba(var(--border-dark), 0.12);
+    border-width: 0 0 0.1rem 0;
+  }
+
+  &__info,
+  &__location {
+    padding: 0 2rem;
+  }
+
+  &__main {
+    display: flex;
+    align-items: stretch;
+    border-style: solid;
+    border-color: rgba(var(--border-dark), 0.12);
+    border-width: 0 0 0.1rem 0;
+  }
+
+  &__cell {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 4rem;
+
+    border-color: transparent;
+    border-style: solid;
+    border-width: 0 0.1rem 0 0.1rem;
+
+    &.page-header__menu {
+      flex-grow: 1;
+    }
+
+    &::after {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      z-index: 1;
+      width: 0.1rem;
+      height: calc(100% - 2.8rem);
+      background-color: rgba(var(--border-dark), 0.12);
+      transform: translateY(-50%);
+      content: "";
+    }
+  }
+
+  &__menu {
+    .menu {
+      height: 100%;
+    }
+  }
+
+  &__link {
+    flex-shrink: 0;
+
+    .main-button {
+      padding: 2.5rem 4rem;
+
+      span {
+        font: var(--font-btn-17);
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__drop-menu-wrapper {
+    position: relative;
+    height: 0;
+    width: 100%;
+    margin-top: -1px;
+  }
+
+  &__drop-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+
+    width: 100%;
+    background-color: var(--back-2);
+  }
+}
+
+.dropmenu-is-open {
+  .page-header {
+    position: fixed;
+    color: var(--black);
+    background-color: var(--white);
+  }
+
+  .page-header__drop-menu {
+    display: flex;
+  }
+
+  .page-header__cell {
+    &::after {
+      background-color: rgba(var(--border-light), 1);
+    }
+  }
+
+  .page-header__top,
+  .page-header__main {
+    border-color: rgba(var(--border-light), 1);
+  }
+
+  .page-header__link {
+    .main-button {
+      .icon {
+        fill: var(--orange);
+      }
+    }
+  }
+}

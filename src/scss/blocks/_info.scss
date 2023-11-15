@@ -1,0 +1,17 @@
+.info {
+  display: flex;
+  align-items: center;
+  column-gap: 2rem;
+
+  &__work,
+  &__mail {
+    font-weight: 500;
+    opacity: 0.55;
+  }
+
+  &__mail {
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

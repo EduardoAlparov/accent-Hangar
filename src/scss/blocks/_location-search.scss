@@ -1,0 +1,70 @@
+.location-search {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  &__search-bar {
+    margin-bottom: 2.5rem;
+  }
+
+  &__list-wrapper {
+    flex-grow: 1;
+    overflow: auto;
+    max-height: 33.5rem;
+
+    @include customScrollbar();
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  &__item {
+    margin-bottom: 1.5rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    column-gap: 0.6rem;
+
+    .icon {
+      display: block;
+      flex-shrink: 0;
+      width: 2rem;
+      height: 2rem;
+      fill: var(--grey-3, #8e969f);
+      transition: var(--transition);
+    }
+
+    span {
+      display: block;
+      flex-shrink: 0;
+      color: var(--grey, #8A8F94);
+      transition: var(--transition);
+    }
+
+    &:hover {
+      span {
+        color: var(--black, #212529);
+      }
+    }
+
+    &--active {
+      .icon {
+        fill: var(--orange, #ff3f00);
+      }
+
+      span {
+        color: var(--black, #212529);
+      }
+    }
+  }
+}

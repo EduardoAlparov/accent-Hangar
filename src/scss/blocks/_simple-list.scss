@@ -1,0 +1,39 @@
+.simple-list {
+  ul {
+    display: flex;
+    flex-direction: column;
+
+    li {
+      margin-bottom: 2rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      a {
+        position: relative;
+        font: var(--font-text-24);
+        white-space: nowrap;
+
+        &::after {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          z-index: 1;
+          width: 0%;
+          height: 0.2rem;
+          background-color: var(--black);
+          transition: var(--transition);
+          content: "";
+        }
+
+        &:hover {
+          &::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

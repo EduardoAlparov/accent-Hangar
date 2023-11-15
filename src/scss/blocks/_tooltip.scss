@@ -1,0 +1,28 @@
+.tooltip {
+  &__body {
+    position: relative;
+    padding: 1.5rem 2.2rem;
+    background-color: var(--back-4);
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+
+      width: 1.5rem;
+      aspect-ratio: 1;
+
+      background-image: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2215%22%20height%3D%2215%22%20viewBox%3D%220%200%2015%2015%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M15%200H0V15L15%200Z%22%20fill%3D%22%23FF3F00%22%2F%3E%0A%3C%2Fsvg%3E");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      content:"";
+    }
+
+    span {
+      color: var(--white);
+      font: var(--font-text-13);
+      font-weight: 600;
+    }
+  }
+}

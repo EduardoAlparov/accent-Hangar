@@ -1,0 +1,29 @@
+.developer {
+  display: flex;
+  align-items: center;
+  column-gap: 1.5rem;
+
+  span {
+    display: block;
+    opacity: 0.55;
+    transition: var(--transition);
+  }
+
+  .icon {
+    display: block;
+    width: 10.9rem;
+    height: 3rem;
+    fill-opacity: 0.45;
+    transition: var(--transition);
+  }
+
+  &:hover {
+    span {
+      opacity: 1;
+    }
+  
+    .icon {
+      fill-opacity: 1;
+    }
+  }
+}

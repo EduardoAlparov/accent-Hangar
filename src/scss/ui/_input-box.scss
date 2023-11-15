@@ -1,0 +1,52 @@
+.input-box {
+  position: relative;
+
+  input {
+    width: 100%;
+    padding: 1.9rem 2.2rem;
+    background-color: rgba($color: var(--input-back), $alpha: 0.4);
+
+    @include placeholder() {
+      color: var(--grey, #8A8F94);
+    }
+  }
+
+  &__submit {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 1;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    aspect-ratio: 1;
+    transform: translateY(-50%);
+
+    .icon {
+      display: block;
+      width: 2rem;
+      aspect-ratio: 1;
+      fill: var(--grey, #8a8f94);
+      transition: var(--transition);
+    }
+
+    &:hover {
+      .icon {
+        fill: var(--black, #212529)
+      }
+    }
+  }
+  
+  &--search {
+    .input-box__submit {
+      display: flex;
+    }
+
+    input { 
+      padding: 1.9rem 5rem 1.9rem 2.2rem;
+    }
+  }
+}

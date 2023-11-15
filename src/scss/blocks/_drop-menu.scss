@@ -1,0 +1,40 @@
+.drop-menu {
+  padding: 4rem;
+  color: var(--black);
+
+  &__body {
+    flex-grow: 1;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    max-height: 52.5rem;
+    padding: 5.5rem 6rem;
+    background-color: var(--white);
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    &--big {
+      flex-grow: 1;
+      flex-shrink: 0;
+
+      .type-list {
+        width: max-content;
+        margin-right: 2rem;
+        margin-bottom: 4.5rem;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &--middle {
+      flex-grow: 1;
+      flex-shrink: 0;
+    }
+  }
+}

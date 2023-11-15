@@ -1,0 +1,52 @@
+.main-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.4rem;
+  padding: 1.9rem 4rem;
+
+  background-color: transparent;
+
+  span {
+    display: block;
+    font: var(--font-btn-15);
+    white-space: nowrap;
+    transition: var(--transition);
+  }
+
+  .icon {
+    width: 1rem;
+    flex-shrink: 0;
+    aspect-ratio: 1;
+    fill: var(--white);
+    transition: var(--transition);
+  }
+
+  &:hover {
+    background-color: var(--orange, #FF3F00);
+
+    span {
+      color: var(--white) !important;
+    }
+  
+    .icon {
+      fill: var(--white) !important;
+    }
+  }
+
+  &--orange {
+    background-color: var(--orange-hover, #eb3a00);
+
+    span {
+      color: var(--white);
+    }
+  
+    .icon {
+      fill: var(--white);
+    }
+
+    &:hover {
+      background-color: var(--orange, #FF3F00);
+    }
+  }
+}
