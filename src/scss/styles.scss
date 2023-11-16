@@ -7,25 +7,35 @@
 @import 'page-header';
 @import 'page-footer';
 @import 'modals';
-// blocks:
-@import './blocks/hero';
+// Blocks:
+// header:
 @import './blocks/location';
-@import './blocks/info';
 @import './blocks/logo';
+@import './blocks/info';
 @import './blocks/menu';
 @import './blocks/dropdown';
 @import './blocks/drop-menu';
 @import './blocks/type-list';
 @import './blocks/simple-list';
-
+// footer:
 @import './blocks/tooltip';
 @import './blocks/developer';
-
+// modals:
 @import './blocks/location-search';
-
+// sections:
+@import './blocks/hero';
+@import './blocks/introduction';
+@import './blocks/stat';
+@import './blocks/catalog-section';
+@import './blocks/calculation';
+@import './blocks/multi-section';
+@import './blocks/form-slide';
+@import './blocks/advantages';
 
 // ui:
 @import './ui/open-menu-btn';
 @import './ui/phone-link';
 @import './ui/main-button';
 @import './ui/input-box';
+@import './ui/custom-select';
+@import './ui/radio-box';

@@ -1,0 +1,94 @@
+.form-slide {
+  &__header{
+    margin-bottom: 2.5rem;
+
+    &--second-step {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__title {
+    font: var(--font-text-22);
+    font-style: normal;
+    font-weight: 600;
+
+    i {
+      display: inline;
+      color: var(--orange, #ff3f00);
+      font-style: normal;
+    }
+
+    span {
+      display: inline;
+    }
+  }
+
+  &__text {
+    display: block;
+    margin-top: 1rem;
+  }
+
+  &__inputs {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__col {
+    flex: 1 1 auto;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 1rem;
+    
+    color: var(--grey-4, #72787e);
+    font: var(--font-text-13);
+    font-weight: 400;
+  }
+
+  &__inputs-block {
+    margin-bottom: 4rem;
+  }
+
+  &__input-radios {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    // justify-content: space-between;
+    column-gap: 3rem;
+    padding: 2rem 0;
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 1.5rem;
+
+    > button {
+      flex: 0 0 50%;
+    }
+  }
+
+  &__agreement {
+    display: block;
+    margin-top: 2.5rem;
+    color: var(--grey, #8A8F94);
+
+    span,
+    a {
+      font: var(--font-text-13);
+      font-weight: 400;
+    }
+
+    a {
+      text-decoration-line: underline;
+    }
+  }
+}

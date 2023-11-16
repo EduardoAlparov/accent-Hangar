@@ -1,0 +1,9 @@
+.multi-section {
+  &__article {
+    margin-bottom: 16rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

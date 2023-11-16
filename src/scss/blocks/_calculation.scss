@@ -1,0 +1,68 @@
+.calculation {
+  &__body {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    align-items: stretch;
+    column-gap: 9.6rem;
+  }
+
+  &__image {
+    position: relative;
+    flex: 1 1 100%;
+    min-height: 50rem;
+    background: linear-gradient(to right, #F6F8FA 0%, #F6F8FA 57%, transparent 57%, transparent 100%);
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 1;
+      display: block;
+      width: 90%;
+      transform: translate(-50%, -50%);
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
+  &__forms {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-left: 1rem;
+  }
+
+  &__title {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2.5rem;
+
+    border-style: solid;
+    border-width: 0 0 0.1rem 0;
+    border-color: var(--grey-5, #e8e8e8);
+  }
+
+  &__slider {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  &__swiper {
+    &.swiper {
+      overflow: initial;
+    }
+  }
+
+  &__swiper-slide {
+    &.swiper-slide {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+
+      &.swiper-slide-active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.stat {
+  display: flex;
+  flex-direction: column;
+
+  &__top {
+    display: inline-flex;
+    align-items: baseline;
+  }
+
+  &__number {
+    color: var(--orangem, #ff3f00);
+  }
+
+  &__dim {
+    margin-top: 1rem;
+    display: block;
+    font: var(--font-text-20);
+  }
+}

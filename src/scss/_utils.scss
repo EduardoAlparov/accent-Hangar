@@ -35,3 +35,22 @@
         display: none !important;
     }
 }
+
+.text-h1 {
+    font: var(--font-h1);
+    letter-spacing: -0.018em;
+}
+
+.text-h2 {
+    font: var(--font-h2);
+    letter-spacing: -0.025em;
+}
+
+.text-h3 {
+    font: var(--font-text-38);
+    letter-spacing: -0.0095em;
+}
+
+.section-padding {
+    padding: 16rem 0;
+}

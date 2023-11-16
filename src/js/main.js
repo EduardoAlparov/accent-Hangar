@@ -12,6 +12,8 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import dropMenuControl from './dropMenuControl'
+import selectContol from './selectContol'
+import calculationSwiper from './calculationSwiper'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -25,8 +27,9 @@ document.addEventListener('DOMContentLoaded', function () {
     tabs();
     menu();
     
-
     dropMenuControl();
+    selectContol();
+    calculationSwiper();
 
     const modal = new Modal({
         isOpen: (modal) => {

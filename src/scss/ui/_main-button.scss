@@ -22,6 +22,10 @@
     transition: var(--transition);
   }
 
+  .icon-stroke {
+    stroke: var(--white, #fff);
+  }
+
   &:hover {
     background-color: var(--orange, #FF3F00);
 
@@ -31,6 +35,10 @@
   
     .icon {
       fill: var(--white) !important;
+    }
+
+    .icon-stroke {
+      stroke: var(--white, #fff);
     }
   }
 
@@ -45,8 +53,52 @@
       fill: var(--white);
     }
 
+    .icon-stroke {
+      stroke: var(--white, #fff);
+    }
+
     &:hover {
       background-color: var(--orange, #FF3F00);
     }
+  }
+
+  &--second {
+    background-color: var(--back-2, #f6f8fa);
+    border-style: solid;
+    border-width: 0.1rem;
+    border-color: transparent;
+
+    span {
+      color: var(--grey, #8A8F94);
+    }
+  
+    .icon {
+      fill: var(--grey, #8A8F94);
+    }
+
+    .icon-stroke {
+      stroke: var(--grey, #8A8F94);
+    }
+
+    &:hover {
+      background-color: var(--white, #fff);
+      border-color: var(--orange, #FF3F00);
+
+      span {
+        color: var(--orange, #FF3F00) !important;
+      }
+
+      .icon {
+        fill: var(--orange, #FF3F00);
+      }
+
+      .icon-stroke {
+        stroke: var(--orange, #FF3F00);
+      }
+    }
+  }
+
+  &--reverse {
+    flex-direction: row-reverse;
   }
 }

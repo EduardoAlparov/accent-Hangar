@@ -18,6 +18,8 @@
     --grey: #8a8f94;
     --grey-2: #bac9d8;
     --grey-3: #8e969f;
+    --grey-4: #72787e;
+    --grey-5: #e8e8e8;
     --back: #1b1b1b;
     --back-2: #f6f8fa;
     --back-3: #171717;
@@ -25,6 +27,7 @@
     --border-dark: 255, 255, 255;
     --border-light: 241, 241, 241;
     --input-back: 233, 238, 243;
+    --radio: #e9eef3;
     // fonts:
     --main-ff: "Manrope", sans-serif;
     --second-ff: "Arial", sans-serif;
@@ -34,9 +37,14 @@
     --font-btn-17: 500 1.7rem/1.18 var(--main-ff);    
     --font-btn-15: 700 1.5rem/1.33 var(--main-ff);    
 
+    --font-h1: 600 7.2rem/1 var(--main-ff);  
+    --font-h2: 600 5.2rem/1.06 var(--main-ff);  
+
     --font-text-38: 600 3.8rem/1.19 var(--main-ff);  
     --font-text-28: 700 2.8rem/1.07 var(--main-ff);  
     --font-text-24: 600 2.4rem/1.25 var(--main-ff);  
+    --font-text-22: 600 2.2rem/1.365 var(--main-ff);  
+    --font-text-20: 600 2rem/1.25 var(--main-ff);  
     --font-text-13: 500 1.3rem/1.54 var(--main-ff);  
     // etc.
     --transition: 0.3s ease-out;

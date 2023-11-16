@@ -1,0 +1,37 @@
+.radio-box {
+  cursor: pointer;
+
+  label {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+  }
+  
+  i {
+    display: block;
+    width: 1.6rem;
+    height: 1.6rem;
+
+    background-color: var(--radio, #e9eef3);
+    border-style: solid;
+    border-color: transparent;
+    border-width: 0.5rem;
+    border-radius: 100%;
+
+    transition: var(--transition);
+  }
+
+  span {
+    display: block;
+    color: var(--black, #212529);
+  }
+
+  input {
+    &:checked {
+      & ~ i {
+        border-color: var(--orange, #FF3F00);
+        background-color: #fff;
+      }
+    }
+  }
+}

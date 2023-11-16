@@ -1,0 +1,133 @@
+.select {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  margin: 0 auto;
+  min-height: 6rem;
+
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 110%;
+  color: var(--black, #212529);
+
+  &__current {
+    position: relative;
+    overflow: hidden;
+    flex-grow: 1;
+
+    outline: none;
+    background-color: rgba($color: var(--input-back), $alpha: 0.4);
+    border: none;
+    cursor: pointer;
+
+    &.active {
+      & + .select__list-wrapper {
+        opacity: 1;
+
+        animation-name: none;
+
+        .select__option {
+          cursor: pointer;
+        }
+      }
+
+      .select__input-text {
+        color: var(--black, #212529);
+      }
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+
+    width: 2rem;
+
+    transition: var(--transition);
+
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+
+  &__value {
+    display: flex;
+  }
+
+  &__input {
+    display: none;
+
+    &:checked + .select__input-text {
+      display: block;
+    }
+  }
+
+  &__input-text {
+    display: none;
+    width: 100%;
+    margin: 0;
+    padding: 1.8rem 0 1.4rem 1.6rem;
+
+    color: var(--black, #212529);
+  }
+
+  &__list-wrapper {
+    position: absolute;
+    top: calc(100% - 1px);
+    z-index: 25;
+
+    width: 100%;
+    padding: 2rem 2.2rem;
+    overflow: hidden;
+
+    animation-name: HideList;
+    animation-duration: 0.5s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: step-start;
+
+    background-color: var(--white, #fff);
+    list-style: none;
+    opacity: 0;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.08)
+  }
+
+  &__list {
+    > li {
+      &:last-child {
+        label {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &__option {
+    position: relative;
+    display: block;
+    padding-left: 0;
+    margin-bottom: 2rem;
+    color: var(--black, #212529);  
+    transition: (--transition);
+
+    &.active {
+      display: none;
+    }
+  }
+}
+
+@keyframes HideList {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(0);
+  }
+}
