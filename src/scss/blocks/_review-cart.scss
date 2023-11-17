@@ -1,0 +1,93 @@
+.review-cart {
+  padding: 4rem 4rem 3.5rem;
+  background-color: var(--back-4, #202020);
+
+  &__body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+
+      width: 2.1rem;
+      height: 2rem;
+
+      background-image: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2221%22%20height%3D%2220%22%20viewBox%3D%220%200%2021%2020%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M21%200.203666L20.5236%204.0392C19.3592%203.95672%2018.4594%204.17668%2017.8242%204.69908C17.189%205.22149%2016.7656%205.9501%2016.5539%206.88493C16.3422%207.81975%2016.3025%208.87831%2016.4348%2010.0606H21V20H12.2268V9.23574C12.2268%205.99134%2012.9679%203.5443%2014.4499%201.8946C15.9584%200.217414%2018.1418%20-0.346232%2021%200.203666ZM8.77316%200.203666L8.29679%204.0392C7.13233%203.95672%206.23252%204.17668%205.59735%204.69908C4.96219%205.22149%204.53875%205.9501%204.32703%206.88493C4.11531%207.81975%204.07561%208.87831%204.20794%2010.0606H8.77316V20H0V9.23574C0%205.99134%200.741021%203.5443%202.22306%201.8946C3.73157%200.217414%205.91493%20-0.346232%208.77316%200.203666Z%22%20fill%3D%22%23FF3F00%22%2F%3E%0A%3C%2Fsvg%3E");
+      background-repeat: no-repeat;
+      background-size: 100%;
+
+      content: "";
+    }
+
+    &::before {
+      position: absolute;
+      right: 1rem;
+      bottom: 0;
+      z-index: 1;
+
+      width: 0.1rem;
+      min-width: 1px;
+      height: calc(100% - 3.5rem);
+
+      background-color: rgba(var(--border-dark), 0.12);
+      content: "";
+    }
+  }
+
+  &__author {
+    display: flex;
+    align-items: center;
+    column-gap: 2.5rem;
+    margin-bottom: 3.5rem;
+  }
+
+  &__author-pic {
+    display: flex;
+    align-items: center;
+    justify-self: start;
+    width: 7rem;
+    height: 7rem;
+    aspect-ratio: 1;
+    overflow: hidden;
+    background-color: var(--grey, #8a8f94);
+    border-radius: 100%;
+
+    img {
+      min-height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__author-name {
+    display: block;
+    margin-bottom: 1rem;
+    font: var(--font-text-20);
+  }
+
+  &__date {
+    color: var(--grey, #8a8f94);
+    font-weight: 400;
+  }
+
+  &__review {
+    padding-right: 8.5rem;
+
+    p {
+      display: block;
+      margin-bottom: 1.5rem;
+      color: var(--white, #FFF);
+      font-weight: 400;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

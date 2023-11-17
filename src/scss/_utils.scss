@@ -54,3 +54,26 @@
 .section-padding {
     padding: 16rem 0;
 }
+
+.carousel {
+    &__swiper-cover {
+        position: relative;
+
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            right: calc(100% + 4rem);
+            z-index: 10;
+            transform: translateY(-50%);
+        }
+    
+        .slider-btn--reverse {
+            left: calc(100% + 4rem);
+            right: unset;
+        }
+    }
+}
+
+.ui-section {
+    background-color: var(--back-5, #f6f8fa);
+}

@@ -11,9 +11,12 @@ import menu from './menu';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-import dropMenuControl from './dropMenuControl'
-import selectContol from './selectContol'
-import calculationSwiper from './calculationSwiper'
+import dropMenuControl from './dropMenuControl';
+import selectContol from './selectContol';
+import calculationSwiper from './calculationSwiper';
+import projectsSwiper from './projectsSwiper';
+import reviewsSwiper from './reviewsSwiper';
+import inputFileStyling from './inputFileStyling';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -30,6 +33,9 @@ document.addEventListener('DOMContentLoaded', function () {
     dropMenuControl();
     selectContol();
     calculationSwiper();
+    projectsSwiper();
+    reviewsSwiper();
+    inputFileStyling();
 
     const modal = new Modal({
         isOpen: (modal) => {

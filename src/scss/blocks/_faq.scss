@@ -1,0 +1,99 @@
+.faq {
+  &__list {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1.5rem;
+  }
+
+  &__item {
+    position: relative;
+    width: calc(50% - (1.5rem / 2));
+  }
+
+  &__button {
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding: 2rem 5rem 2rem 2rem;
+
+    color: var(--black, #212529);
+    font-weight: 600;
+    background-color: rgba($color: var(--input-back, 233, 238, 243), $alpha: 0.4);
+    transition: color var(--transition);
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: 2rem;
+      z-index: 10;
+
+      display: block;
+      width: 1.8rem;
+      transform: translateY(-50%);
+      content: "";
+
+      background-repeat: no-repeat;
+      background-size: 100%;
+      transition: var(--transition);
+    }
+
+    &::before {
+      height: 1.8rem;
+      background-image: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%220%200%2018%2018%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M9%200V18%22%20stroke%3D%22%23FF3F00%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M18%209L-4.76837e-07%209%22%20stroke%3D%22%23FF3F00%22%20stroke-width%3D%222%22%2F%3E%0A%3C%2Fsvg%3E");
+    }
+
+    &::after {
+      height: 0.2rem;
+      background-image: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%222%22%20viewBox%3D%220%200%2018%202%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M18%201L-4.76837e-07%200.999999%22%20stroke%3D%22%23FF3F00%22%20stroke-width%3D%222%22%2F%3E%0A%3C%2Fsvg%3E");
+      opacity: 0;
+    }
+
+    &:hover {
+      color: var(--orange, #ff3f00);
+    }
+  }
+
+  &__dropdown {
+    max-height: 0;
+    padding-top: 0;
+    padding-left: 2rem;
+    padding-bottom: 0;
+    padding-right: 7rem;
+    opacity: 0;
+    transform-origin: top;
+    transform: scaleY(0);
+    transition-duration: 0.3s;
+    transition-property: max-height, opacity, transform, padding;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.08);
+
+    p {
+      color: var(--grey-4, #72787e);
+      font-weight: 400;
+    }
+  }
+
+  input {
+    &:checked {
+      ~ .faq__dropdown {
+        max-height: 500px;
+        opacity: 1;
+        transform: scaleY(1);
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      }
+
+      ~ .faq__button {
+        &::before {
+          transform: translateY(-50%) rotateX(90deg);
+        }
+
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

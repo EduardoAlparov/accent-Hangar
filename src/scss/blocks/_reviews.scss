@@ -1,0 +1,11 @@
+.reviews {
+  color: var(--white, #fff);
+  background-color: var(--back, #1b1b1b);
+
+  &__link-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4.5rem;
+  }
+}

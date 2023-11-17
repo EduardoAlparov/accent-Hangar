@@ -1,0 +1,13 @@
+.projects-slider {
+  &__header {
+    align-items: center;
+  }
+
+  &__swiper-slide {
+    margin-right: 3rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

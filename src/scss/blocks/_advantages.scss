@@ -3,6 +3,11 @@
     max-width: 44.5rem;
   }
 
+  &__bottom {
+    margin-top: 6rem;
+    padding-bottom: 7rem;
+  }
+
   &__list {
     display: flex;
     flex-flow: row wrap;
@@ -37,7 +42,6 @@
     position: relative;
     width: 100%;
     aspect-ratio: 3.68 / 1;
-    margin-bottom: 7rem;
 
     img {
       position: absolute;

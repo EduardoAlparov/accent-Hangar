@@ -1,0 +1,43 @@
+.slider-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 4.5rem;
+  height: 4.5rem;
+  aspect-ratio: 1;
+  overflow: hidden;
+  
+  background-color: var( --back-2, #f6f8fa);
+  border-radius: 100%;
+  transition: background-color var(--transition);
+
+  .icon {
+    width: 100%;
+    aspect-ratio: 1;
+    stroke-width: 0.2rem;
+    stroke: var(--orange, #ff3f00);
+  }
+
+  &:hover {
+    background-color: var(--grey-5, #e8e8e8);
+  }
+
+  &--reverse {
+    .icon {
+      transform: rotate(180deg);
+    }
+  }
+
+  &--light {
+    background-color: var(--back-4, #202020);
+
+    .icon {
+      stroke: var(--white, #fff);
+    }
+
+    &:hover {
+      background-color: var(--back-6, #333);
+    }
+  }
+}

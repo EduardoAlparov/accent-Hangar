@@ -1,6 +1,7 @@
 .input-box {
   position: relative;
 
+  textarea,
   input {
     width: 100%;
     padding: 1.9rem 2.2rem;
@@ -8,6 +9,10 @@
 
     @include placeholder() {
       color: var(--grey, #8A8F94);
+    }
+
+    &--textarea {
+      min-height: 15rem;
     }
   }
 

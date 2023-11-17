@@ -6,6 +6,7 @@
   padding: 1.9rem 4rem;
 
   background-color: transparent;
+  cursor: pointer;
 
   span {
     display: block;
@@ -24,6 +25,12 @@
 
   .icon-stroke {
     stroke: var(--white, #fff);
+  }
+
+  .icon-upload {
+    width: 1.2rem;
+    height: 1.8rem;
+    aspect-ratio: unset;
   }
 
   &:hover {
@@ -64,41 +71,82 @@
 
   &--second {
     background-color: var(--back-2, #f6f8fa);
-    border-style: solid;
-    border-width: 0.1rem;
-    border-color: transparent;
 
     span {
-      color: var(--grey, #8A8F94);
+      color: var(--black, #212529);
     }
   
     .icon {
-      fill: var(--grey, #8A8F94);
+      fill: var(--black, #212529);
     }
 
     .icon-stroke {
-      stroke: var(--grey, #8A8F94);
+      stroke: var(--black, #212529);
     }
 
     &:hover {
-      background-color: var(--white, #fff);
-      border-color: var(--orange, #FF3F00);
+      background-color: var(--orange, #FF3F00);
 
       span {
-        color: var(--orange, #FF3F00) !important;
+        color: var(--white, #fff);
       }
 
       .icon {
-        fill: var(--orange, #FF3F00);
+        fill: var(--white, #fff);
       }
 
       .icon-stroke {
-        stroke: var(--orange, #FF3F00);
+        stroke: var(--white, #fff);
       }
     }
   }
 
   &--reverse {
     flex-direction: row-reverse;
+  }
+
+  &--upload {
+    width: 100%;
+
+    background-color: var(--back-2, #f6f8fa);
+
+    span {
+      color: var(--grey-3, #8e969f);
+    }
+  
+    .icon {
+      fill: var(--grey-3, #8e969f);
+    }
+
+    .icon-stroke {
+      stroke: var(--grey-3, #8e969f);
+    }
+  }
+
+  input[type="file"] {
+    &:checked {
+      ~ .icon-upload {
+        fill: var(--orange, #FF3F00);
+      }
+    }
+  }
+
+  &--upload-active {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+
+      width: 1.5rem;
+      aspect-ratio: 1;
+
+      background-image: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2215%22%20height%3D%2215%22%20viewBox%3D%220%200%2015%2015%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M15%200H0V15L15%200Z%22%20fill%3D%22%23FF3F00%22%2F%3E%0A%3C%2Fsvg%3E");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      content:"";
+    }
   }
 }

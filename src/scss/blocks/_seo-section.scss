@@ -1,0 +1,13 @@
+.seo-section {
+  &__text {
+    @include maxSizeText(6);
+
+    p {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__expand {
+    margin-top: 2.5rem;
+  }
+}

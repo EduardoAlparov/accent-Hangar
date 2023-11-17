@@ -24,13 +24,33 @@
 @import './blocks/location-search';
 // sections:
 @import './blocks/hero';
+
 @import './blocks/introduction';
 @import './blocks/stat';
+
 @import './blocks/catalog-section';
+@import './blocks/catalog-item';
+
 @import './blocks/calculation';
+
 @import './blocks/multi-section';
 @import './blocks/form-slide';
 @import './blocks/advantages';
+
+@import './blocks/stages';
+@import './blocks/stage';
+
+@import './blocks/projects-slider';
+@import './blocks/project-cart';
+
+@import './blocks/reviews';
+@import './blocks/review-cart';
+
+@import './blocks/production';
+
+@import './blocks/faq';
+
+@import './blocks/seo-section';
 
 // ui:
 @import './ui/open-menu-btn';
@@ -39,3 +59,5 @@
 @import './ui/input-box';
 @import './ui/custom-select';
 @import './ui/radio-box';
+@import './ui/slider-btn';
+@import './ui/expand-button';

@@ -1,0 +1,34 @@
+.stage {
+  display: flex;
+  flex-direction: column;
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    min-height: 21rem;
+  }
+
+  &__content {
+    margin-bottom: 5rem;
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 1rem;
+    font: var(--font-text-20);
+  }
+
+  &__text {
+    display: block;
+    color: var(--grey-4, #72787e);
+    font-weight: 400;
+  }
+
+  &__number {
+    display: block;
+    margin-top: auto;
+    color: var(--orange, #ff3f00);
+  }
+}

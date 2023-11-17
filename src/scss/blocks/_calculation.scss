@@ -24,6 +24,14 @@
       object-fit: contain;
       object-position: center;
     }
+
+    &--form {
+      img {
+        width: auto;
+        height: 100%;
+        max-height: 100%;
+      }
+    }
   }
 
   &__forms {
@@ -39,6 +47,19 @@
     border-style: solid;
     border-width: 0 0 0.1rem 0;
     border-color: var(--grey-5, #e8e8e8);
+    
+    &--no-border {
+      border-width: 0;
+
+      h6 {
+        margin-bottom: 2rem;
+      }
+
+      span {
+        display: block;
+        max-width: 60rem;
+      }
+    }
   }
 
   &__slider {

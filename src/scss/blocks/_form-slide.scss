@@ -37,6 +37,10 @@
     &:last-child {
       margin-bottom: 0;
     }
+
+    &--feedback {
+      margin-bottom: 1.5rem;
+    }
   }
 
   &__col {
@@ -54,6 +58,10 @@
 
   &__inputs-block {
     margin-bottom: 4rem;
+
+    &--feedback {
+      margin-bottom: 1.5rem;
+    }
   }
 
   &__input-radios {
@@ -73,6 +81,26 @@
 
     > button {
       flex: 0 0 50%;
+    }
+
+    .main-button--reverse {
+      background-color: var(--back-2, #f6f8fa);
+
+      span {
+        color: var(--grey-3, #8e969f);
+      }
+    
+      .icon {
+        fill: var(--grey-3, #8e969f);
+      }
+
+      .icon-stroke {
+        stroke: var(--grey-3, #8e969f);
+      }
+    }
+
+    &--feedback {
+
     }
   }
 
