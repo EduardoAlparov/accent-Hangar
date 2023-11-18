@@ -4,6 +4,7 @@
 
   &__top {
     display: inline-flex;
+    column-gap: 0.5rem;
     align-items: baseline;
   }
 
@@ -15,5 +16,9 @@
     margin-top: 1rem;
     display: block;
     font: var(--font-text-20);
+
+    @include  breakpoint(small-tablet) {
+      margin-top: 0.5rem;
+    }
   }
 }

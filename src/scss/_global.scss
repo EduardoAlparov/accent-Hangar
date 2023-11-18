@@ -50,15 +50,38 @@
     --font-text-13: 500 1.3rem/1.54 var(--main-ff);  
     // etc.
     --transition: 0.3s ease-out;
+
+    @include  breakpoint(laptop) {
+        --content-padding: 1.5rem;
+        --font-body: 400 1.4rem/1.43 var(--main-ff);
+        --font-btn-15: 700 1.4rem/1.43 var(--main-ff);
+
+        --font-h1: 600 5.2rem/1.05 var(--main-ff); 
+        --font-h2: 600 3.2rem/1.1 var(--main-ff); 
+
+        --font-text-38: 600 2.6rem/1.35 var(--main-ff); 
+        --font-text-28: 700 2rem/1.25 var(--main-ff);  
+        --font-text-22: 600 1.8rem/1.39 var(--main-ff); 
+        --font-text-20: 600 1.6rem/1.56 var(--main-ff);
+    }
 }
+
 
 html {
     @include noHighlight();
     font-size: 10px;
-    font-size: clamp(10px, 0.5vw, 25px);
+    font-size: clamp(10px, 0.52vw, 25px);
 
     box-sizing: border-box;
     -webkit-text-size-adjust: 100%;
+
+    @include  breakpoint(large-desktop) {
+        font-size: clamp(9px, 0.52vw, 25px);
+    }
+
+    @include  breakpoint(laptop) {
+        font-size: 10px;
+    }
 }
 
 body {

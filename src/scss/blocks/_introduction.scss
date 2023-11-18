@@ -13,11 +13,19 @@
 
   &__subtitle {
     font: var(--font-text-22);
+
+    @include  breakpoint(tablet) {
+      margin-bottom: 2rem;
+    }
   }
 
   &__text {
     margin-top: 2rem;
     color: var(--grey-4, #72787e);
+
+    @include  breakpoint(tablet) {
+      margin-top: 0;
+    }
   }
 
   &__intro-row--border  {
@@ -27,6 +35,10 @@
     border-style: solid;
     border-width: 0.1rem 0 0 0;
     border-color: var(--grey-5, #e8e8e8);
+
+    @include  breakpoint(tablet) {
+      margin-top: 4rem;
+    } 
   }
 
   &__list {
@@ -34,10 +46,24 @@
     flex-flow: row wrap;
     justify-content: space-between;
     gap: 4rem;
+
+    @include  breakpoint(small-tablet) {
+      flex-flow: column nowrap;
+      gap: unset;
+    }
   }
 
   &__item {
     width: 100%;
     max-width: calc(50% - 2rem);
+
+    @include  breakpoint(small-tablet) {
+      max-width: 100%;
+      margin-bottom: 3rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 }

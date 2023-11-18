@@ -1,11 +1,19 @@
 .advantages {
   &__text {
     max-width: 44.5rem;
+
+    @include  breakpoint(tablet) {
+      margin-top: 1.5rem;
+    }
   }
 
   &__bottom {
     margin-top: 6rem;
     padding-bottom: 7rem;
+
+    @include  breakpoint(tablet) {
+      padding-bottom: 2rem;
+    }
   }
 
   &__list {
@@ -13,16 +21,37 @@
     flex-flow: row wrap;
     justify-content: space-between;
     gap: 3rem 8rem;
+
+    @include  breakpoint(laptop) {
+      gap: 1.5rem;
+    }
   }
 
   &__item {
-    width: calc(50% - 6.9rem);
+    width: calc(50% - 4rem);
+
+    @include  breakpoint(laptop) {
+      width: calc(50% - (1.5rem / 2));
+    }
+
+    @include  breakpoint(mobile) {
+      width: 100%;
+    }
 
     span {
       position: relative;
       display: block;
       padding-left: 1.8rem;
       font: var(--font-text-20);
+
+      @include  breakpoint(mobile) {
+        padding-left: 1rem;
+        white-space: nowrap;
+
+        br {
+          display: none;
+        }
+      }
 
       &::before {
         position: absolute;
@@ -34,6 +63,14 @@
         height: 100%;
         background: var(--orange, #FF3F00);
         content: "";
+
+        @include  breakpoint(laptop) {
+          width: 2px;
+        }
+      }
+
+      i {
+        font-style: normal;
       }
     }
   }
@@ -42,6 +79,10 @@
     position: relative;
     width: 100%;
     aspect-ratio: 3.68 / 1;
+
+    @include  breakpoint(small-tablet) {
+      aspect-ratio: 1.59 / 1;
+    }
 
     img {
       position: absolute;
@@ -59,15 +100,31 @@
 
   &__logo {
     position: absolute;
-    bottom: -7.1rem;
+    bottom: 0;
     z-index: 30;
+
+    display: block;
     width: 100%;
     aspect-ratio: 6.635 / 1;
-    display: block;
+    transform: translateY(35%);
+
+    @include  breakpoint(small-tablet) {
+      transform: translateY(45%);
+    }
 
     .icon {
       width: 100%;
       height: 100%;
+    }
+  }
+
+  &__intro-row {
+    &.hero__intro-row {
+      .hero__left {
+        @include  breakpoint(tablet) {
+          margin-bottom: 4rem;
+        }
+      }
     }
   }
 }

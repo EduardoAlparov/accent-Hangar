@@ -53,6 +53,14 @@
 
 .section-padding {
     padding: 16rem 0;
+
+    @include  breakpoint(small-desktop) {
+        padding: 10rem 0;
+    }
+
+    @include  breakpoint(tablet) {
+        padding: 8rem 0;
+    }
 }
 
 .carousel {

@@ -25,11 +25,23 @@
     border-style: solid;
     border-color: rgba(var(--border-dark), 0.12);
     border-width: 0 0 0.1rem 0;
+
+    @include  breakpoint(small-desktop) {
+      display: none;
+    }
   }
 
   &__info,
   &__location {
-    padding: 0 2rem;
+    padding: 0 4rem;
+
+    @include  breakpoint(desktop) {
+      padding: 0 3rem;
+
+      @include  breakpoint(small-desktop) {
+        padding: 0 2rem;
+      }
+    }
   }
 
   &__main {
@@ -38,6 +50,12 @@
     border-style: solid;
     border-color: rgba(var(--border-dark), 0.12);
     border-width: 0 0 0.1rem 0;
+
+    @include  breakpoint(laptop) {
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.5rem;
+    }
   }
 
   &__cell {
@@ -68,11 +86,39 @@
       transform: translateY(-50%);
       content: "";
     }
+
+    @include  breakpoint(desktop) {
+      padding: 0 3rem;
+    }
+
+    @include  breakpoint(small-desktop) {
+      padding: 0 2rem;
+    }
+
+    @include  breakpoint(laptop) {
+      padding: 0;
+    }
+  }
+
+  &__menu-open {
+    @include  breakpoint(laptop) {
+      display: none;
+    }
   }
 
   &__menu {
     .menu {
       height: 100%;
+    }
+
+    @include  breakpoint(laptop) {
+      display: none;
+    }
+  }
+
+  &__phone {
+    @include  breakpoint(desktop) {
+      display: none;
     }
   }
 
@@ -86,6 +132,18 @@
         font: var(--font-btn-17);
         font-weight: 700;
       }
+    }
+
+    @include  breakpoint(laptop) {
+      display: none;
+    }
+  }
+
+  &__mobile-btn {
+    display: none;
+
+    @include  breakpoint(laptop) {
+      display: block;
     }
   }
 

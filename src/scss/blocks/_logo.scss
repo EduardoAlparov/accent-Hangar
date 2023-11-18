@@ -12,6 +12,11 @@
     background-repeat: no-repeat;
     background-size: 100%;
   }
+
+  @include  breakpoint(laptop) {
+    width: 12.6rem;
+    height: 1.8rem;
+  }
 }
 
 .dropmenu-is-open {

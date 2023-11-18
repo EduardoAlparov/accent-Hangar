@@ -8,6 +8,11 @@
   background-color: transparent;
   cursor: pointer;
 
+  @include  breakpoint(laptop) {
+    column-gap: 0.2rem;
+    padding: 1.7rem 4rem;
+  }
+
   span {
     display: block;
     font: var(--font-btn-15);
@@ -21,6 +26,10 @@
     aspect-ratio: 1;
     fill: var(--white);
     transition: var(--transition);
+    
+    @include  breakpoint(laptop) {
+      width: 0.8rem;
+    }
   }
 
   .icon-stroke {

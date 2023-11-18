@@ -3,6 +3,10 @@
   padding: 3.5rem;
   background-color: var(--back-4, #202020);
 
+  @include  breakpoint(small-desktop) {
+    padding: 2.5rem;
+  }
+
   &__body {
     display: flex;
     flex-direction: column;
@@ -14,11 +18,23 @@
     align-items: flex-start;
     justify-content: space-between;
     margin-bottom: 11rem;
+
+    @include  breakpoint(small-desktop) {
+      margin-bottom: 8rem;
+    }
+
+    @include  breakpoint(mobile) {
+      margin-bottom: 4rem;
+    }
   }
 
   &__image {
     height: 9rem;
     aspect-ratio: 1.25 / 1;
+
+    @include  breakpoint(small-desktop) {
+      height: 6rem;
+    }
 
     img {
       display: block;
@@ -58,6 +74,10 @@
   &__icon {
     width: 2.5rem;
     aspect-ratio: 1;
+
+    @include  breakpoint(small-desktop) {
+      width: 2rem;
+    }
 
     img {
       display: block;

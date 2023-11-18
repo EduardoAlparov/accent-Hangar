@@ -8,13 +8,25 @@ export default () => {
         speed: 0,
         grabCursor: false,
         simulateTouch: false,
+        autoHeight: true,
+
+        breakpoints: {
+          1024: {
+            autoHeight: false,
+          }
+        },
 
         on: {
           init: function () {
             const nextBtn = item.querySelector('.js-set-next-form');
+            const prevBtn = item.querySelector('.js-set-prev-form');
 
             nextBtn.onclick = () => {
               this.slideNext(0);
+            }
+
+            prevBtn.onclick = () => {
+              this.slidePrev(0);
             }
           },
         },

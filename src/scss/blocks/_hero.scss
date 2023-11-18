@@ -68,6 +68,10 @@
     border-style: solid;
     border-width: 0.2rem 0 0 0;
     border-color: var(--white, #fff);
+
+    @include  breakpoint(tablet) {
+      padding: 2rem 0 4rem;
+    }
   }
 
   &__intro-row,
@@ -75,20 +79,78 @@
   &__intro-top {
     display: flex;
     justify-content: space-between;
+
+    @include  breakpoint(small-desktop) {
+      column-gap: 3rem;
+    }
+
+    @include  breakpoint(tablet) {
+      flex-direction: column;
+      column-gap: unset;
+    }
+  }
+
+  &__title {
+    @include  breakpoint(tablet) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__intro-top {
+    @include  breakpoint(tablet) {
+      flex-direction: column-reverse;
+    }
   }
 
   &__intro-bottom {
     margin-top: 8rem;
+
+    @include  breakpoint(tablet) {
+      margin-top: 4rem;
+    }
   }
 
   &__text {
     display: block;
     max-width: 47.5rem;
     font-weight: 600;
+
+    @include  breakpoint(tablet) {
+      max-width: 100%;
+    }
   }
 
   &__right {
     flex: 0 0 50%;
+
+    @include  breakpoint(tablet) {
+      flex: 1 1 auto;
+      width: 80%;
+    }
+
+    @include  breakpoint(small-tablet ) {
+      width: 100%;
+    }
+  }
+
+  &__left {
+    @include  breakpoint(tablet) {
+      flex: 1 1 auto;
+      width: 80%;
+      margin-bottom: 2rem;
+    }
+
+    @include  breakpoint(small-tablet ) {
+      width: 100%;
+    }
+
+    &--no-margin {
+      margin-bottom: 0;
+
+      @include  breakpoint(tablet) {
+        margin-bottom: 0;
+      }
+    }
   }
 
   &__link-wrapper {
@@ -103,13 +165,18 @@
 
     > span {
       display: block;
+      color: var(--border-dark, rgb(255, 255, 255));
       font-weight: 600;
       opacity: 0.55;
+
+      @include  breakpoint(tablet) {
+        margin-top: 1.5rem;
+      }
+    }
+
+    @include  breakpoint(tablet) {
+      flex-direction: column;
+      align-items: stretch;
     }
   }
-}
-
-.introduction {
-  height: 100vh;
-  background-color: var(--white);
 }
