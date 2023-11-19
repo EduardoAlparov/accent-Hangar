@@ -30,6 +30,12 @@
     }
 }
 
+.hide-on-tablet {
+    @include breakpoint(tablet) {
+        display: none !important;
+    }
+}
+
 .show-on-mobile {
     @include breakpointMF(small-tablet) {
         display: none !important;

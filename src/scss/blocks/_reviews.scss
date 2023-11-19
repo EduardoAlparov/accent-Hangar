@@ -7,5 +7,22 @@
     align-items: center;
     justify-content: center;
     margin-top: 4.5rem;
+
+    .main-button {
+      @include breakpoint(small-tablet) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__swiper {
+    &.swiper {
+      @include  breakpoint(portrait-tablet) {
+        margin-right: -1.5rem;
+        margin-left: -1.5rem;
+        padding-left: 1.5rem;
+        padding-top: 1rem;
+      }
+    }
   }
 }

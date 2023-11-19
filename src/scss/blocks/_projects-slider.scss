@@ -1,6 +1,10 @@
 .projects-slider {
   &__header {
     align-items: center;
+
+    @include  breakpoint(tablet) {
+      align-items: flex-start;
+    }
   }
 
   &__swiper-slide {
@@ -8,6 +12,16 @@
 
     &:last-child {
       margin-right: 0;
+    }
+  }
+
+  &__swiper {
+    &.swiper {
+      @include  breakpoint(small-tablet) {
+        margin-right: -1.5rem;
+        margin-left: -1.5rem;
+        padding-left: 1.5rem;
+      }
     }
   }
 }

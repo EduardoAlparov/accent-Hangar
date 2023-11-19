@@ -1,5 +1,9 @@
 .project-cart {
   max-width: 45rem;
+
+  &.swiper-slide {
+    max-width: unset;
+  }
   
   &__body {
     display: flex;

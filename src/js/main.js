@@ -17,6 +17,9 @@ import calculationSwiper from './calculationSwiper';
 import projectsSwiper from './projectsSwiper';
 import reviewsSwiper from './reviewsSwiper';
 import inputFileStyling from './inputFileStyling';
+import stagesListSwiper from './stagesListSwiper';
+import expandReviewText from './expandReviewText';
+import productionSwiper from './productionSwiper';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -36,6 +39,9 @@ document.addEventListener('DOMContentLoaded', function () {
     projectsSwiper();
     reviewsSwiper();
     inputFileStyling();
+    stagesListSwiper();
+    expandReviewText();
+    productionSwiper();
 
     const modal = new Modal({
         isOpen: (modal) => {

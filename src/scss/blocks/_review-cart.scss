@@ -2,6 +2,10 @@
   padding: 4rem 4rem 3.5rem;
   background-color: var(--back-4, #202020);
 
+  @include breakpoint(portrait-tablet) {
+    padding: 2rem;
+  }
+
   &__body {
     position: relative;
     display: flex;
@@ -22,6 +26,13 @@
       background-size: 100%;
 
       content: "";
+
+      @include breakpoint(portrait-tablet) {
+        top: unset;
+        bottom: calc(100% + 1rem);
+        width: 1.6rem;
+        height: 1.5rem;
+      }
     }
 
     &::before {
@@ -36,6 +47,10 @@
 
       background-color: rgba(var(--border-dark), 0.12);
       content: "";
+
+      @include breakpoint(portrait-tablet) {
+        content: none;
+      }
     }
   }
 
@@ -44,6 +59,11 @@
     align-items: center;
     column-gap: 2.5rem;
     margin-bottom: 3.5rem;
+
+    @include breakpoint(mobile) {
+      column-gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
   }
 
   &__author-pic {
@@ -57,6 +77,11 @@
     background-color: var(--grey, #8a8f94);
     border-radius: 100%;
 
+    @include breakpoint(mobile) {
+      width: 5rem;
+      height: 5rem;
+    }
+
     img {
       min-height: 100%;
       display: block;
@@ -69,6 +94,10 @@
     display: block;
     margin-bottom: 1rem;
     font: var(--font-text-20);
+
+    @include breakpoint(mobile) {
+      margin-bottom: 0.5rem;
+    }
   }
 
   &__date {
@@ -76,8 +105,22 @@
     font-weight: 400;
   }
 
+  &__expand-button {
+    &.expand-button {
+      display: none;
+    }
+  }
+
   &__review {
     padding-right: 8.5rem;
+
+    @include breakpoint(portrait-tablet) {
+      padding-right: 4.5rem;
+    }
+
+    @include breakpoint(mobile) {
+      padding-right: 0;
+    }
 
     p {
       display: block;
@@ -89,5 +132,44 @@
         margin-bottom: 0;
       }
     }
+
+    &--full {
+      .review-cart__text-wrapper {
+        display: -webkit-box;
+        overflow: hidden;
+        line-clamp: 8;
+        -webkit-line-clamp: 8;
+        -webkit-box-orient: vertical;
+
+        @include breakpoint(mobile) {
+          line-clamp: 16;
+          -webkit-line-clamp: 16;
+        }
+      }
+    }
+
+    &--expand {
+      &.review-cart__review--full {
+
+        .review-cart__text-wrapper {
+          overflow-y: auto;
+          
+          @include customScrollbar();
+        }
+      }
+    }
+
+    &--with-btn {
+      .review-cart__expand-button {
+        &.expand-button {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__text-wrapper {
+    overflow: hidden;
+    margin-bottom: 2rem;
   }
 }
