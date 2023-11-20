@@ -265,7 +265,7 @@
         font: var(--font-text-28);
 
         @include breakpoint(small-tablet) {
-          margin: 1rem;
+          margin-bottom: 1rem;
         }
       }
 

@@ -1,4 +1,4 @@
-<header class="page-header fix-block">
+<header class="page-header fix-block {{#if pageHeaderClass}} page-header--secondary {{/if}}">
     <div class="page-header__top">
         <div class="page-header__location location">
             <span class="location__text">
@@ -339,6 +339,256 @@
                                 </a>
                             </li>
                         </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-header__mobile-menu-wrapper">
+        <div class="page-header__mobile-menu mobile-menu">
+            <div class="mobile-menu__body">
+                <div class="mobile-menu__swiper-cover">
+                    <div class="mobile-menu__swiper swiper js-mobile-menu-swiper">
+                        <ul class="mobile-menu__swiper-wrapper swiper-wrapper">
+                            <li class="mobile-menu__swiper-slide swiper-slide" data-level="1">
+                                <ul class="mobile-menu__list">
+                                    <li class="mobile-menu__item">
+                                        <a href="#" class="mobile-menu__link mobile-menu__link--btn js-mobile-swiper-next" data-route="2">
+                                            Каталог ангаров
+                                        </a>
+                                    </li>
+                                    <li class="mobile-menu__item">
+                                        <a href="#" class="mobile-menu__link">
+                                            Наши объекты
+                                        </a>
+                                    </li>
+                                    <li class="mobile-menu__item">
+                                        <a href="#" class="mobile-menu__link">
+                                            Цены
+                                        </a>
+                                    </li>
+                                    <li class="mobile-menu__item">
+                                        <a href="#" class="mobile-menu__link mobile-menu__link--btn js-mobile-swiper-next" data-route="1">
+                                            О компании
+                                        </a>
+                                    </li>
+                                    <li class="mobile-menu__item">
+                                        <a href="#" class="mobile-menu__link">
+                                            Контакты
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="mobile-menu__swiper-slide swiper-slide" data-level="1">
+                                <ul class="mobile-menu__list">
+                                    <li class="mobile-menu__item">
+                                        <a href="#" class="mobile-menu__link mobile-menu__link--btn mobile-menu__link--back js-mobile-swiper-back">
+                                            О компании
+                                        </a>
+                                    </li>
+                                    <li class="mobile-menu__item">
+                                        <a href="#" class="mobile-menu__link mobile-menu__link--small">
+                                            Контакты
+                                        </a>
+                                    </li>
+                                    <li class="mobile-menu__item">
+                                        <a href="#" class="mobile-menu__link mobile-menu__link--small">
+                                            Акции
+                                        </a>
+                                    </li>
+                                    <li class="mobile-menu__item">
+                                        <a href="#" class="mobile-menu__link mobile-menu__link--small">
+                                            Отзывы
+                                        </a>
+                                    </li>
+                                    <li class="mobile-menu__item">
+                                        <a href="#" class="mobile-menu__link mobile-menu__link--small">
+                                            Оплата и доставка
+                                        </a>
+                                    </li>
+                                    <li class="mobile-menu__item">
+                                        <a href="#" class="mobile-menu__link mobile-menu__link--small">
+                                            Вакансии
+                                        </a>
+                                    </li>
+                                    <li class="mobile-menu__item">
+                                        <a href="#" class="mobile-menu__link mobile-menu__link--small">
+                                            Гарантии
+                                        </a>
+                                    </li>
+                                    <li class="mobile-menu__item">
+                                        <a href="#" class="mobile-menu__link mobile-menu__link--small">
+                                            Блог
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="mobile-menu__swiper-slide swiper-slide" data-level="2">
+                                <ul class="mobile-menu__list">
+                                    <li class="mobile-menu__item">
+                                        <a href="#" class="mobile-menu__link mobile-menu__link--btn mobile-menu__link--back js-mobile-swiper-back">
+                                            Каталог ангаров
+                                        </a>
+                                    </li>
+                                    <li class="mobile-menu__item">
+                                        <a href="#" class="mobile-menu__link mobile-menu__link--btn js-mobile-swiper-next"  data-route="3">
+                                            Ангары по назначению
+                                        </a>
+                                    </li>
+                                    <li class="mobile-menu__item">
+                                        <a href="#" class="mobile-menu__link mobile-menu__link--btn js-mobile-swiper-next"  data-route="4">
+                                            Ангары по типу
+                                        </a>
+                                    </li>
+                                    <li class="mobile-menu__item">
+                                        <a href="#" class="mobile-menu__link mobile-menu__link--btn js-mobile-swiper-next"  data-route="5">
+                                            Ангары по форме
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="mobile-menu__swiper-slide swiper-slide" data-level="3" id="level-4">
+                                <ul class="mobile-menu__list">
+                                    <li class="mobile-menu__item">
+                                        <a href="#" class="mobile-menu__link mobile-menu__link--btn mobile-menu__link--back js-mobile-swiper-back">
+                                            Ангары по назначению
+                                        </a>
+                                    </li>
+                                    <li class="mobile-menu__item">
+                                        <a href="#" class="mobile-menu__link mobile-menu__link--small">
+                                            Сельскохозяйственные ангары и постройки 
+                                        </a>
+                                    </li>
+                                    <li class="mobile-menu__item">
+                                        <a href="#" class="mobile-menu__link mobile-menu__link--small">
+                                            Складские ангары
+                                        </a>
+                                    </li>
+                                    <li class="mobile-menu__item">
+                                        <a href="#" class="mobile-menu__link mobile-menu__link--small">
+                                            Промышленные ангары
+                                        </a>
+                                    </li>
+                                    <li class="mobile-menu__item">
+                                        <a href="#" class="mobile-menu__link mobile-menu__link--small">
+                                            Спортивные ангары и сооружения
+                                        </a>
+                                    </li>
+                                    <li class="mobile-menu__item">
+                                        <a href="#" class="mobile-menu__link mobile-menu__link--small">
+                                            Спортивные ангары и сооружения
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="mobile-menu__swiper-slide swiper-slide" data-level="4" id="level-5">
+                                <ul class="mobile-menu__list">
+                                    <li class="mobile-menu__item">
+                                        <a href="#" class="mobile-menu__link mobile-menu__link--btn mobile-menu__link--back js-mobile-swiper-back">
+                                            Ангары по типу
+                                        </a>
+                                    </li>
+                                    <li class="mobile-menu__item">
+                                        <a href="#" class="mobile-menu__link mobile-menu__link--small">
+                                            Ангары тип 1
+                                        </a>
+                                    </li>
+                                    <li class="mobile-menu__item">
+                                        <a href="#" class="mobile-menu__link mobile-menu__link--small">
+                                             Ангары тип 2
+                                        </a>
+                                    </li>
+                                    <li class="mobile-menu__item">
+                                        <a href="#" class="mobile-menu__link mobile-menu__link--small">
+                                             Ангары тип 3
+                                        </a>
+                                    </li>
+                                    <li class="mobile-menu__item">
+                                        <a href="#" class="mobile-menu__link mobile-menu__link--small">
+                                             Ангары тип 4
+                                        </a>
+                                    </li>
+                                    <li class="mobile-menu__item">
+                                        <a href="#" class="mobile-menu__link mobile-menu__link--small">
+                                             Ангары тип 5
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="mobile-menu__swiper-slide swiper-slide" data-level="5" id="level-6">
+                                <ul class="mobile-menu__list">
+                                    <li class="mobile-menu__item">
+                                        <a href="#" class="mobile-menu__link mobile-menu__link--btn mobile-menu__link--back js-mobile-swiper-back">
+                                            Ангары по форме
+                                        </a>
+                                    </li>
+                                    <li class="mobile-menu__item">
+                                        <a href="#" class="mobile-menu__link mobile-menu__link--small">
+                                            Ангары форма 1
+                                        </a>
+                                    </li>
+                                    <li class="mobile-menu__item">
+                                        <a href="#" class="mobile-menu__link mobile-menu__link--small">
+                                             Ангары форма 2
+                                        </a>
+                                    </li>
+                                    <li class="mobile-menu__item">
+                                        <a href="#" class="mobile-menu__link mobile-menu__link--small">
+                                             Ангары форма 3
+                                        </a>
+                                    </li>
+                                    <li class="mobile-menu__item">
+                                        <a href="#" class="mobile-menu__link mobile-menu__link--small">
+                                             Ангары форма 4
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mobile-menu__footer">
+                    <div class="page-footer__right">
+                        <a href="#" class="page-footer__phone-link phone-link">
+                            <span>8 918 044 89 22</span>
+                            <i>Заказать звонок</i>
+                        </a>
+
+                        <div class="page-footer__location-info">
+                            <div class="page-footer__location location">
+                                <svg aria-hidden="true" class="icon">
+                                    <use xlink:href="#loc"></use>
+                                </svg>
+                                <span class="location__text">
+                                    Город:
+                                </span>
+                                <button class="location__button location__button--dark" type="button">
+                                    Казань
+                                </button>
+                            </div>
+
+                            <span class="page-footer__location-address">
+                                ул. Мухамедьярова 31А, 3&nbsp;этаж, оф. 301-305
+                            </span>
+                        </div>
+
+                        <div class="page-footer__about info">
+                            <a href="mailto:kirstroy@gmail.com" class="info__mail">
+                                kirstroy@gmail.com
+                            </a>
+                            <span class="info__work">
+                                Пн-Пт: 09:00-18:00
+                            </span>
+                        </div>
+
+                        <a href="#" class="page-footer__link main-button main-button--orange">
+                            <span>Калькулятор ангаров</span>
+                            <svg aria-hidden="true" class="icon">
+                                <use xlink:href="#plus"></use>
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>

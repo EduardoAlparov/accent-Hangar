@@ -17,12 +17,15 @@
 @import './blocks/drop-menu';
 @import './blocks/type-list';
 @import './blocks/simple-list';
+@import './blocks/mobile-menu';
 // footer:
 @import './blocks/tooltip';
 @import './blocks/developer';
 // modals:
 @import './blocks/location-search';
-// sections:
+// breadcrumbs:
+@import './blocks/breadcrumbs';
+// sections index:
 @import './blocks/hero';
 
 @import './blocks/introduction';
@@ -51,6 +54,9 @@
 @import './blocks/faq';
 
 @import './blocks/seo-section';
+
+// about
+@import './blocks/image-intro';
 
 // ui:
 @import './ui/open-menu-btn';

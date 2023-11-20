@@ -24,6 +24,10 @@
     width: 100%;
 }
 
+.mobile-menu-is-open {
+    overflow: hidden;
+}
+
 .hide-on-mobile {
     @include breakpoint(mobile) {
         display: none !important;

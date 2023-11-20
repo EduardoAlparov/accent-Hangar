@@ -152,6 +152,10 @@
     height: 0;
     width: 100%;
     margin-top: -1px;
+
+    @include  breakpoint(laptop) {
+      display: none !important;
+    }
   }
 
   &__drop-menu {
@@ -167,6 +171,38 @@
 
     width: 100%;
     background-color: var(--back-2);
+  }
+
+  &__mobile-menu-wrapper {
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    overflow: hidden;
+    background-color: var(--white, #fff);
+  }
+
+  &.page-header--secondary {
+    color: var(--black);
+    background-color: var(--white);
+  
+    .page-header__cell {
+      &::after {
+        background-color: rgba(var(--border-light), 1);
+      }
+    }
+  
+    .page-header__top,
+    .page-header__main {
+      border-color: rgba(var(--border-light), 1);
+    }
+  
+    .page-header__link {
+      .main-button {
+        .icon {
+          fill: var(--orange);
+        }
+      }
+    }
   }
 }
 
@@ -198,5 +234,67 @@
         fill: var(--orange);
       }
     }
+  }
+}
+
+.page-header-is-fixed {
+  .page-header {
+    position: fixed;
+    color: var(--black);
+    background-color: var(--white, #fff);
+    animation-name: headerTransform;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1
+  }
+
+  .page-header__cell {
+    &::after {
+      background-color: rgba(var(--border-light), 1);
+    }
+  }
+
+  .page-header__top,
+  .page-header__main {
+    border-color: rgba(var(--border-light), 1);
+  }
+
+  .page-header__link {
+    .main-button {
+      .icon {
+        fill: var(--orange);
+      }
+    }
+  }
+}
+
+.mobile-menu-is-open {
+  .page-header {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    height: 100vh;
+    color: var(--black);
+    background-color: var(--white, #fff);
+  }
+
+  .page-header__main {
+    border-color: rgba(var(--border-light), 1);
+  }
+
+  .page-header__mobile-menu-wrapper {
+    display: flex;
+    flex-grow: 1;
+  }
+}
+
+@keyframes headerTransform {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
   }
 }

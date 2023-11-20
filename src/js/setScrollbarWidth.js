@@ -5,8 +5,7 @@ export default function setScrollbarWidth() {
         document.documentElement.style.setProperty('--sb-width', scrollbarWidth + "px");
     }
 
-    // setWidth();
+    setWidth();
 
-    // window.addEventListener('resize', setWidth);
-    
+    window.addEventListener('resize', setWidth);
 }

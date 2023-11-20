@@ -36,3 +36,12 @@
     }
   }
 }
+
+.page-header--secondary,
+.page-header-is-fixed {
+  .open-menu-btn {
+    .icon-open {
+      fill: var(--orange, #ff3f00);
+    }
+  }
+}

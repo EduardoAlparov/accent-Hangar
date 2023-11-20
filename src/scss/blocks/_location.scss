@@ -34,16 +34,22 @@
       width: 100%;
       height: 0.1rem;
 
-      background-color: var(--white);
+      background-color: var(--white, #fff);
       transition: var(--transition);
       content: "";
     }
 
     &:hover {
       &::before {
-        background-color: var(--orange);
+        background-color: var(--orange, #ff3f00);
       }
     }
+
+    &--dark {
+      &::before {
+        background-color: var(--black, #212529);
+      }
+    } 
   }
 }
 

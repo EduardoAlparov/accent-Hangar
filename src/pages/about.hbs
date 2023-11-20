@@ -1,0 +1,44 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<section class="image-intro {{#if pageHeaderClass}} image-intro--big {{/if}}">
+
+  <div class="site-container">
+    {{>breadcrumbs}}
+
+    <div class="image-intro__intro-row hero__intro-row">
+      <div class="hero__left">
+        <div class="image-intro__title text-h2">
+          О компании
+        </div>
+      </div>
+      <div class="hero__right">
+        <div class="image-intro__text-wrapper">
+          <div class="introduction__subtitle">
+            Имеем богатый опыт в строительстве ангаров и можем 
+            гарантировать высокое качество нашей работы
+          </div>
+          <div class="introduction__text image-intro__text">
+            Решив работать с нами, вы получите надежного и компетентного 
+            партнера, который обеспечит качественное строительство вашего 
+            ангара и удовлетворит все ваши потребности. Мы гордимся нашей 
+            работой и стремимся к высокому уровню удовлетворенности наших 
+            клиентов.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="image-intro__picture-wrapper">
+    <div class="image-intro__picture">
+      <picture>
+        <source type="image/webp" srcset="./img/about/intro.jpg" alt="image intro image">
+        <img src="./img/about/intro.jpg" alt="hero image">
+      </picture>
+    </div>
+  </div>
+</section>
+
+{{/content}}
+{{/extend}}

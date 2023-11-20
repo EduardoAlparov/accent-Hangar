@@ -1,0 +1,126 @@
+.image-intro {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 3.62 / 1;
+  padding-top: var(--header-height, 12rem);
+  color: var(--white, #fff);
+  background-color: lightgray;
+
+  &__picture-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+  }
+
+  &__picture {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 1;
+
+      display: block;
+      width: 100%;
+      min-height: 100%;
+
+      object-fit: cover;
+      object-position: bottom center;
+      transform: translate(-50%, -50%);
+    }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+      background: rgba(0, 0, 0, 0.55);
+      content: "";
+    }
+  }
+
+  .site-container {
+    position: relative;
+    z-index: 60;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    height: 100%;
+  }
+  
+  &__title {
+    padding: 4.5rem 0;
+
+    @include  breakpoint(tablet) {
+      padding: 3rem 0;
+    }
+  }
+
+  &__text {
+    color: inherit;
+  }
+  
+  &--big {
+    width: 100%;
+    height: 100vh;
+    aspect-ratio: unset;
+
+    .image-intro__text-wrapper {
+      padding: 4.5rem 0 4.5rem 5rem;
+
+      @include  breakpoint(tablet) {
+        position: relative;
+        z-index: 5;
+        padding: 2rem 0;
+      }
+    }
+
+    .image-intro__intro-row {  
+      &::before {
+        position: absolute;
+        left: 50%;
+        z-index: 1;
+        height: 100%;
+        width: 100vw;
+        background: var(--orange, #FF3F00);
+        content: "";
+
+        @include  breakpoint(tablet) {
+          content: none;
+        }
+      }
+    }
+
+    .hero__right,
+    .hero__left {
+      position: relative;
+      z-index: 5;
+    }
+
+    .hero__right {
+      @include  breakpoint(tablet) {
+        &::before {
+          position: absolute;
+          top: 0;
+          left: 50%;
+          z-index: 1;
+          height: 100%;
+          width: 100vw;
+          background: var(--orange, #FF3F00);
+          transform: translateX(-50%);
+          content: "";
+        }
+      }
+    }
+  }
+}
