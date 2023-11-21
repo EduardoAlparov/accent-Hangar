@@ -1,358 +1,270 @@
 {{#extend "layout"}}
 {{#content "main"}}
 
-<section class="hero">
-  <div class="hero__video visually-hidden">
-    <div class="hero__content-wrapper">
+<section class="image-intro {{#if imageIntroClass}} image-intro--big {{/if}}">
+
+  <div class="site-container">
+    {{>breadcrumbs}}
+
+    <div class="image-intro__intro-row hero__intro-row">
+      <div class="hero__left image-intro__left image-intro__left--full-width">
+        <div class="image-intro__title text-h2">
+          Строительство сельскохозяйственных<br> ангаров «Под ключ»
+        </div>
+      </div>
+      <div class="hero__right"></div>
     </div>
   </div>
-  <div class="hero__image">
-    <div class="hero__content-wrapper">
+
+  <div class="image-intro__picture-wrapper">
+    <div class="image-intro__picture">
       <picture>
-        <source type="image/webp" srcset="./img/hero/back.jpg" alt="hero image">
-        <img src="./img/hero/back.jpg" alt="hero image">
+        <source type="image/webp" srcset="./img/catalog/intro.jpg" alt="image intro image">
+        <img src="./img/catalog/intro.jpg" alt="hero image">
       </picture>
     </div>
   </div>
-
-  <h1 class="hero__title visually-hidden">
-    seo title
-  </h1>
-
-  <div class="site-container">
-    <div class="hero__intro-wrapper">
-      <div class="hero__intro-top hero__intro-row">
-        <div class="hero__left hero__left--no-margin">
-          <span class="hero__text">
-            Наша компания уже более восьми лет реализует проекты по возведению ангаров разных видов и любой сложностив
-            Казани и по всей России. За это время мы построили ангаров и складских сооружений общей площадью более
-            шестидесяти тысяч квадратных метров. 
-          </span>
-        </div>
-        <h2 class="hero__right hero__title text-h2">
-          Строительство ангаров в Казани в срок и с гарантией
-        </h2>
-      </div>
-      <div class="hero__intro-bottom hero__intro-row">
-        <div class="hero__left hero__left--no-margin"></div>
-        <div class="hero__right hero__link-wrapper">
-          <a href="#" class="main-button main-button--orange">
-            <span>Оставить заявку</span>
-            <svg aria-hidden="true" class="icon">
-              <use xlink:href="#plus"></use>
-            </svg>
-          </a>
-
-          <span>
-            Рассчитаем стоимость ангара под ваш объект
-          </span>
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
 
-<section class="introduction section-padding">
-  <div class="site-container">
-    <div class="introduction__content-wrapper">
-      <div class="introduction__intro-row hero__intro-row">
-        <div class="hero__left">
-          <div class="introduction__title text-h3">
-            Производим и строим ангары «Под ключ» с 2015 года
+<section class="multi-section section-padding section-padding--smaller">
+  <article class="multi-section__article">
+    <div class="request-section">
+      <div class="site-container">
+        <div class="request-section__body">
+          <div class="request-section__title">
+            <h6>
+              Оставьте заявку и получите<br> консультацию инженера
+            </h6>
           </div>
-        </div>
-        <div class="hero__right">
-          <div class="introduction__subtitle">
-            Наша компания уже более восьми лет реализует проекты по
-            возведению ангаров разных видов и любой сложности в
-            Казани и по всей России. За это время мы построили
-            ангаров и складских сооружений общей площадью более
-            шестидесяти тысяч квадратных метров. 
-          </div>
-          <div class="introduction__text">
-            Мы предоставляем максимальный спектр услуг  по изготовлению,
-            проектированию, доставке и сборке сооружений в рамках “одного
-            окна”, а также всегда рады поделиться с нашими Заказчиками
-            экспертными знаниями в области строительства ангаров и других
-            сооружений. 
-          </div>
-        </div>
-      </div>
-      <div class="introduction__intro-row introduction__intro-row--border hero__intro-row">
-        <div class="hero__left">
-          <div class="introduction__text">
-            О компании в цифрах
-          </div>
-        </div>
-        <div class="hero__right">
-          <ul class="introduction__list">
-            <li class="introduction__item stat">
-              <div class="stat__top">
-                <span class="stat__number text-h1">21</span>
-                <span class="stat__dim">день</span>
+
+          <form action="#" class="request-section__form">
+            <div class="request-section__inputs">
+              <div class="request-section__input-wrapper">
+                <div class="input-box input-box--ligth">
+                  <input type="text" name="request-user-name" id="request-user-name" class="input-box__input"
+                    placeholder="Ваше имя" required>
+                </div>
               </div>
-              <span class="stat__text">
-                Средний срок строительства
-              </span>
-            </li>
-            <li class="introduction__item stat">
-              <div class="stat__top">
-                <span class="stat__number text-h1">60 000</span>
-                <span class="stat__dim">кв.м.</span>
+
+              <div class="request-section__input-wrapper">
+                <div class="input-box input-box--ligth">
+                  <input type="text" name="request-user-phone" id="request-user-phone" class="input-box__input"
+                    placeholder="+7 (___)-___-__-__" required>
+                </div>
               </div>
-              <span class="stat__text">
-                Общая площадь выполненной застройки
-              </span>
-            </li>
-            <li class="introduction__item stat">
-              <div class="stat__top">
-                <span class="stat__number text-h1">8</span>
-                <span class="stat__dim">лет</span>
+
+              <button type="submit" class="main-button main-button--orange request-section__submit">
+                <span>Оставить заявку</span>
+                <svg aria-hidden="true" class="icon">
+                  <use xlink:href="#plus"></use>
+                </svg>
+              </button>
+            </div>
+
+            <div class="request-section__agreement">
+              <div class="form-slide__agreement">
+                <span>Нажимая кнопку «Оставить заявку», вы соглашаетесь с&nbsp;</span>
+                <a href="#">
+                  политикой конфиденциальности
+                </a>
               </div>
-              <span class="stat__text">
-                Опыта работы в сфере
-              </span>
-            </li>
-            <li class="introduction__item stat">
-              <div class="stat__top">
-                <span class="stat__number text-h1">32</span>
-                <span class="stat__dim">cотрудника</span>
-              </div>
-              <span class="stat__text">
-                Различных профессий в нашем штате
-              </span>
-            </li>
-          </ul>
+            </div>
+          </form>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </article>
 
-<section class="catalog-section section-padding">
-  <div class="site-container">
-    <div class="catalog-section__header">
-      <span>
-        Каталог ангаров
-      </span>
+  <article class="multi-section__article">
+    <div class="double-section">
+      <div class="site-container">
+        <div class="double-section__body">
+          <div class="double-section__text-block">
+            <div class="seo-section__body">
+              <div class="seo-section__header stages__header">
+                <div class="stages__title text-h3">Особенности постройки</div>
+              </div>
+
+              <div class="seo-section__content">
+                <div class="seo-section__text double-section__text">
+                  <p>
+                    Укрепление и развитие структуры представляет собой интересный эксперимент проверки форм
+                    развития. Разнообразный и богатый опыт новая модель организационной деятельности требуют
+                    от нас анализа систем массового участия. Идейные соображения высшего порядка, а также
+                    постоянный количественный рост и сфера нашей активности в значительной степени обуславливает
+                    создание модели развития. Укрепление и развитие структуры представляет собой интересный
+                    эксперимент проверки форм развития.
+                  </p>
+
+                  <p>
+                    Мы предоставляем максимальный спектр услуг по изготовлению, проектированию, доставке и
+                    сборке сооружений в рамках “одного окна”, а также всегда рады поделитьсяс нашими Заказчиками
+                    экспертными знаниями в области строительства ангаров и других сооружений. Укрепление и
+                    развитие структуры представляет собой интересный.
+                  </p>
+
+                  <p>
+                    Разнообразный и богатый опыт новая модель организационной деятельности требуют от нас анализа
+                    систем массового участия. Идейные соображения высшего порядка, а также постоянный количественный
+                    рост и сфера нашей активности в значительной степени.
+                  </p>
+
+                  <p>
+                    Укрепление и развитие структуры представляет собой интересный эксперимент
+                    проверки форм развития. Разнообразный и богатый опыт новая модель организационной
+                    деятельности требуют от нас анализа систем массового участия. Идейные
+                    соображения высшего порядка, а также постоянный количественный рост и сфера
+                    нашей активности в значительной степени обуславливает создание модели развития.
+                    Укрепление и развитие структуры представляет собой интересный эксперимент
+                    проверки форм развития. Укрепление и развитие структуры представляет собой...
+                  </p>
+                </div>
+
+                <button type="button" class="seo-section__expand expand-button" data-text="Читать полностью"></button>
+              </div>
+            </div>
+          </div>
+          <div class="double-section__image-block">
+            <div class="double-section__image">
+              <picture>
+                <source type="image/webp" srcset="./img/double-section/image.png" alt="image intro image">
+                <img src="./img/double-section/image.png" alt="hero image">
+              </picture>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </article>
 
-    <div class="catalog-section__content">
-      <ul class="catalog-section__list">
-        <li class="catalog-section__item catalog-item">
-          <div class="catalog-item__body">
-            <div class="catalog-item__header">
-              <div class="catalog-item__image">
-                <img src="./img/catalog-items/pic-1.png" alt="картинка каталога ангаров">
-              </div>
-              <span class="catalog-item__count">01</span>
-            </div>
-
-            <div class="catalog-item__list-wrapper">
-              <span class="catalog-item__title">
-                По назначению
-              </span>
-
-              <ul class="catalog-item__list">
-                <li class="catalog-item__item">
-                  <a href="#" class="catalog-item__link">
-                    <div class="catalog-item__icon">
-                      <img src="./img/catalog-items/icons/icon-1.png" alt="картинка каталога ангаров">
-                    </div>
-                    <span class="catalog-item__text">
-                      Сельскохозяйственные ангары и постройки 
-                    </span>
-                  </a>
-                </li>
-                <li class="catalog-item__item">
-                  <a href="#" class="catalog-item__link">
-                    <div class="catalog-item__icon">
-                      <img src="./img/catalog-items/icons/icon-2.png" alt="картинка каталога ангаров">
-                    </div>
-                    <span class="catalog-item__text">
-                      Складские ангары
-                    </span>
-                  </a>
-                </li>
-                <li class="catalog-item__item">
-                  <a href="#" class="catalog-item__link">
-                    <div class="catalog-item__icon">
-                      <img src="./img/catalog-items/icons/icon-3.png" alt="картинка каталога ангаров">
-                    </div>
-                    <span class="catalog-item__text">
-                      Промышленные ангары
-                    </span>
-                  </a>
-                </li>
-                <li class="catalog-item__item">
-                  <a href="#" class="catalog-item__link">
-                    <div class="catalog-item__icon">
-                      <img src="./img/catalog-items/icons/icon-4.png" alt="картинка каталога ангаров">
-                    </div>
-                    <span class="catalog-item__text">
-                      Ангары для техники
-                    </span>
-                  </a>
-                </li>
-                <li class="catalog-item__item">
-                  <a href="#" class="catalog-item__link">
-                    <div class="catalog-item__icon">
-                      <img src="./img/catalog-items/icons/icon-5.png" alt="картинка каталога ангаров">
-                    </div>
-                    <span class="catalog-item__text">
-                      Спортивные ангары и сооружения
-                    </span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </li>
-        <li class="catalog-section__item catalog-item">
-          <div class="catalog-item__body">
-            <div class="catalog-item__header">
-              <div class="catalog-item__image">
-                <img src="./img/catalog-items/pic-2.png" alt="картинка каталога ангаров">
-              </div>
-              <span class="catalog-item__count">02</span>
-            </div>
-
-            <div class="catalog-item__list-wrapper">
-              <span class="catalog-item__title">
-                По типу
-              </span>
-
-              <ul class="catalog-item__list">
-                <li class="catalog-item__item">
-                  <a href="#" class="catalog-item__link">
-                    <div class="catalog-item__icon">
-                      <img src="./img/catalog-items/icons/icon-6.png" alt="картинка каталога ангаров">
-                    </div>
-                    <span class="catalog-item__text">
-                      Арочные ангары
-                    </span>
-                  </a>
-                </li>
-                <li class="catalog-item__item">
-                  <a href="#" class="catalog-item__link">
-                    <div class="catalog-item__icon">
-                      <img src="./img/catalog-items/icons/icon-7.png" alt="картинка каталога ангаров">
-                    </div>
-                    <span class="catalog-item__text">
-                      Прямостенные ангары
-                    </span>
-                  </a>
-                </li>
-                <li class="catalog-item__item">
-                  <a href="#" class="catalog-item__link">
-                    <div class="catalog-item__icon">
-                      <img src="./img/catalog-items/icons/icon-8.png" alt="картинка каталога ангаров">
-                    </div>
-                    <span class="catalog-item__text">
-                      Двухскатные ангары
-                    </span>
-                  </a>
-                </li>
-                <li class="catalog-item__item">
-                  <a href="#" class="catalog-item__link">
-                    <div class="catalog-item__icon">
-                      <img src="./img/catalog-items/icons/icon-9.png" alt="картинка каталога ангаров">
-                    </div>
-                    <span class="catalog-item__text">
-                      Бескаркасные ангары
-                    </span>
-                  </a>
-                </li>
-                <li class="catalog-item__item">
-                  <a href="#" class="catalog-item__link">
-                    <div class="catalog-item__icon">
-                      <img src="./img/catalog-items/icons/icon-10.png" alt="картинка каталога ангаров">
-                    </div>
-                    <span class="catalog-item__text">
-                      Быстровозводимые ангары
-                    </span>
-                  </a>
-                </li>
-                <li class="catalog-item__item">
-                  <a href="#" class="catalog-item__link">
-                    <div class="catalog-item__icon">
-                      <img src="./img/catalog-items/icons/icon-11.png" alt="картинка каталога ангаров">
-                    </div>
-                    <span class="catalog-item__text">
-                      Ангары из металлокаркаса
-                    </span>
-                  </a>
-                </li>
-                <li class="catalog-item__item">
-                  <a href="#" class="catalog-item__link">
-                    <div class="catalog-item__icon">
-                      <img src="./img/catalog-items/icons/icon-12.png" alt="картинка каталога ангаров">
-                    </div>
-                    <span class="catalog-item__text">
-                      Сборно-разборные ангары
-                    </span>
-                  </a>
-                </li>
-                <li class="catalog-item__item">
-                  <a href="#" class="catalog-item__link">
-                    <div class="catalog-item__icon">
-                      <img src="./img/catalog-items/icons/icon-13.png" alt="картинка каталога ангаров">
-                    </div>
-                    <span class="catalog-item__text">
-                      Ангары из сендвич панелей
-                    </span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </li>
-        <li class="catalog-section__item catalog-item">
-          <div class="catalog-item__body">
-            <div class="catalog-item__header">
-              <div class="catalog-item__image">
-                <img src="./img/catalog-items/pic-3.png" alt="картинка каталога ангаров">
-              </div>
-              <span class="catalog-item__count">03</span>
-            </div>
-
-            <div class="catalog-item__list-wrapper">
-              <span class="catalog-item__title">
-                По форме
-              </span>
-
-              <ul class="catalog-item__list">
-                <li class="catalog-item__item">
-                  <a href="#" class="catalog-item__link">
-                    <div class="catalog-item__icon">
-                      <img src="./img/catalog-items/icons/icon-14.png" alt="картинка каталога ангаров">
-                    </div>
-                    <span class="catalog-item__text">
-                      Холодные ангары
-                    </span>
-                  </a>
-                </li>
-                <li class="catalog-item__item">
-                  <a href="#" class="catalog-item__link">
-                    <div class="catalog-item__icon">
-                      <img src="./img/catalog-items/icons/icon-15.png" alt="картинка каталога ангаров">
-                    </div>
-                    <span class="catalog-item__text">
-                      Теплые ангары
-                    </span>
-                  </a>
-                </li>
-
-              </ul>
-            </div>
-          </div>
-        </li>
-      </ul>
+  <article class="multi-section__article">
+    <div class="catalogs">
+      <div class="site-container">
+        <ul class="catalogs__list">
+          <li class="catalogs__item">
+            <span class="catalogs__name text-h3">
+              Какие виды сельскохозяйственных ангары мы строим
+            </span>
+            <ul class="catalog">
+              <li class="catalog__item">
+                <a href="#" class="catalog__link catalog-link">
+                  <span class="catalog-link__icon"></span>
+                  <div class="catalog-link__img">
+                    <svg aria-hidden="true" class="icon">
+                      <use xlink:href="#cat-type-granary"></use>
+                    </svg>
+                  </div>
+                  <span class="catalog-link__text">
+                    Зернохранилище (зерносклад)
+                  </span>
+                  <span class="catalog-link__price">
+                    от 200 000 ₽
+                  </span>
+                </a>
+              </li>
+              <li class="catalog__item">
+                <a href="#" class="catalog__link catalog-link">
+                  <span class="catalog-link__icon"></span>
+                  <div class="catalog-link__img">
+                    <svg aria-hidden="true" class="icon">
+                      <use xlink:href="#cat-type-haystorage"></use>
+                    </svg>
+                  </div>
+                  <span class="catalog-link__text">
+                    Сенохранилища
+                  </span>
+                  <span class="catalog-link__price">
+                    от 180 000 ₽
+                  </span>
+                </a>
+              </li>
+              <li class="catalog__item">
+                <a href="#" class="catalog__link catalog-link">
+                  <span class="catalog-link__icon"></span>
+                  <div class="catalog-link__img">
+                    <svg aria-hidden="true" class="icon">
+                      <use xlink:href="#cat-type-potatostorage"></use>
+                    </svg>
+                  </div>
+                  <span class="catalog-link__text">
+                    Картофелехранилища
+                  </span>
+                  <span class="catalog-link__price">
+                    от 140 000 ₽
+                  </span>
+                </a>
+              </li>
+              <li class="catalog__item">
+                <a href="#" class="catalog__link catalog-link">
+                  <span class="catalog-link__icon"></span>
+                  <div class="catalog-link__img">
+                    <svg aria-hidden="true" class="icon">
+                      <use xlink:href="#cat-type-fruitstorage"></use>
+                    </svg>
+                  </div>
+                  <span class="catalog-link__text">
+                    Фруктохранилища
+                  </span>
+                  <span class="catalog-link__price">
+                    от 130 000 ₽
+                  </span>
+                </a>
+              </li>
+              <li class="catalog__item">
+                <a href="#" class="catalog__link catalog-link">
+                  <span class="catalog-link__icon"></span>
+                  <div class="catalog-link__img">
+                    <svg aria-hidden="true" class="icon">
+                      <use xlink:href="#cat-type-poultry"></use>
+                    </svg>
+                  </div>
+                  <span class="catalog-link__text">
+                    Птицефермы
+                  </span>
+                  <span class="catalog-link__price">
+                    от 180 000 ₽
+                  </span>
+                </a>
+              </li>
+              <li class="catalog__item">
+                <a href="#" class="catalog__link catalog-link">
+                  <span class="catalog-link__icon"></span>
+                  <div class="catalog-link__img">
+                    <svg aria-hidden="true" class="icon">
+                      <use xlink:href="#cat-type-pigpens"></use>
+                    </svg>
+                  </div>
+                  <span class="catalog-link__text">
+                    Свинарники
+                  </span>
+                  <span class="catalog-link__price">
+                    от 140 000 ₽
+                  </span>
+                </a>
+              </li>
+              <li class="catalog__item">
+                <a href="#" class="catalog__link catalog-link">
+                  <span class="catalog-link__icon"></span>
+                  <div class="catalog-link__img">
+                    <svg aria-hidden="true" class="icon">
+                      <use xlink:href="#cat-type-cowsheds"></use>
+                    </svg>
+                  </div>
+                  <span class="catalog-link__text">
+                    Фермы КРС (Коровники)
+                  </span>
+                  <span class="catalog-link__price">
+                    от 130 000 ₽
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</section>
+  </article>
 
-<section class="multi-section section-padding">
   <article class="multi-section__article">
     <div class="calculation">
       <div class="site-container">
@@ -717,178 +629,6 @@
   </article>
 
   <article class="multi-section__article">
-    <div class="advantages">
-      <div class="site-container">
-        <div class="advantages__body">
-          <div class="advantages__top">
-            <div class="advantages__intro-row hero__intro-row">
-              <div class="hero__left">
-                <div class="introduction__title advantages__title text-h3">
-                  Комплекс услуг - наше преимущество при строительстве ангаров
-                </div>
-                <div class="advantages__text introduction__text">
-                  Реализуем  полный комплекс услуг в области строительства ангаров в рамках «Одного окна»
-                </div>
-              </div>
-              <div class="hero__right">
-                <ul class="advantages__list">
-                  <li class="advantages__item">
-                    <span>Построим ангар<br> необходимого типа</span>
-                  </li>
-                  <li class="advantages__item">
-                    <span>Подготовим проектную<br> документацию</span>
-                  </li>
-                  <li class="advantages__item">
-                    <span>Изготовим<br> промышленные полы</span>
-                  </li>
-                  <li class="advantages__item">
-                    <span>Выполним теплоизоляцию<br> ангара</span>
-                  </li>
-                  <li class="advantages__item">
-                    <span>Электромонтажные<br> работы</span>
-                  </li>
-                  <li class="advantages__item">
-                    <span>Выполним <i class="hide-on-mobile">необходимые</i><br> геодезические работы</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="advantages__bottom">
-            <div class="advantages__image">
-              <picture>
-                <source type="image/webp" srcset="./img/advantages/img.png" alt="advantages image">
-                <img src="./img/advantages/img.png" alt="advantages image">
-              </picture>
-              <span class="advantages__logo">
-                <svg aria-hidden="true" class="icon">
-                  <use xlink:href="#bigger-logo"></use>
-                </svg>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </article>
-
-  <article class="multi-section__article">
-    <div class="stages">
-      <div class="site-container">
-        <div class="stages__header">
-          <div class="stages__title text-h3">Этапы строительства ангара</div>
-          <span class="stages__subtitle">Несколько простых шагов с «Нуля» до сдачи готового объекта</span>
-        </div>
-        <div class="stages__list-wrapper">
-          <ul class="stages__list">
-            <li class="stages__item stage">
-              <div class="stage__body">
-                <div class="stage__content">
-                  <span class="stage__title">Составление технического задания</span>
-                  <span class="stage__text">
-                    После предварительной беседы с клиентом и осмотра места,
-                    выбранного под строительство. Сюда также входят геодезические
-                    работы, если в них есть необходимость
-                  </span>
-                </div>
-
-                <div class="stage__number text-h3">
-                  01
-                </div>
-              </div>
-            </li>
-            <li class="stages__item stage">
-              <div class="stage__body">
-                <div class="stage__content">
-                  <span class="stage__title">
-                    Разработка технической документации и составление сметы
-                  </span>
-                  <span class="stage__text">
-                    Каждый этап в обязательном порядке согласуется с заказчиком
-                  </span>
-                </div>
-
-                <div class="stage__number text-h3">
-                  02
-                </div>
-              </div>
-            </li>
-            <li class="stages__item stage">
-              <div class="stage__body">
-                <div class="stage__content">
-                  <span class="stage__title">
-                    Фундаментные работы
-                  </span>
-                  <span class="stage__text">
-                    Выполнение комплекса работ по возведению фундамента
-                    в зависимости от типа почвы
-                  </span>
-                </div>
-
-                <div class="stage__number text-h3">
-                  03
-                </div>
-              </div>
-            </li>
-            <li class="stages__item stage">
-              <div class="stage__body">
-                <div class="stage__content">
-                  <span class="stage__title">
-                    Сборка металлоконструкций
-                  </span>
-                  <span class="stage__text">
-                    Последующая обшивка в зависимости от типа ангара.
-                    На данном этапе также выполняется общая гидроизоляция
-                  </span>
-                </div>
-
-                <div class="stage__number text-h3">
-                  04
-                </div>
-              </div>
-            </li>
-            <li class="stages__item stage">
-              <div class="stage__body">
-                <div class="stage__content">
-                  <span class="stage__title">
-                    Электромонтаж 
-                  </span>
-                  <span class="stage__text">
-                    Монтаж кабелей, освещения и слаботочных систем
-                    (пожарная и  охранная сигнализации, видеонаблюдение)
-                  </span>
-                </div>
-
-                <div class="stage__number text-h3">
-                  05
-                </div>
-              </div>
-            </li>
-            <li class="stages__item stage">
-              <div class="stage__body">
-                <div class="stage__content">
-                  <span class="stage__title">
-                    Финальные отделочные работы
-                  </span>
-                  <span class="stage__text">
-                    Выполнение комплекса работ по возведению фундамента в
-                    зависимости от типа почвы
-                  </span>
-                </div>
-
-                <div class="stage__number text-h3">
-                  06
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </article>
-
-  <article class="multi-section__article">
     <div class="projects-slider carousel">
       <div class="site-container">
         <div class="projects-slider__body">
@@ -1171,6 +911,454 @@
                   <use xlink:href="#slider-arrow"></use>
                 </svg>
               </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <article class="multi-section__article">
+    <div class="peculiarities">
+      <div class="site-container">
+        <div class="peculiarities__header stages__header">
+          <div class="stages__title text-h3">Особенности строительства зернохранилища</div>
+        </div>
+
+        <div class="peculiarities__body">
+          <div class="peculiarities__block">
+            <h6>Особенности постройки:</h6>
+
+            <p>
+              Вся земля в России поделена на категории. У каждой есть свое целевое назначение и
+              специальный режим использования. Например, к землям особо охраняемых территорий
+              относятся заповедники. В них нельзя строить жилые дома, дороги и торговые центры,
+              потому что их цель — сохранить природу. Зато все это разрешено на землях
+              населенных пунктов — они нужны как раз для развития городов и сел, в которых
+              живут люди. В зависимости от целевого назначения есть семь категорий земель
+              (ст. 7 Земельного кодекса РФ):
+            </p>
+
+            <ul>
+              <li>
+                <span>
+                  лесного фонда;
+                </span>
+              </li>
+              <li>
+                <span>
+                  населенных пунктов;
+                </span>
+              </li>
+              <li>
+                <span>
+                  промышленности;
+                </span>
+              </li>
+              <li>
+                <span>
+                  особо охраняемых территорий и объектов;
+                </span>
+              </li>
+              <li>
+                <span>
+                  лесного фонда;
+                </span>
+              </li>
+              <li>
+                <span>
+                  запаса.
+                </span>
+              </li>
+            </ul>
+
+            <p>
+              Укрепление и развитие структуры представляет собой интересный эксперимент проверки
+              форм развития. Разнообразный и богатый опыт новая модель организационной деятельности
+              требуют от нас анализа систем массового участия. Идейные соображения высшего порядка,
+              а также постоянный количественный рост и сфера нашей активности в значительной степени
+              обуславливает создание модели развития. Укрепление и развитие структуры представляет
+              собой интересный эксперимент проверки форм развития. Разнообразный и богатый опыт новая
+              модель организационной деятельности требуют от нас анализа систем массового участия.
+              Идейные соображения высшего порядка, а также постоянный количественный рост и сфера
+              нашей активности в значительной степени.
+            </p>
+          </div>
+
+          <div class="peculiarities__block">
+            <h6>Преимущества постройки:</h6>
+            <p>
+              Укрепление и развитие структуры представляет собой интересный эксперимент проверки форм
+              развития. Разнообразный и богатый опыт новая модель организационной деятельности требуют
+              от нас анализа систем массового участия. Идейные соображения высшего порядка, а также
+              постоянный количественный рост и сфера нашей активности в значительной степени
+              обуславливает создание модели развития. Укрепление и развитие структуры представляет
+              собой интересный эксперимент проверки форм развития. Разнообразный и богатый опыт новая
+              модель организационной деятельности требуют от нас анализа систем массового участия.
+              Идейные соображения высшего порядка, а также постоянный количественный рост и сфера
+              нашей активности в значительной степени.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <article class="multi-section__article">
+    <div class="faq">
+      <div class="site-container">
+        <div class="faq__header stages__header stages__header--half">
+          <div class="stages__title text-h3">Часто задаваемые вопросы</div>
+          <span class="stages__subtitle">Строительство ангаров, достаточно сложный и трудоемкий процесс. Как правило, у
+            заказчиков перед началом сотрудничества есть не мало вопросов, отвечаем на некоторые из них.</span>
+        </div>
+
+        <ul class="faq__list">
+          <li class="faq__item">
+            <input class="visually-hidden" type="checkbox" name="faq-1" id="faq-1">
+            <label for="faq-1" class="faq__button">
+              Сколько времени требуется на монтаж металлоконструкций?
+            </label>
+            <div class="faq__dropdown">
+              <p>
+                Строительство ангаров, достаточно сложный и трудоемкий процесс. Как правило, у заказчиков перед началом
+                сотрудничества есть не мало вопросов, отвечаем на некоторые из них.
+              </p>
+            </div>
+          </li>
+          <li class="faq__item">
+            <input class="visually-hidden" type="checkbox" name="faq-2" id="faq-2">
+            <label for="faq-2" class="faq__button">
+              Какие требования имеются к площадке под строительство ангара?
+            </label>
+            <div class="faq__dropdown">
+              <p>
+                Строительство ангаров, достаточно сложный и трудоемкий процесс. Как правило, у заказчиков перед началом
+                сотрудничества есть не мало вопросов, отвечаем на некоторые из них.
+              </p>
+            </div>
+          </li>
+          <li class="faq__item">
+            <input class="visually-hidden" type="checkbox" name="faq-3" id="faq-3">
+            <label for="faq-3" class="faq__button">
+              Какие требования имеются к площадке под строительство ангара?
+            </label>
+            <div class="faq__dropdown">
+              <p>
+                Строительство ангаров, достаточно сложный и трудоемкий процесс. Как правило, у заказчиков перед началом
+                сотрудничества есть не мало вопросов, отвечаем на некоторые из них.
+              </p>
+            </div>
+          </li>
+          <li class="faq__item">
+            <input class="visually-hidden" type="checkbox" name="faq-4" id="faq-4">
+            <label for="faq-4" class="faq__button">
+              Сколько времени требуется на монтаж металлоконструкций?
+            </label>
+            <div class="faq__dropdown">
+              <p>
+                Строительство ангаров, достаточно сложный и трудоемкий процесс. Как правило, у заказчиков перед началом
+                сотрудничества есть не мало вопросов, отвечаем на некоторые из них.
+              </p>
+            </div>
+          </li>
+          <li class="faq__item">
+            <input class="visually-hidden" type="checkbox" name="faq-5" id="faq-5">
+            <label for="faq-5" class="faq__button">
+              Сколько времени требуется на монтаж металлоконструкций?
+            </label>
+            <div class="faq__dropdown">
+              <p>
+                Строительство ангаров, достаточно сложный и трудоемкий процесс. Как правило, у заказчиков перед началом
+                сотрудничества есть не мало вопросов, отвечаем на некоторые из них.
+              </p>
+            </div>
+          </li>
+          <li class="faq__item">
+            <input class="visually-hidden" type="checkbox" name="faq-6" id="faq-6">
+            <label for="faq-6" class="faq__button">
+              Какие требования имеются к площадке под строительство ангара?
+            </label>
+            <div class="faq__dropdown">
+              <p>
+                Строительство ангаров, достаточно сложный и трудоемкий процесс. Как правило, у заказчиков перед началом
+                сотрудничества есть не мало вопросов, отвечаем на некоторые из них.
+              </p>
+            </div>
+          </li>
+          <li class="faq__item">
+            <input class="visually-hidden" type="checkbox" name="faq-7" id="faq-7">
+            <label for="faq-7" class="faq__button">
+              Какие требования имеются к площадке под строительство ангара?
+            </label>
+            <div class="faq__dropdown">
+              <p>
+                Строительство ангаров, достаточно сложный и трудоемкий процесс. Как правило, у заказчиков перед началом
+                сотрудничества есть не мало вопросов, отвечаем на некоторые из них.
+              </p>
+            </div>
+          </li>
+          <li class="faq__item">
+            <input class="visually-hidden" type="checkbox" name="faq-8" id="faq-8">
+            <label for="faq-8" class="faq__button">
+              Сколько времени требуется на монтаж металлоконструкций?
+            </label>
+            <div class="faq__dropdown">
+              <p>
+                Строительство ангаров, достаточно сложный и трудоемкий процесс. Как правило, у заказчиков перед началом
+                сотрудничества есть не мало вопросов, отвечаем на некоторые из них.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </article>
+
+  <article class="multi-section__article">
+    <div class="stages">
+      <div class="site-container">
+        <div class="stages__header">
+          <div class="stages__title text-h3">Этапы строительства ангара</div>
+          <span class="stages__subtitle">Несколько простых шагов с «Нуля» до сдачи готового объекта</span>
+        </div>
+        <div class="stages__list-wrapper">
+          <ul class="stages__list">
+            <li class="stages__item stage">
+              <div class="stage__body">
+                <div class="stage__content">
+                  <span class="stage__title">Составление технического задания</span>
+                  <span class="stage__text">
+                    После предварительной беседы с клиентом и осмотра места,
+                    выбранного под строительство. Сюда также входят геодезические
+                    работы, если в них есть необходимость
+                  </span>
+                </div>
+
+                <div class="stage__number text-h3">
+                  01
+                </div>
+              </div>
+            </li>
+            <li class="stages__item stage">
+              <div class="stage__body">
+                <div class="stage__content">
+                  <span class="stage__title">
+                    Разработка технической документации и составление сметы
+                  </span>
+                  <span class="stage__text">
+                    Каждый этап в обязательном порядке согласуется с заказчиком
+                  </span>
+                </div>
+
+                <div class="stage__number text-h3">
+                  02
+                </div>
+              </div>
+            </li>
+            <li class="stages__item stage">
+              <div class="stage__body">
+                <div class="stage__content">
+                  <span class="stage__title">
+                    Фундаментные работы
+                  </span>
+                  <span class="stage__text">
+                    Выполнение комплекса работ по возведению фундамента
+                    в зависимости от типа почвы
+                  </span>
+                </div>
+
+                <div class="stage__number text-h3">
+                  03
+                </div>
+              </div>
+            </li>
+            <li class="stages__item stage">
+              <div class="stage__body">
+                <div class="stage__content">
+                  <span class="stage__title">
+                    Сборка металлоконструкций
+                  </span>
+                  <span class="stage__text">
+                    Последующая обшивка в зависимости от типа ангара.
+                    На данном этапе также выполняется общая гидроизоляция
+                  </span>
+                </div>
+
+                <div class="stage__number text-h3">
+                  04
+                </div>
+              </div>
+            </li>
+            <li class="stages__item stage">
+              <div class="stage__body">
+                <div class="stage__content">
+                  <span class="stage__title">
+                    Электромонтаж 
+                  </span>
+                  <span class="stage__text">
+                    Монтаж кабелей, освещения и слаботочных систем
+                    (пожарная и  охранная сигнализации, видеонаблюдение)
+                  </span>
+                </div>
+
+                <div class="stage__number text-h3">
+                  05
+                </div>
+              </div>
+            </li>
+            <li class="stages__item stage">
+              <div class="stage__body">
+                <div class="stage__content">
+                  <span class="stage__title">
+                    Финальные отделочные работы
+                  </span>
+                  <span class="stage__text">
+                    Выполнение комплекса работ по возведению фундамента в
+                    зависимости от типа почвы
+                  </span>
+                </div>
+
+                <div class="stage__number text-h3">
+                  06
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <article class="multi-section__article">
+    <div class="advantages">
+      <div class="site-container">
+        <div class="advantages__body">
+          <div class="advantages__top">
+            <div class="advantages__intro-row hero__intro-row">
+              <div class="hero__left">
+                <div class="introduction__title advantages__title text-h3">
+                  Комплекс услуг - наше преимущество при строительстве ангаров
+                </div>
+                <div class="advantages__text introduction__text">
+                  Реализуем  полный комплекс услуг в области строительства ангаров в рамках «Одного окна»
+                </div>
+              </div>
+              <div class="hero__right">
+                <ul class="advantages__list">
+                  <li class="advantages__item">
+                    <span>Построим ангар<br> необходимого типа</span>
+                  </li>
+                  <li class="advantages__item">
+                    <span>Подготовим проектную<br> документацию</span>
+                  </li>
+                  <li class="advantages__item">
+                    <span>Изготовим<br> промышленные полы</span>
+                  </li>
+                  <li class="advantages__item">
+                    <span>Выполним теплоизоляцию<br> ангара</span>
+                  </li>
+                  <li class="advantages__item">
+                    <span>Электромонтажные<br> работы</span>
+                  </li>
+                  <li class="advantages__item">
+                    <span>Выполним <i class="hide-on-mobile">необходимые</i><br> геодезические работы</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="advantages__bottom">
+            <div class="advantages__image">
+              <picture>
+                <source type="image/webp" srcset="./img/advantages/img.png" alt="advantages image">
+                <img src="./img/advantages/img.png" alt="advantages image">
+              </picture>
+              <span class="advantages__logo">
+                <svg aria-hidden="true" class="icon">
+                  <use xlink:href="#bigger-logo"></use>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <article class="multi-section__article">
+    <div class="introduction">
+      <div class="site-container">
+        <div class="introduction__content-wrapper">
+          <div class="introduction__intro-row hero__intro-row">
+            <div class="hero__left">
+              <div class="introduction__title text-h3">
+                Производим и строим ангары «Под ключ» с 2015 года
+              </div>
+            </div>
+            <div class="hero__right">
+              <div class="introduction__subtitle">
+                Наша компания уже более восьми лет реализует проекты по
+                возведению ангаров разных видов и любой сложности в
+                Казани и по всей России. За это время мы построили
+                ангаров и складских сооружений общей площадью более
+                шестидесяти тысяч квадратных метров. 
+              </div>
+              <div class="introduction__text">
+                Мы предоставляем максимальный спектр услуг  по изготовлению,
+                проектированию, доставке и сборке сооружений в рамках “одного
+                окна”, а также всегда рады поделиться с нашими Заказчиками
+                экспертными знаниями в области строительства ангаров и других
+                сооружений. 
+              </div>
+            </div>
+          </div>
+          <div class="introduction__intro-row introduction__intro-row--border hero__intro-row">
+            <div class="hero__left">
+              <div class="introduction__text">
+                О компании в цифрах
+              </div>
+            </div>
+            <div class="hero__right">
+              <ul class="introduction__list">
+                <li class="introduction__item stat">
+                  <div class="stat__top">
+                    <span class="stat__number text-h1">21</span>
+                    <span class="stat__dim">день</span>
+                  </div>
+                  <span class="stat__text">
+                    Средний срок строительства
+                  </span>
+                </li>
+                <li class="introduction__item stat">
+                  <div class="stat__top">
+                    <span class="stat__number text-h1">60 000</span>
+                    <span class="stat__dim">кв.м.</span>
+                  </div>
+                  <span class="stat__text">
+                    Общая площадь выполненной застройки
+                  </span>
+                </li>
+                <li class="introduction__item stat">
+                  <div class="stat__top">
+                    <span class="stat__number text-h1">8</span>
+                    <span class="stat__dim">лет</span>
+                  </div>
+                  <span class="stat__text">
+                    Опыта работы в сфере
+                  </span>
+                </li>
+                <li class="introduction__item stat">
+                  <div class="stat__top">
+                    <span class="stat__number text-h1">32</span>
+                    <span class="stat__dim">cотрудника</span>
+                  </div>
+                  <span class="stat__text">
+                    Различных профессий в нашем штате
+                  </span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -1521,117 +1709,6 @@
             </div>
           </form>
         </div>
-      </div>
-    </div>
-  </article>
-
-  <article class="multi-section__article">
-    <div class="faq">
-      <div class="site-container">
-        <div class="faq__header stages__header stages__header--half">
-          <div class="stages__title text-h3">Часто задаваемые вопросы</div>
-          <span class="stages__subtitle">Строительство ангаров, достаточно сложный и трудоемкий процесс. Как правило, у
-            заказчиков перед началом сотрудничества есть не мало вопросов, отвечаем на некоторые из них.</span>
-        </div>
-
-        <ul class="faq__list">
-          <li class="faq__item">
-            <input class="visually-hidden" type="checkbox" name="faq-1" id="faq-1">
-            <label for="faq-1" class="faq__button">
-              Сколько времени требуется на монтаж металлоконструкций?
-            </label>
-            <div class="faq__dropdown">
-              <p>
-                Строительство ангаров, достаточно сложный и трудоемкий процесс. Как правило, у заказчиков перед началом
-                сотрудничества есть не мало вопросов, отвечаем на некоторые из них.
-              </p>
-            </div>
-          </li>
-          <li class="faq__item">
-            <input class="visually-hidden" type="checkbox" name="faq-2" id="faq-2">
-            <label for="faq-2" class="faq__button">
-              Какие требования имеются к площадке под строительство ангара?
-            </label>
-            <div class="faq__dropdown">
-              <p>
-                Строительство ангаров, достаточно сложный и трудоемкий процесс. Как правило, у заказчиков перед началом
-                сотрудничества есть не мало вопросов, отвечаем на некоторые из них.
-              </p>
-            </div>
-          </li>
-          <li class="faq__item">
-            <input class="visually-hidden" type="checkbox" name="faq-3" id="faq-3">
-            <label for="faq-3" class="faq__button">
-              Какие требования имеются к площадке под строительство ангара?
-            </label>
-            <div class="faq__dropdown">
-              <p>
-                Строительство ангаров, достаточно сложный и трудоемкий процесс. Как правило, у заказчиков перед началом
-                сотрудничества есть не мало вопросов, отвечаем на некоторые из них.
-              </p>
-            </div>
-          </li>
-          <li class="faq__item">
-            <input class="visually-hidden" type="checkbox" name="faq-4" id="faq-4">
-            <label for="faq-4" class="faq__button">
-              Сколько времени требуется на монтаж металлоконструкций?
-            </label>
-            <div class="faq__dropdown">
-              <p>
-                Строительство ангаров, достаточно сложный и трудоемкий процесс. Как правило, у заказчиков перед началом
-                сотрудничества есть не мало вопросов, отвечаем на некоторые из них.
-              </p>
-            </div>
-          </li>
-          <li class="faq__item">
-            <input class="visually-hidden" type="checkbox" name="faq-5" id="faq-5">
-            <label for="faq-5" class="faq__button">
-              Сколько времени требуется на монтаж металлоконструкций?
-            </label>
-            <div class="faq__dropdown">
-              <p>
-                Строительство ангаров, достаточно сложный и трудоемкий процесс. Как правило, у заказчиков перед началом
-                сотрудничества есть не мало вопросов, отвечаем на некоторые из них.
-              </p>
-            </div>
-          </li>
-          <li class="faq__item">
-            <input class="visually-hidden" type="checkbox" name="faq-6" id="faq-6">
-            <label for="faq-6" class="faq__button">
-              Какие требования имеются к площадке под строительство ангара?
-            </label>
-            <div class="faq__dropdown">
-              <p>
-                Строительство ангаров, достаточно сложный и трудоемкий процесс. Как правило, у заказчиков перед началом
-                сотрудничества есть не мало вопросов, отвечаем на некоторые из них.
-              </p>
-            </div>
-          </li>
-          <li class="faq__item">
-            <input class="visually-hidden" type="checkbox" name="faq-7" id="faq-7">
-            <label for="faq-7" class="faq__button">
-              Какие требования имеются к площадке под строительство ангара?
-            </label>
-            <div class="faq__dropdown">
-              <p>
-                Строительство ангаров, достаточно сложный и трудоемкий процесс. Как правило, у заказчиков перед началом
-                сотрудничества есть не мало вопросов, отвечаем на некоторые из них.
-              </p>
-            </div>
-          </li>
-          <li class="faq__item">
-            <input class="visually-hidden" type="checkbox" name="faq-8" id="faq-8">
-            <label for="faq-8" class="faq__button">
-              Сколько времени требуется на монтаж металлоконструкций?
-            </label>
-            <div class="faq__dropdown">
-              <p>
-                Строительство ангаров, достаточно сложный и трудоемкий процесс. Как правило, у заказчиков перед началом
-                сотрудничества есть не мало вопросов, отвечаем на некоторые из них.
-              </p>
-            </div>
-          </li>
-        </ul>
       </div>
     </div>
   </article>

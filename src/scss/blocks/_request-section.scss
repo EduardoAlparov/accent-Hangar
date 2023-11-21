@@ -1,0 +1,87 @@
+.request-section {
+  &__body {
+    display: flex;
+    column-gap: 6rem;
+    padding: 3.5rem 4rem 3rem;
+    background-color: var(--back-2, #f6f8fa);
+
+    @include breakpoint(laptop) {
+      padding: 2.5rem;
+      column-gap: 2.5rem;
+    }
+
+    @include breakpoint(tablet) {
+      flex-direction: column;
+      align-items: stretch;
+      column-gap: unset;
+    }
+  }
+
+  &__title {
+    position: relative;
+    padding-bottom: 2.5rem;
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      width: 12rem;
+      height: 0.2rem;
+      min-height: 2px;
+      background-color: var(--orange, #ff3f00);
+      content: "";
+
+      @include breakpoint(tablet) {
+        width: 9rem;
+        height: 0.15rem;
+        min-height: 1.5px;
+      }
+    }
+    
+    h6 {
+      font: var(--font-text-22);
+    }
+
+    @include breakpoint(tablet) {
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+    }
+  }
+
+  &__form {
+    flex-grow: 1;
+  }
+
+  &__inputs {
+    display: flex;
+    align-items: stretch;
+    gap: 1.5rem;
+
+    @include breakpoint(tablet) {
+      gap: 1rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+
+  &__input-wrapper,
+  &__submit {
+    flex-grow: 1;
+
+    @include breakpoint(small-tablet) {
+      flex-grow: unset;
+    }
+  }
+
+  &__agreement {
+    margin-top: 1.5rem;
+
+    .form-slide__agreement {
+      margin-top: 0;
+    }
+  }
+}

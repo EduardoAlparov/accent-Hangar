@@ -1,0 +1,49 @@
+.double-section {
+  &__body {
+    display: flex;
+
+    .stages__header {
+      margin-bottom: 3rem;
+
+      @include  breakpoint(mobile) {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    @include  breakpoint(tablet) {
+      flex-flow: column-reverse nowrap;
+    }
+  }
+
+  &__image-block,
+  &__text-block {
+    flex: 1 0 50%;
+
+    @include  breakpoint(tablet) {
+      flex: 0 0 auto;
+    }
+  }
+
+  &__image-block {
+    @include  breakpoint(tablet) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__image {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 60.7%;
+    overflow: hidden;
+
+    img {
+      @include centeredAbsolute();
+      z-index: 10;
+
+      display: block;
+      width: 100%;
+      min-height: 100%;
+    }
+  }
+}

@@ -72,6 +72,30 @@
   @include breakpoint(tablet) {
     padding: 8rem 0;
   }
+
+  &--smaller {
+    padding: 7.5rem 0 16rem;
+
+    @include breakpoint(small-desktop) {
+      padding: 7.5rem 0 10rem;
+    }
+  
+    @include breakpoint(tablet) {
+      padding: 4rem 0 8rem;
+    }
+  }
+
+  &--low-bottom-padding {
+    padding: 16rem 0 10rem;
+
+    @include breakpoint(small-desktop) {
+      padding: 10rem 0 10rem;
+    }
+  
+    @include breakpoint(tablet) {
+      padding: 8rem 0 6rem;
+    }
+  }
 }
 
 .carousel {

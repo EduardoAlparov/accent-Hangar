@@ -5,6 +5,16 @@
     p {
       margin-bottom: 1.5rem;
     }
+
+    &.double-section__text {
+      @include maxSizeText(13);
+      padding-right: 5rem;
+
+      @include  breakpoint(tablet) {
+        @include maxSizeText(24);
+        padding-right: 0;
+      }
+    }
   }
 
   &__expand {
