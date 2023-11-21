@@ -1,97 +1,98 @@
 .visually-hidden {
-    @include visuallyHidden();
+  @include visuallyHidden();
 }
 
 .no-scroll {
-    overflow-y: scroll;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    body {
-        height: auto;
-        overflow: hidden;
-    }
+  overflow-y: scroll;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+
+  body {
+    height: auto;
+    overflow: hidden;
+  }
 }
 
 .disable-scroll {
-    overflow: hidden;
-    height: 100vh;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
+  overflow: hidden;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
 }
 
 .mobile-menu-is-open {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .hide-on-mobile {
-    @include breakpoint(mobile) {
-        display: none !important;
-    }
+  @include breakpoint(mobile) {
+    display: none !important;
+  }
 }
 
 .hide-on-tablet {
-    @include breakpoint(tablet) {
-        display: none !important;
-    }
+  @include breakpoint(tablet) {
+    display: none !important;
+  }
 }
 
 .show-on-mobile {
-    @include breakpointMF(small-tablet) {
-        display: none !important;
-    }
+  @include breakpointMF(small-tablet) {
+    display: none !important;
+  }
 }
 
 .text-h1 {
-    font: var(--font-h1);
-    letter-spacing: -0.018em;
+  font: var(--font-h1);
+  letter-spacing: -0.018em;
 }
 
 .text-h2 {
-    font: var(--font-h2);
-    letter-spacing: -0.025em;
+  font: var(--font-h2);
+  letter-spacing: -0.025em;
 }
 
 .text-h3 {
-    font: var(--font-text-38);
-    letter-spacing: -0.0095em;
+  font: var(--font-text-38);
+  letter-spacing: -0.0095em;
 }
 
 .section-padding {
-    padding: 16rem 0;
+  padding: 16rem 0;
 
-    @include  breakpoint(small-desktop) {
-        padding: 10rem 0;
-    }
+  @include breakpoint(small-desktop) {
+    padding: 10rem 0;
+  }
 
-    @include  breakpoint(tablet) {
-        padding: 8rem 0;
-    }
+  @include breakpoint(tablet) {
+    padding: 8rem 0;
+  }
 }
 
 .carousel {
-    &__swiper-cover {
-        position: relative;
+  &__swiper-cover {
+    position: relative;
 
-        .slider-btn {
-            position: absolute;
-            top: 50%;
-            right: calc(100% + 4rem);
-            z-index: 10;
-            transform: translateY(-50%);
-        }
-    
-        .slider-btn--reverse {
-            left: calc(100% + 4rem);
-            right: unset;
-        }
+    .slider-btn {
+      position: absolute;
+      top: 50%;
+      right: calc(100% + 4rem);
+      z-index: 10;
+      transform: translateY(-50%);
     }
+
+    .slider-btn--reverse {
+      left: calc(100% + 4rem);
+      right: unset;
+    }
+  }
 }
 
 .ui-section {
-    background-color: var(--back-5, #f6f8fa);
+  background-color: var(--back-5, #f6f8fa);
 }

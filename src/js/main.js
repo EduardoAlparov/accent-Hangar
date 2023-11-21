@@ -24,6 +24,8 @@ import stagesListSwiper from './stagesListSwiper';
 import expandReviewText from './expandReviewText';
 import productionSwiper from './productionSwiper';
 import setHeaderPadding from './setHeaderPadding';
+import certificatesSwiper from './certificatesSwiper';
+import fancybox from './fancybox';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -50,6 +52,8 @@ document.addEventListener('DOMContentLoaded', function () {
     expandReviewText();
     productionSwiper();
     setHeaderPadding();
+    certificatesSwiper();
+    fancybox();
 
     const modal = new Modal({
         isOpen: (modal) => {

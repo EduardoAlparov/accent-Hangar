@@ -8,7 +8,7 @@
   }
 
   &__title {
-    max-width: 54rem;
+    max-width: 55rem;
   }
 
   &__subtitle {
@@ -41,16 +41,15 @@
     } 
   }
 
-  &__list {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    gap: 4rem;
+  &__intro-row--margin {
+    margin-top: 4.5rem;
+    padding: 6rem 7.5rem;
+    background-color: var(--back-2, #f6f8fa);
 
-    @include  breakpoint(small-tablet) {
-      flex-flow: column nowrap;
-      gap: unset;
-    }
+    @include  breakpoint(tablet) {
+      margin-top: 2.5rem;
+      padding: 2.5rem;
+    } 
   }
 
   &__item {
@@ -63,6 +62,50 @@
 
       &:last-child {
         margin-bottom: 0;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: 4rem;
+
+    @include  breakpoint(small-tablet) {
+      flex-flow: column nowrap;
+      gap: unset;
+    }
+
+    &--row {
+      flex-flow: row nowrap;
+      gap: 2rem;
+
+      .introduction__item {
+        flex: 0 1 auto;
+        width: auto;
+        max-width: unset;
+
+        @include  breakpoint(laptop) {
+          width: 100%;
+          max-width: calc(50% - 2rem);
+        }
+
+        @include  breakpoint(small-tablet) {
+          width: 100%;
+          max-width: unset;
+        }
+      }
+
+      @include  breakpoint(laptop) {
+        flex-flow: row wrap;
+        justify-content: space-between;
+        gap: 4rem;
+      }
+
+      @include  breakpoint(small-tablet) {
+        flex-flow: column nowrap;
+        gap: unset;
       }
     }
   }

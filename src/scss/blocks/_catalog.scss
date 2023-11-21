@@ -1,0 +1,18 @@
+.catalog {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 1.5rem;
+
+  &__item {
+    width: calc( (100% / 5) - ( (1.5rem * 4) / 5 ));
+
+    @include breakpoint(laptop) {
+      width: calc( (100% / 3) - ( (1.5rem * 2) / 3 ));
+    }
+
+    @include breakpoint(small-tablet) {
+      width: 100%;
+    }
+  }
+}
