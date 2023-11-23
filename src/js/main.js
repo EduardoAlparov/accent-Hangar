@@ -3,13 +3,14 @@ import detectTouch from './detectTouch';
 import setScrollbarWidth from './setScrollbarWidth';
 import masks from './masks';
 import validation from './validation';
-import anchorLinks from './anchorLinks';
+// import anchorLinks from './anchorLinks';
 import accordions from './accordions';
 import { Modal } from "./Modal";
 import tabs from './tabs';
 import menu from './menu';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import fancybox from './fancybox';
 
 import headerSetting from './headerSetting';
 import dropMenuControl from './dropMenuControl';
@@ -25,7 +26,10 @@ import expandReviewText from './expandReviewText';
 import productionSwiper from './productionSwiper';
 import setHeaderPadding from './setHeaderPadding';
 import certificatesSwiper from './certificatesSwiper';
-import fancybox from './fancybox';
+import articleSwipers from './articleSwipers';
+import pricesTabControl from './pricesTabControl';
+// import checkOverflow from './checkOverflow';
+import setActiveArticle from './setActiveArticle';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -34,10 +38,11 @@ document.addEventListener('DOMContentLoaded', function () {
     setScrollbarWidth();
     masks();
     validation();
-    anchorLinks();
+    // anchorLinks();
     accordions();
     tabs();
     menu();
+    fancybox();
     
     headerSetting();
     dropMenuControl();
@@ -53,7 +58,10 @@ document.addEventListener('DOMContentLoaded', function () {
     productionSwiper();
     setHeaderPadding();
     certificatesSwiper();
-    fancybox();
+    articleSwipers();
+    pricesTabControl();
+    // checkOverflow();
+    setActiveArticle();
 
     const modal = new Modal({
         isOpen: (modal) => {

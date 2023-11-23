@@ -51,6 +51,10 @@
   // etc.
   --transition: 0.3s ease-out;
 
+  @include  breakpoint(desktop) {
+    --content-padding: 2.5rem;
+  }
+
   @include breakpoint(laptop) {
     --content-padding: 1.5rem;
     --font-body: 400 1.4rem/1.43 var(--main-ff);
@@ -67,7 +71,6 @@
   }
 }
 
-
 html {
   @include noHighlight();
   font-size: 10px;
@@ -75,6 +78,7 @@ html {
 
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
 
   @include breakpoint(large-desktop) {
     font-size: clamp(9px, 0.52vw, 25px);
@@ -249,7 +253,7 @@ th {
 
 ::selection {
   color: white;
-  background-color: var(--primary-color);
+  background-color: var(--grey, #8a8f94);
   -webkit-text-fill-color: white;
 }
 

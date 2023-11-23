@@ -172,4 +172,23 @@
     overflow: hidden;
     margin-bottom: 2rem;
   }
+
+  &--light {
+    background-color: var(--back-2, #f6f8fa);
+    color: var(--black, #212529);
+
+    .review-cart__review  {
+      p {
+        color: var(--black, #212529);
+      }
+    }
+
+    .review-cart__text-wrapper {
+      margin-bottom: 1.5rem;
+
+      @include  breakpoint(portrait-tablet) {
+        margin-bottom: 5rem;
+      }
+    }
+  }
 }

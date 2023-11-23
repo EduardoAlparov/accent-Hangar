@@ -28,20 +28,50 @@
       opacity: 1;
     }
   }
+
+  &--reverse {
+    flex-direction: column-reverse;
+
+    i {
+      margin-bottom: 1rem;
+      color: var(--grey, #8A8F94);
+    }
+
+    span {
+      margin-bottom: 0;
+      color: var(--orange, #ff3f00);
+    }
+  }
 }
 
 .page-header-is-fixed,
 .dropmenu-is-open {
   .phone-link { 
     i {
-      color: var(--orange);
+      color: var(--orange, #ff3f00);
       opacity: 1;
     }
 
     &:hover {
       i {
-        color: var(--orange-hover);
+        color: var(--orange-hover, #eb3a00);
       }
+    }
+  }
+}
+
+.contacts-section {
+  .phone-link { 
+    pointer-events: none;
+    
+    i {
+      margin-bottom: 1rem;
+      color: var(--grey, #8A8F94);
+    }
+
+    span {
+      margin-bottom: 0;
+      color: var(--orange, #ff3f00);
     }
   }
 }

@@ -1,0 +1,30 @@
+.icon-tab {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 2rem;
+
+  width: 100%;
+  padding: 1.5rem 2rem;
+
+  background-color: var(--orange, #ff3f00);
+  border-radius: 5rem;
+
+  i {
+    display: block;
+    width: 0.8rem;
+    height: 0.4rem;
+
+    background-image: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2210%22%20height%3D%227%22%20viewBox%3D%220%200%2010%207%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M1%201L5%205L9%201%22%20stroke%3D%22white%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  
+  span {
+    display: block;
+    color: var(--white, #fff);
+    font-weight: 600;
+  }
+}

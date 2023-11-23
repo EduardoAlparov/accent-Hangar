@@ -1,0 +1,26 @@
+.prices-list {
+  &__title {
+    margin-bottom: 3.5rem;
+
+    @include breakpoint(portrait-tablet) {
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    row-gap: 8rem;
+
+    @include breakpoint(portrait-tablet) {
+      row-gap: 5rem;
+    }
+  }
+
+  &__item {
+    &--hidden {
+      @include visuallyHidden();
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.feedback-form {
+  .calculation__image {
+    max-height: 53.5rem;
+  }
+
+  .calculation__forms {
+
+  }
+
+  .calculation__title {
+    padding-bottom: 0;
+    margin-bottom: 4rem;
+
+    @include breakpoint(portrait-tablet) {
+      margin-bottom: 2.5rem;
+    }
+  }
+}

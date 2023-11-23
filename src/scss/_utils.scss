@@ -47,6 +47,12 @@
   }
 }
 
+.show-on-tablet {
+  @include breakpointMF(laptop) {
+    display: none !important;
+  }
+}
+
 .text-h1 {
   font: var(--font-h1);
   letter-spacing: -0.018em;
@@ -79,7 +85,7 @@
     @include breakpoint(small-desktop) {
       padding: 7.5rem 0 10rem;
     }
-  
+
     @include breakpoint(tablet) {
       padding: 4rem 0 8rem;
     }
@@ -91,9 +97,21 @@
     @include breakpoint(small-desktop) {
       padding: 10rem 0 10rem;
     }
-  
+
     @include breakpoint(tablet) {
       padding: 8rem 0 6rem;
+    }
+  }
+
+  &--all-small {
+    padding: 7.5rem 0 10rem;
+
+    @include breakpoint(small-desktop) {
+      padding: 7.5rem 0 10rem;
+    }
+
+    @include breakpoint(tablet) {
+      padding: 4rem 0 6rem;
     }
   }
 }
@@ -108,11 +126,25 @@
       right: calc(100% + 4rem);
       z-index: 10;
       transform: translateY(-50%);
+
+      @include breakpoint(desktop) {
+        right: calc(100%);
+        transform: translate(50%, -50%);
+
+        -webkit-box-shadow: 0px 0px 5px 1px rgba(33, 37, 41, 0.1);
+        -moz-box-shadow: 0px 0px 5px 1px rgba(33, 37, 41, 0.1);
+        box-shadow: 0px 0px 5px 1px rgba(33, 37, 41, 0.1);
+      }
     }
 
     .slider-btn--reverse {
       left: calc(100% + 4rem);
       right: unset;
+
+      @include breakpoint(desktop) {
+        left: calc(100%);
+        transform: translate(-50%, -50%);
+      }
     }
   }
 }

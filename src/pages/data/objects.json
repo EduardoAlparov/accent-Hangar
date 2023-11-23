@@ -1,0 +1,40 @@
+{
+  "title": " АНГАРСТРОЙ - цены",
+  "pageHeaderClass": true,
+  "breadcrumbsList": [
+    "Главная",
+    "Цены"
+  ],
+  "tabsList": [
+    {
+      "text": "Все категории",
+      "data": "all"
+    },
+    {
+      "text": "Сельскохозяйственные постройки",
+      "data": "type-1"
+    },
+    {
+      "text": "Склады",
+      "data": "type-2"
+    },
+    {
+      "text": "Свинарники",
+      "data": "type-3"
+    },
+    {
+      "text": "Арочные ангары",
+      "data": "type-4"
+    },
+    {
+      "text": "Теплые ангары",
+      "data": "type-5"
+    },
+    {
+      "text": "Холодные ангары",
+      "data": "type-6"
+    }
+  ],
+  "imageIntroClass": false,
+  "breadcrumbsClass": true
+}

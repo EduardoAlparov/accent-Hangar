@@ -1,0 +1,298 @@
+.article-section {
+  color: var(--black, #212529);
+
+  &__container {
+
+    & > section {
+      display: flex;
+      column-gap: 2.5rem;
+      width: 100%;
+
+      @include breakpoint(laptop) {
+        column-gap: unset;
+      }
+
+      & > div {
+        flex: 1 1 80%;
+        max-width: 80%;
+        padding-right: 8.4rem;
+
+        @include breakpoint(laptop) {
+          padding-right: 4.5rem;
+        }
+
+        @include breakpoint(tablet) {
+          flex: 0 0 auto;
+          max-width: 100%;
+          padding-right: 0;
+        }
+      }
+  
+      & > nav {
+        flex: 1 0 auto;
+
+        @include breakpoint(tablet) {
+          display: none;
+        }
+
+        ul {
+          position: sticky;
+          top: 4rem;
+          z-index: 1;
+
+          display: flex;
+          flex-direction: column;
+          align-items: stretch;
+  
+          li {
+            margin-bottom: 1.5rem;
+  
+            &:last-child {
+              margin-bottom: 0;
+            }
+  
+            a {
+              position: relative;
+              display: block;
+              color: var(--grey-4, #72787e);
+              font-weight: 400;
+              white-space: nowrap;
+
+              &::before {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                z-index: 1;
+                color: var(--orange, #ff3f00);
+                transform: translateY(-50%);
+                content: none;
+              }
+
+              &._active {
+                padding-left: 2.5rem;
+                color: var(--black, #212529);
+                font-weight: 500;
+
+                &::before {
+                  content: "\2014";
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    article {
+      padding: 4rem 0;
+
+      &:first-child {
+        margin-top: -4rem;
+      }
+
+      &:last-child {
+        padding: 4rem 0 0;
+      }
+
+      @include breakpoint(portrait-tablet) {
+        padding: 2.5rem 0;
+
+        &:last-child {
+          padding: 2.5rem 0 0;
+        }
+      }
+
+      & > h2 {
+        margin-bottom: 3rem;
+        font: var(--font-text-38);
+
+        @include breakpoint(portrait-tablet) {
+          margin-bottom: 1.5rem;
+        }
+      }
+
+      & > div {
+        margin-bottom: 4.5rem;
+
+        @include breakpoint(portrait-tablet) {
+          margin-bottom: 3rem;
+        }
+
+        & > span {
+          display: block;
+          margin-bottom: 1.5rem;
+
+          @include breakpoint(portrait-tablet) {
+            margin-bottom: 1rem;
+          }
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+
+        & > ul {
+          margin-top: 2.5rem;
+
+          @include breakpoint(portrait-tablet) {
+            margin-top: 1.5rem;
+          }
+
+          li {
+            margin-bottom: 1.5rem;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            @include breakpoint(portrait-tablet) {
+              margin-top: 1rem;
+
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
+
+            span {
+              position: relative;
+              padding-left: 1.3rem;
+  
+              &::after {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                z-index: 1;
+                width: 0.5rem;
+                height: 0.5rem;
+                background-color: var(--orange, #FF3F00);
+                transform: translateY(-50%);
+                content: "";
+              }
+            }
+
+            p {
+              position: relative;
+              padding-left: 1.3rem;
+              color: var(--orange, #FF3F00);
+
+              &::after {
+                position: absolute;
+                top: 50%;
+                left: 0.1rem;
+                z-index: 1;
+                width: 0.9rem;
+                height: 1px;
+                background-color: var(--orange, #FF3F00);
+                transform: translateY(-50%);
+                content: "";
+              }
+            }
+          }
+
+        }
+
+        .swiper-slide {
+          overflow: hidden;
+
+          img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 1.49 / 1;
+            object-position: center;
+          }
+        }
+
+        & > ol {
+          margin-top: 2.5rem;
+
+          @include breakpoint(portrait-tablet) {
+            margin-top: 1.5rem;
+          }
+
+          li {
+            display: flex;
+            align-items: center;
+            column-gap: 2rem;
+            margin-bottom: 2rem;
+            padding-right: 2rem;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            @include breakpoint(portrait-tablet) {
+              align-items: flex-start;
+              column-gap: 1.5rem;
+              margin-bottom: 1.5rem;
+              padding-right: 0;
+              
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
+
+            &::before {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-shrink: 0;
+              width: 3rem;
+              height: 3rem;
+              color: var(--white, #fff);
+              font: var( --font-btn-15);
+              background-color: var(--orange, #FF3F00);
+              content: counter(ordered-list, decimal); 
+
+              @include breakpoint(portrait-tablet) {
+                width: 2.5rem;
+                height: 2.5rem;
+              }
+            }
+          }
+        }
+      }
+
+      figure {
+        & > img {
+          display: block;
+          width: 100%;
+          aspect-ratio: 1.6736 / 1;
+
+          @include breakpoint(portrait-tablet) {
+            aspect-ratio: 1.4 / 1;
+          }
+        }
+
+        & > figcaption {
+          margin-top: 1.5rem;
+          color: var(--grey, #8A8F94);
+          font: var(--font-text-13);
+          font-weight: 400;
+
+          @include breakpoint(portrait-tablet) {
+            margin-top: 1rem;
+          }
+        }
+      }
+
+      & > h3 {
+        margin-bottom: 1.5rem;
+        font: var(--font-text-22);
+
+        @include breakpoint(portrait-tablet) {
+          margin-bottom: 1rem;
+        }
+      }
+
+      & > h4 {
+        margin-bottom: 1.5rem;
+        font: var(--font-btn-15);
+        font-weight: 600;
+
+        @include breakpoint(portrait-tablet) {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}

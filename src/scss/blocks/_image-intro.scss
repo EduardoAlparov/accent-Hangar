@@ -155,4 +155,11 @@
       }
     }
   }
+
+  &--no-height {
+    width: 100%;
+    height: auto;
+    aspect-ratio: unset;
+    background-color: unset;
+  }
 }

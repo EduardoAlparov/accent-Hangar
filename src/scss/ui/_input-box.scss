@@ -16,6 +16,22 @@
     }
   }
 
+  input {
+    min-height: 6rem;
+
+    @include breakpoint(portrait-tablet) {
+      min-height: 5.5rem;
+    }
+  }
+
+  textarea {
+    max-height: 15rem;
+
+    @include breakpoint(portrait-tablet) {
+      max-height: 16rem;
+    }
+  }
+
   &__submit {
     position: absolute;
     top: 50%;
@@ -59,6 +75,26 @@
     textarea,
     input {
       background-color: var(--white, #fff);
+    }
+  }
+
+  .parsley-errors-list {
+    position: absolute;
+    bottom: calc(100% + 0.1rem);
+    left: 0;
+    z-index: 1;
+    max-width: 100%;
+
+    li {
+      color: var(--orange, #ff3f00);
+      font: var(--font-text-13);
+      font-weight: 600;
+    }
+  }
+
+  &--bottom-error {
+    .parsley-errors-list {
+      bottom: 0.1rem;
     }
   }
 }

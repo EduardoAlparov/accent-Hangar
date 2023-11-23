@@ -8,6 +8,8 @@
   background-color: transparent;
   cursor: pointer;
 
+  transition: background-color var(--transition);
+
   @include  breakpoint(laptop) {
     column-gap: 0.2rem;
     padding: 1.7rem 4rem;
@@ -130,6 +132,10 @@
     .icon-stroke {
       stroke: var(--grey-3, #8e969f);
     }
+  }
+
+  &--white {
+    background-color: var(--white, #fff);
   }
 
   input[type="file"] {

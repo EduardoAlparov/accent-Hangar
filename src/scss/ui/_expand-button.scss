@@ -1,4 +1,5 @@
 .expand-button {
+  position: relative;
   display: block;
   color: var(--orange, #FF3F00);
   font-weight: 600;
@@ -8,6 +9,7 @@
   &::before {
     display: block;
     content: attr(data-text);
+    color: var(--orange, #FF3F00);
   }
 
   &::after {

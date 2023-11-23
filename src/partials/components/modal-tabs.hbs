@@ -1,0 +1,26 @@
+<div class="modal modal--tabs">
+  <div class="modal__container" data-target="modal-tabs">
+    <div class="modal__content">
+      <button class="button-reset modal__close-btn modal-close visually-hidden" type="button">
+        <svg aria-hidden="true" class="icon icon-close">
+          <use xlink:href="#cross"></use>
+        </svg>
+      </button>
+
+      {{#if tabsList}}
+        <ul class="modal__buttons-list">
+          {{#each tabsList}}
+          <li class="modal__buttons-item">
+            <button type="button" class="modal__item-button js-mobile-tab js-prices-tab" data-btn={{this.data}}>
+              <span class="modal__button-span">
+                {{this.text}}
+              </span>
+              <i></i>
+            </button>
+          </li>
+          {{/each}}
+        </ul>
+      {{/if}}  
+    </div>
+  </div>
+</div>

@@ -1,0 +1,42 @@
+.calculator-section {
+  &__body {
+    display: flex;
+    align-items: stretch;
+    column-gap: 6rem;
+
+    @include breakpoint(laptop) {
+      column-gap: 2rem;
+    }
+
+    @include breakpoint(tablet) {
+      flex-direction: column;
+      column-gap: unset;
+    }
+  }
+
+  &__left,
+  &__right {
+    flex: 1 1 50%;
+  }
+
+  &__left {
+    padding: 3.5rem 0;
+
+    @include breakpoint(laptop) {
+      padding: 2.5rem 0;
+    }
+
+    @include breakpoint(tablet) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__right {
+    padding: 3.5rem 4rem;
+    background-color: var(--back-2, #f6f8fa);
+
+    @include breakpoint(laptop) {
+      padding: 2.5rem;
+    }
+  }
+}

@@ -1,0 +1,755 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<section class="image-intro image-intro--no-height">
+  <div class="site-container">
+    {{>breadcrumbs}}
+  </div>
+</section>
+
+<section class="reviews-list">
+
+  <div class="site-container">
+    <h1 class="reviews-list__title text-h2">
+      Наши объекты
+    </h1>
+
+    {{#if tabsList}}
+    <div class="prices-navigation">
+      <ul class="prices-navigation__list hide-on-tablet">
+        {{#each tabsList}}
+        <li class="prices-navigation__item">
+          <button type="button" class="prices-navigation__tab tab js-prices-tab" data-btn={{this.data}}>
+            {{this.text}}
+          </button>
+        </li>
+        {{/each}}
+      </ul>
+
+      <div class="prices-navigation__mobile-button show-on-tablet">
+        <button type="button" class="icon-tab" data-path="modal-tabs">
+          <span class="js-price-type-value">Все категории</span>
+          <i></i>
+        </button>
+      </div>
+    </div>
+    {{/if}}
+
+    <div class="objects-list">
+      <ul class="objects-list__list">
+        <li class="objects-list__item project-cart js-filtered-item" data-id="type-1">
+          <div class="project-cart__body">
+            <div class="project-cart__image">
+              <picture>
+                <source type="image/webp" srcset="./img/projects/project-1.jpg" alt="advantages image">
+                <img src="./img/projects/project-1.jpg" alt="advantages image">
+              </picture>
+            </div>
+
+            <div class="project-cart__info">
+              <div class="project-cart__title">
+                <span class="project-cart__name">
+                  Холодный склад
+                </span>
+                <span class="project-cart__area">
+                  576 м²
+                </span>
+              </div>
+
+              <ul class="project-cart__list">
+                <li>
+                  <span class="project-cart__key">Ш х Д:</span>
+                  <span class="project-cart__value">48 х 12 м</span>
+                </li>
+                <li>
+                  <span class="project-cart__key">Высота ангара:</span>
+                  <span class="project-cart__value">4,4 м</span>
+                </li>
+                <li>
+                  <span class="project-cart__key">Форма ангара:</span>
+                  <span class="project-cart__value">Арочная</span>
+                </li>
+                <li>
+                  <span class="project-cart__key">Материал ангара:</span>
+                  <span class="project-cart__value">Профлист оцинкованный МП-2</span>
+                </li>
+                <li>
+                  <span class="project-cart__key">Монтаж к земле:</span>
+                  <span class="project-cart__value">Фундамент ленточный высотой 700 мм</span>
+                </li>
+              </ul>
+            </div>
+
+            <a href="#" class="main-button main-button--second">
+              <span>Узнать стоимость похожего ангара</span>
+              <svg aria-hidden="true" class="icon">
+                <use xlink:href="#plus"></use>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="objects-list__item project-cart js-filtered-item" data-id="type-2">
+          <div class="project-cart__body">
+            <div class="project-cart__image">
+              <picture>
+                <source type="image/webp" srcset="./img/projects/project-2.jpg" alt="advantages image">
+                <img src="./img/projects/project-2.jpg" alt="advantages image">
+              </picture>
+            </div>
+
+            <div class="project-cart__info">
+              <div class="project-cart__title">
+                <span class="project-cart__name">
+                  Теплый склад
+                </span>
+                <span class="project-cart__area">
+                  2032 м²
+                </span>
+              </div>
+
+              <ul class="project-cart__list">
+                <li>
+                  <span class="project-cart__key">Ш х Д:</span>
+                  <span class="project-cart__value">48 х 12 м</span>
+                </li>
+                <li>
+                  <span class="project-cart__key">Высота ангара:</span>
+                  <span class="project-cart__value">4,4 м</span>
+                </li>
+                <li>
+                  <span class="project-cart__key">Форма ангара:</span>
+                  <span class="project-cart__value">Арочная</span>
+                </li>
+                <li>
+                  <span class="project-cart__key">Материал ангара:</span>
+                  <span class="project-cart__value">Профлист оцинкованный МП-2</span>
+                </li>
+                <li>
+                  <span class="project-cart__key">Монтаж к земле:</span>
+                  <span class="project-cart__value">Фундамент ленточный высотой 700 мм</span>
+                </li>
+              </ul>
+            </div>
+
+            <a href="#" class="main-button main-button--second">
+              <span>Узнать стоимость похожего ангара</span>
+              <svg aria-hidden="true" class="icon">
+                <use xlink:href="#plus"></use>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="objects-list__item project-cart js-filtered-item" data-id="type-3">
+          <div class="project-cart__body">
+            <div class="project-cart__image">
+              <picture>
+                <source type="image/webp" srcset="./img/projects/project-3.jpg" alt="advantages image">
+                <img src="./img/projects/project-3.jpg" alt="advantages image">
+              </picture>
+            </div>
+
+            <div class="project-cart__info">
+              <div class="project-cart__title">
+                <span class="project-cart__name">
+                  Холодный склад
+                </span>
+                <span class="project-cart__area">
+                  234 м²
+                </span>
+              </div>
+
+              <ul class="project-cart__list">
+                <li>
+                  <span class="project-cart__key">Ш х Д:</span>
+                  <span class="project-cart__value">48 х 12 м</span>
+                </li>
+                <li>
+                  <span class="project-cart__key">Высота ангара:</span>
+                  <span class="project-cart__value">4,4 м</span>
+                </li>
+                <li>
+                  <span class="project-cart__key">Форма ангара:</span>
+                  <span class="project-cart__value">Арочная</span>
+                </li>
+                <li>
+                  <span class="project-cart__key">Материал ангара:</span>
+                  <span class="project-cart__value">Профлист оцинкованный МП-2</span>
+                </li>
+                <li>
+                  <span class="project-cart__key">Монтаж к земле:</span>
+                  <span class="project-cart__value">Фундамент ленточный высотой 700 мм</span>
+                </li>
+              </ul>
+            </div>
+
+            <a href="#" class="main-button main-button--second">
+              <span>Узнать стоимость похожего ангара</span>
+              <svg aria-hidden="true" class="icon">
+                <use xlink:href="#plus"></use>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="objects-list__item project-cart js-filtered-item" data-id="type-4">
+          <div class="project-cart__body">
+            <div class="project-cart__image">
+              <picture>
+                <source type="image/webp" srcset="./img/projects/project-1.jpg" alt="advantages image">
+                <img src="./img/projects/project-1.jpg" alt="advantages image">
+              </picture>
+            </div>
+
+            <div class="project-cart__info">
+              <div class="project-cart__title">
+                <span class="project-cart__name">
+                  Холодный склад
+                </span>
+                <span class="project-cart__area">
+                  576 м²
+                </span>
+              </div>
+
+              <ul class="project-cart__list">
+                <li>
+                  <span class="project-cart__key">Ш х Д:</span>
+                  <span class="project-cart__value">48 х 12 м</span>
+                </li>
+                <li>
+                  <span class="project-cart__key">Высота ангара:</span>
+                  <span class="project-cart__value">4,4 м</span>
+                </li>
+                <li>
+                  <span class="project-cart__key">Форма ангара:</span>
+                  <span class="project-cart__value">Арочная</span>
+                </li>
+                <li>
+                  <span class="project-cart__key">Материал ангара:</span>
+                  <span class="project-cart__value">Профлист оцинкованный МП-2</span>
+                </li>
+                <li>
+                  <span class="project-cart__key">Монтаж к земле:</span>
+                  <span class="project-cart__value">Фундамент ленточный высотой 700 мм</span>
+                </li>
+              </ul>
+            </div>
+
+            <a href="#" class="main-button main-button--second">
+              <span>Узнать стоимость похожего ангара</span>
+              <svg aria-hidden="true" class="icon">
+                <use xlink:href="#plus"></use>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="objects-list__item project-cart js-filtered-item" data-id="type-5">
+          <div class="project-cart__body">
+            <div class="project-cart__image">
+              <picture>
+                <source type="image/webp" srcset="./img/projects/project-2.jpg" alt="advantages image">
+                <img src="./img/projects/project-2.jpg" alt="advantages image">
+              </picture>
+            </div>
+
+            <div class="project-cart__info">
+              <div class="project-cart__title">
+                <span class="project-cart__name">
+                  Теплый склад
+                </span>
+                <span class="project-cart__area">
+                  2032 м²
+                </span>
+              </div>
+
+              <ul class="project-cart__list">
+                <li>
+                  <span class="project-cart__key">Ш х Д:</span>
+                  <span class="project-cart__value">48 х 12 м</span>
+                </li>
+                <li>
+                  <span class="project-cart__key">Высота ангара:</span>
+                  <span class="project-cart__value">4,4 м</span>
+                </li>
+                <li>
+                  <span class="project-cart__key">Форма ангара:</span>
+                  <span class="project-cart__value">Арочная</span>
+                </li>
+                <li>
+                  <span class="project-cart__key">Материал ангара:</span>
+                  <span class="project-cart__value">Профлист оцинкованный МП-2</span>
+                </li>
+                <li>
+                  <span class="project-cart__key">Монтаж к земле:</span>
+                  <span class="project-cart__value">Фундамент ленточный высотой 700 мм</span>
+                </li>
+              </ul>
+            </div>
+
+            <a href="#" class="main-button main-button--second">
+              <span>Узнать стоимость похожего ангара</span>
+              <svg aria-hidden="true" class="icon">
+                <use xlink:href="#plus"></use>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="objects-list__item project-cart js-filtered-item" data-id="type-6">
+          <div class="project-cart__body">
+            <div class="project-cart__image">
+              <picture>
+                <source type="image/webp" srcset="./img/projects/project-3.jpg" alt="advantages image">
+                <img src="./img/projects/project-3.jpg" alt="advantages image">
+              </picture>
+            </div>
+
+            <div class="project-cart__info">
+              <div class="project-cart__title">
+                <span class="project-cart__name">
+                  Холодный склад
+                </span>
+                <span class="project-cart__area">
+                  234 м²
+                </span>
+              </div>
+
+              <ul class="project-cart__list">
+                <li>
+                  <span class="project-cart__key">Ш х Д:</span>
+                  <span class="project-cart__value">48 х 12 м</span>
+                </li>
+                <li>
+                  <span class="project-cart__key">Высота ангара:</span>
+                  <span class="project-cart__value">4,4 м</span>
+                </li>
+                <li>
+                  <span class="project-cart__key">Форма ангара:</span>
+                  <span class="project-cart__value">Арочная</span>
+                </li>
+                <li>
+                  <span class="project-cart__key">Материал ангара:</span>
+                  <span class="project-cart__value">Профлист оцинкованный МП-2</span>
+                </li>
+                <li>
+                  <span class="project-cart__key">Монтаж к земле:</span>
+                  <span class="project-cart__value">Фундамент ленточный высотой 700 мм</span>
+                </li>
+              </ul>
+            </div>
+
+            <a href="#" class="main-button main-button--second">
+              <span>Узнать стоимость похожего ангара</span>
+              <svg aria-hidden="true" class="icon">
+                <use xlink:href="#plus"></use>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="objects-list__item project-cart js-filtered-item" data-id="type-1">
+          <div class="project-cart__body">
+            <div class="project-cart__image">
+              <picture>
+                <source type="image/webp" srcset="./img/projects/project-1.jpg" alt="advantages image">
+                <img src="./img/projects/project-1.jpg" alt="advantages image">
+              </picture>
+            </div>
+
+            <div class="project-cart__info">
+              <div class="project-cart__title">
+                <span class="project-cart__name">
+                  Холодный склад
+                </span>
+                <span class="project-cart__area">
+                  576 м²
+                </span>
+              </div>
+
+              <ul class="project-cart__list">
+                <li>
+                  <span class="project-cart__key">Ш х Д:</span>
+                  <span class="project-cart__value">48 х 12 м</span>
+                </li>
+                <li>
+                  <span class="project-cart__key">Высота ангара:</span>
+                  <span class="project-cart__value">4,4 м</span>
+                </li>
+                <li>
+                  <span class="project-cart__key">Форма ангара:</span>
+                  <span class="project-cart__value">Арочная</span>
+                </li>
+                <li>
+                  <span class="project-cart__key">Материал ангара:</span>
+                  <span class="project-cart__value">Профлист оцинкованный МП-2</span>
+                </li>
+                <li>
+                  <span class="project-cart__key">Монтаж к земле:</span>
+                  <span class="project-cart__value">Фундамент ленточный высотой 700 мм</span>
+                </li>
+              </ul>
+            </div>
+
+            <a href="#" class="main-button main-button--second">
+              <span>Узнать стоимость похожего ангара</span>
+              <svg aria-hidden="true" class="icon">
+                <use xlink:href="#plus"></use>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="objects-list__item project-cart js-filtered-item" data-id="type-1">
+          <div class="project-cart__body">
+            <div class="project-cart__image">
+              <picture>
+                <source type="image/webp" srcset="./img/projects/project-2.jpg" alt="advantages image">
+                <img src="./img/projects/project-2.jpg" alt="advantages image">
+              </picture>
+            </div>
+
+            <div class="project-cart__info">
+              <div class="project-cart__title">
+                <span class="project-cart__name">
+                  Теплый склад
+                </span>
+                <span class="project-cart__area">
+                  2032 м²
+                </span>
+              </div>
+
+              <ul class="project-cart__list">
+                <li>
+                  <span class="project-cart__key">Ш х Д:</span>
+                  <span class="project-cart__value">48 х 12 м</span>
+                </li>
+                <li>
+                  <span class="project-cart__key">Высота ангара:</span>
+                  <span class="project-cart__value">4,4 м</span>
+                </li>
+                <li>
+                  <span class="project-cart__key">Форма ангара:</span>
+                  <span class="project-cart__value">Арочная</span>
+                </li>
+                <li>
+                  <span class="project-cart__key">Материал ангара:</span>
+                  <span class="project-cart__value">Профлист оцинкованный МП-2</span>
+                </li>
+                <li>
+                  <span class="project-cart__key">Монтаж к земле:</span>
+                  <span class="project-cart__value">Фундамент ленточный высотой 700 мм</span>
+                </li>
+              </ul>
+            </div>
+
+            <a href="#" class="main-button main-button--second">
+              <span>Узнать стоимость похожего ангара</span>
+              <svg aria-hidden="true" class="icon">
+                <use xlink:href="#plus"></use>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="objects-list__item project-cart js-filtered-item" data-id="type-3">
+          <div class="project-cart__body">
+            <div class="project-cart__image">
+              <picture>
+                <source type="image/webp" srcset="./img/projects/project-3.jpg" alt="advantages image">
+                <img src="./img/projects/project-3.jpg" alt="advantages image">
+              </picture>
+            </div>
+
+            <div class="project-cart__info">
+              <div class="project-cart__title">
+                <span class="project-cart__name">
+                  Холодный склад
+                </span>
+                <span class="project-cart__area">
+                  234 м²
+                </span>
+              </div>
+
+              <ul class="project-cart__list">
+                <li>
+                  <span class="project-cart__key">Ш х Д:</span>
+                  <span class="project-cart__value">48 х 12 м</span>
+                </li>
+                <li>
+                  <span class="project-cart__key">Высота ангара:</span>
+                  <span class="project-cart__value">4,4 м</span>
+                </li>
+                <li>
+                  <span class="project-cart__key">Форма ангара:</span>
+                  <span class="project-cart__value">Арочная</span>
+                </li>
+                <li>
+                  <span class="project-cart__key">Материал ангара:</span>
+                  <span class="project-cart__value">Профлист оцинкованный МП-2</span>
+                </li>
+                <li>
+                  <span class="project-cart__key">Монтаж к земле:</span>
+                  <span class="project-cart__value">Фундамент ленточный высотой 700 мм</span>
+                </li>
+              </ul>
+            </div>
+
+            <a href="#" class="main-button main-button--second">
+              <span>Узнать стоимость похожего ангара</span>
+              <svg aria-hidden="true" class="icon">
+                <use xlink:href="#plus"></use>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="objects-list__item project-cart js-filtered-item" data-id="type-6">
+          <div class="project-cart__body">
+            <div class="project-cart__image">
+              <picture>
+                <source type="image/webp" srcset="./img/projects/project-1.jpg" alt="advantages image">
+                <img src="./img/projects/project-1.jpg" alt="advantages image">
+              </picture>
+            </div>
+
+            <div class="project-cart__info">
+              <div class="project-cart__title">
+                <span class="project-cart__name">
+                  Холодный склад
+                </span>
+                <span class="project-cart__area">
+                  576 м²
+                </span>
+              </div>
+
+              <ul class="project-cart__list">
+                <li>
+                  <span class="project-cart__key">Ш х Д:</span>
+                  <span class="project-cart__value">48 х 12 м</span>
+                </li>
+                <li>
+                  <span class="project-cart__key">Высота ангара:</span>
+                  <span class="project-cart__value">4,4 м</span>
+                </li>
+                <li>
+                  <span class="project-cart__key">Форма ангара:</span>
+                  <span class="project-cart__value">Арочная</span>
+                </li>
+                <li>
+                  <span class="project-cart__key">Материал ангара:</span>
+                  <span class="project-cart__value">Профлист оцинкованный МП-2</span>
+                </li>
+                <li>
+                  <span class="project-cart__key">Монтаж к земле:</span>
+                  <span class="project-cart__value">Фундамент ленточный высотой 700 мм</span>
+                </li>
+              </ul>
+            </div>
+
+            <a href="#" class="main-button main-button--second">
+              <span>Узнать стоимость похожего ангара</span>
+              <svg aria-hidden="true" class="icon">
+                <use xlink:href="#plus"></use>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="objects-list__item project-cart js-filtered-item" data-id="type-6">
+          <div class="project-cart__body">
+            <div class="project-cart__image">
+              <picture>
+                <source type="image/webp" srcset="./img/projects/project-2.jpg" alt="advantages image">
+                <img src="./img/projects/project-2.jpg" alt="advantages image">
+              </picture>
+            </div>
+
+            <div class="project-cart__info">
+              <div class="project-cart__title">
+                <span class="project-cart__name">
+                  Теплый склад
+                </span>
+                <span class="project-cart__area">
+                  2032 м²
+                </span>
+              </div>
+
+              <ul class="project-cart__list">
+                <li>
+                  <span class="project-cart__key">Ш х Д:</span>
+                  <span class="project-cart__value">48 х 12 м</span>
+                </li>
+                <li>
+                  <span class="project-cart__key">Высота ангара:</span>
+                  <span class="project-cart__value">4,4 м</span>
+                </li>
+                <li>
+                  <span class="project-cart__key">Форма ангара:</span>
+                  <span class="project-cart__value">Арочная</span>
+                </li>
+                <li>
+                  <span class="project-cart__key">Материал ангара:</span>
+                  <span class="project-cart__value">Профлист оцинкованный МП-2</span>
+                </li>
+                <li>
+                  <span class="project-cart__key">Монтаж к земле:</span>
+                  <span class="project-cart__value">Фундамент ленточный высотой 700 мм</span>
+                </li>
+              </ul>
+            </div>
+
+            <a href="#" class="main-button main-button--second">
+              <span>Узнать стоимость похожего ангара</span>
+              <svg aria-hidden="true" class="icon">
+                <use xlink:href="#plus"></use>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="objects-list__item project-cart js-filtered-item" data-id="type-6">
+          <div class="project-cart__body">
+            <div class="project-cart__image">
+              <picture>
+                <source type="image/webp" srcset="./img/projects/project-3.jpg" alt="advantages image">
+                <img src="./img/projects/project-3.jpg" alt="advantages image">
+              </picture>
+            </div>
+
+            <div class="project-cart__info">
+              <div class="project-cart__title">
+                <span class="project-cart__name">
+                  Холодный склад
+                </span>
+                <span class="project-cart__area">
+                  234 м²
+                </span>
+              </div>
+
+              <ul class="project-cart__list">
+                <li>
+                  <span class="project-cart__key">Ш х Д:</span>
+                  <span class="project-cart__value">48 х 12 м</span>
+                </li>
+                <li>
+                  <span class="project-cart__key">Высота ангара:</span>
+                  <span class="project-cart__value">4,4 м</span>
+                </li>
+                <li>
+                  <span class="project-cart__key">Форма ангара:</span>
+                  <span class="project-cart__value">Арочная</span>
+                </li>
+                <li>
+                  <span class="project-cart__key">Материал ангара:</span>
+                  <span class="project-cart__value">Профлист оцинкованный МП-2</span>
+                </li>
+                <li>
+                  <span class="project-cart__key">Монтаж к земле:</span>
+                  <span class="project-cart__value">Фундамент ленточный высотой 700 мм</span>
+                </li>
+              </ul>
+            </div>
+
+            <a href="#" class="main-button main-button--second">
+              <span>Узнать стоимость похожего ангара</span>
+              <svg aria-hidden="true" class="icon">
+                <use xlink:href="#plus"></use>
+              </svg>
+            </a>
+          </div>
+        </li>
+      </ul>
+
+      <div class="blog__button-wrapper">
+        <button type="button" class="main-button main-button--orange">
+          <span>Показать еще</span>
+          <svg aria-hidden="true" class="icon">
+            <use xlink:href="#plus"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="multi-section section-padding section-padding--low-bottom-padding">
+  <article class="multi-section__article">
+    <div class="introduction">
+      <div class="site-container">
+        <div class="introduction__content-wrapper">
+          <div class="introduction__intro-row hero__intro-row">
+            <div class="hero__left">
+              <div class="introduction__title text-h3">
+                Производим и строим ангары «Под ключ» с 2015 года
+              </div>
+            </div>
+            <div class="hero__right">
+              <div class="introduction__subtitle">
+                Наша компания уже более восьми лет реализует проекты по
+                возведению ангаров разных видов и любой сложности в
+                Казани и по всей России. За это время мы построили
+                ангаров и складских сооружений общей площадью более
+                шестидесяти тысяч квадратных метров. 
+              </div>
+              <div class="introduction__text">
+                Мы предоставляем максимальный спектр услуг  по изготовлению,
+                проектированию, доставке и сборке сооружений в рамках “одного
+                окна”, а также всегда рады поделиться с нашими Заказчиками
+                экспертными знаниями в области строительства ангаров и других
+                сооружений. 
+              </div>
+            </div>
+          </div>
+          <div class="introduction__intro-row introduction__intro-row--border hero__intro-row">
+            <div class="hero__left">
+              <div class="introduction__text">
+                О компании в цифрах
+              </div>
+            </div>
+            <div class="hero__right">
+              <ul class="introduction__list">
+                <li class="introduction__item stat">
+                  <div class="stat__top">
+                    <span class="stat__number text-h1">21</span>
+                    <span class="stat__dim">день</span>
+                  </div>
+                  <span class="stat__text">
+                    Средний срок строительства
+                  </span>
+                </li>
+                <li class="introduction__item stat">
+                  <div class="stat__top">
+                    <span class="stat__number text-h1">60 000</span>
+                    <span class="stat__dim">кв.м.</span>
+                  </div>
+                  <span class="stat__text">
+                    Общая площадь выполненной застройки
+                  </span>
+                </li>
+                <li class="introduction__item stat">
+                  <div class="stat__top">
+                    <span class="stat__number text-h1">8</span>
+                    <span class="stat__dim">лет</span>
+                  </div>
+                  <span class="stat__text">
+                    Опыта работы в сфере
+                  </span>
+                </li>
+                <li class="introduction__item stat">
+                  <div class="stat__top">
+                    <span class="stat__number text-h1">32</span>
+                    <span class="stat__dim">cотрудника</span>
+                  </div>
+                  <span class="stat__text">
+                    Различных профессий в нашем штате
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <article class="multi-section__article">
+    {{> form }}
+  </article>
+</section>
+
+{{>modal-tabs}}
+
+{{/content}}
+{{/extend}}

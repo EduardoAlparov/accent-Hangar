@@ -53,9 +53,11 @@
     align-items: stretch;
 
     li {
-      display: flex;
-      align-items: center;
-      column-gap: 0.4rem;
+      @include maxSizeText(2);
+
+      display: inline;
+
+      max-width: 100%;
 
       span {
         font-weight: 400;
@@ -64,6 +66,12 @@
   }
 
   &__key {
+    margin-right: 0.4rem;
     color: var(--grey-4, #72787e);
+    white-space: nowrap;
+  }
+
+  &__value {
+
   }
 }

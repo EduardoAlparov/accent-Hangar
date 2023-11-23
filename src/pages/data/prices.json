@@ -1,0 +1,83 @@
+{
+  "title": " АНГАРСТРОЙ - цены",
+  "pageHeaderClass": true,
+  "breadcrumbsList": [
+    "Главная",
+    "Цены"
+  ],
+  "tabsList": [
+    {
+      "text": "Все категории",
+      "data": "all"
+    },
+    {
+      "text": "Строительство",
+      "data": "type-1"
+    },
+    {
+      "text": "Проектирование",
+      "data": "type-2"
+    },
+    {
+      "text": "Производство",
+      "data": "type-3"
+    },
+    {
+      "text": "Монтаж",
+      "data": "type-4"
+    },
+    {
+      "text": "Утепление",
+      "data": "type-5"
+    },
+    {
+      "text": "Демонтаж",
+      "data": "type-6"
+    },
+    {
+      "text": "Ангары под ключ",
+      "data": "type-7"
+    },
+    {
+      "text": "Арочные",
+      "data": "type-8"
+    },
+    {
+      "text": "Монтаж",
+      "data": "type-9"
+    },
+    {
+      "text": "Проектирование",
+      "data": "type-2"
+    },
+    {
+      "text": "Производство",
+      "data": "type-3"
+    },
+    {
+      "text": "Монтаж",
+      "data": "type-4"
+    },
+    {
+      "text": "Утепление",
+      "data": "type-5"
+    },
+    {
+      "text": "Демонтаж",
+      "data": "type-6"
+    },
+    {
+      "text": "Ангары под ключ",
+      "data": "type-7"
+    },
+    {
+      "text": "Арочные",
+      "data": "type-8"
+    },
+    {
+      "text": "Монтаж",
+      "data": "type-9"
+    }
+  ],
+  "imageIntroClass": false
+}

@@ -17,6 +17,8 @@
     margin-right: -1.5rem;
     padding-right: 1.5rem;
     overflow: auto;
+
+    @include noScrollbar();
   }
   
   &__link {
@@ -54,6 +56,33 @@
       
       .breadcrumbs__link {
         opacity: 1;
+      }
+    }
+  }
+
+  &--dark {
+    padding: 2.5rem 0;
+    margin-bottom: 3.5rem;
+
+    @include  breakpoint(small-tablet) {
+      padding: 1.5rem 0;
+      margin-bottom: 2.5rem;
+    }
+
+    .breadcrumbs__link {
+      color: var(--grey, #8A8F94);
+      opacity: 1;
+    }
+
+    .breadcrumbs__item {
+      &:last-child {
+        .breadcrumbs__link {
+          color: var(--black, #212529);
+        }
+      }
+
+      &::after {
+        color: var(--grey, #8A8F94);
       }
     }
   }

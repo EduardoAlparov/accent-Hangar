@@ -109,6 +109,11 @@
   &__menu {
     .menu {
       height: 100%;
+      padding-left: 4rem;
+
+      @include  breakpoint(small-desktop) {
+        padding-left: unset;
+      }
     }
 
     @include  breakpoint(laptop) {

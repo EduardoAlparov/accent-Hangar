@@ -24,4 +24,10 @@
       }
     }
   }
+
+  &__controls {
+    @include  breakpoint(laptop) {
+      @include visuallyHidden();
+    }
+  }
 }

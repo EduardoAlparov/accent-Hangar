@@ -21,6 +21,10 @@
 // footer:
 @import './blocks/tooltip';
 @import './blocks/developer';
+
+// feedback-form:
+@import './blocks/feedback-form';
+
 // modals:
 @import './blocks/location-search';
 // breadcrumbs:
@@ -73,6 +77,26 @@
 @import './blocks/blog';
 @import './blocks/blog-item';
 
+// article:
+@import './blocks/article-section';
+
+// prices:
+@import './blocks/prices-navigation';
+@import './blocks/prices-list';
+@import './blocks/price-table';
+
+//reviews-list
+@import './blocks/reviews-list';
+
+// contacts-section:
+@import './blocks/contacts-section';
+
+// objects: 
+@import './blocks/objects-list';
+
+// calculator-section:
+@import './blocks/calculator-section';
+
 // ui:
 @import './ui/open-menu-btn';
 @import './ui/phone-link';
@@ -83,3 +107,5 @@
 @import './ui/slider-btn';
 @import './ui/expand-button';
 @import './ui/mobile-btn';
+@import './ui/tab';
+@import './ui/icon-tab';
