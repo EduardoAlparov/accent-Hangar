@@ -618,7 +618,7 @@
 <section class="image-intro  image-intro--big ">
 
   <div class="site-container">
-      <div class="breadcrumbs">
+      <div class="breadcrumbs ">
         <ul class="breadcrumbs__list">
             <li class="breadcrumbs__item">
               <a href="#" class="breadcrumbs__link">
@@ -1089,24 +1089,24 @@
     <div class="feedback-form">
       <div class="site-container">
         <div class="feedback-form__body">
-          <form action="#" class="calculation__body">
+          <form action="#" class="calculation__body" data-need-validation>
             <div class="calculation__image calculation__image--form">
               <img src="./img/form/pic-1.png" alt="картинка формы">
             </div>
-
+    
             <div class="calculation__forms">
               <div class="calculation__title calculation__title--no-border">
                 <h6 class="text-h3">
                   Необходима профессиональная<br> консультация инженера?
                 </h6>
-
+    
                 <span>
                   Просто оставьте заявку или опишите свой вопрос, а также
                   вы можете прикрепить какие-либо файлы для более
                   предметного разговора
                 </span>
               </div>
-
+    
               <div class="calculation__slider">
                 <div class="feedback-form__form form-slide">
                   <div class="form-slide__inputs-block form-slide__inputs-block--feedback">
@@ -1114,21 +1114,21 @@
                       <div class="form-slide__col">
                         <div class="form-slide__input-wrapper">
                           <div class="input-box">
-                            <input type="text" name="feedback-user-name" id="feedback-user-name"
-                              class="input-box__input" placeholder="Ваше имя" required>
+                            <input type="text" name="feedback-user-name" id="feedback-user-name" class="input-box__input"
+                              placeholder="Ваше имя" required data-parsley-required="" data-parsley-reqtext="" autocomplete="off" >
                           </div>
                         </div>
                       </div>
                       <div class="form-slide__col">
                         <div class="form-slide__input-wrapper">
                           <div class="input-box">
-                            <input type="text" name="feedback-user-phone" id="feedback-user-phone"
-                              class="input-box__input" placeholder="+7 (___)-___-__-__" required>
+                            <input type="text" name="feedback-user-phone" id="feedback-user-phone" class="input-box__input js-phone-input"
+                              placeholder="+7 (___)-___-__-__" required data-parsley-required="" data-parsley-phone="" autocomplete="off" >
                           </div>
                         </div>
                       </div>
                     </div>
-
+    
                     <div class="form-slide__inputs">
                       <div class="form-slide__col">
                         <div class="form-slide__input-wrapper">
@@ -1140,7 +1140,7 @@
                       </div>
                     </div>
                   </div>
-
+    
                   <div class="form-slide__buttons">
                     <label for="upload-user-file"
                       class="main-button main-button--upload main-button--second js-file-upload">
@@ -1150,15 +1150,15 @@
                         <use xlink:href="#upload-file"></use>
                       </svg>
                     </label>
-
-                    <button type="button" class="main-button main-button--orange">
+    
+                    <button type="submit" class="main-button main-button--orange">
                       <span>Оставить заявку</span>
                       <svg aria-hidden="true" class="icon">
                         <use xlink:href="#plus"></use>
                       </svg>
                     </button>
                   </div>
-
+    
                   <div class="form-slide__agreement">
                     <span>Нажимая кнопку «Оставить заявку», вы соглашаетесь с&nbsp;</span>
                     <a href="#">
@@ -1166,287 +1166,287 @@
                     </a>
                   </div>
                 </div>
+    
               </div>
             </div>
           </form>
         </div>
       </div>
-    </div>
-  </article>
+    </div>  </article>
 </section>
 
         </main>
         <footer class="page-footer">
-            <div class="page-footer__main">
-                <div class="site-container">
-                    <div class="page-footer__left">
-                        <a href="/" class="page-footer__logo logo">
-                          <span></span>
-                        </a>
+          <div class="page-footer__main">
+            <div class="site-container">
+              <div class="page-footer__left">
+                <a href="/" class="page-footer__logo logo">
+                  <span></span>
+                </a>
         
-                        <span class="page-footer__slogan">
-                            Строительство и монтаж ангаров любой сложности в Казани
-                        </span>
+                <span class="page-footer__slogan">
+                  Строительство и монтаж ангаров любой сложности в Казани
+                </span>
         
-                        <div class="page-footer__info">
-                            <span>ООО «КИРСТРОЙ»</span>
-                            <span>ИНН 6319220932</span>
-                            <span>ИНН 9728069808</span>
-                        </div>
-        
-                        <div class="page-footer__tooltip tooltip">
-                            <div class="tooltip__body">
-                                <span>
-                                    Закажите строительство ангаров в Казани по оптимальной цене за 21 день
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <div class="page-footer__center">
-                        <div class="page-footer__simple-list simple-list">
-                            <ul class="simple-list__list">
-                                <li class="simple-list__item">
-                                    <a href="#" class="simple-list__link">
-                                        Главная
-                                    </a>
-                                </li>
-                                <li class="simple-list__item">
-                                    <a href="#" class="simple-list__link">
-                                        Услуги
-                                    </a>
-                                </li>
-                                <li class="simple-list__item">
-                                    <a href="#" class="simple-list__link">
-                                        Наши объекты
-                                    </a>
-                                </li>
-                                <li class="simple-list__item">
-                                    <a href="#" class="simple-list__link">
-                                        Цены
-                                    </a>
-                                </li>
-                                <li class="simple-list__item">
-                                    <a href="#" class="simple-list__link">
-                                        О компании
-                                    </a>
-                                </li>
-                                <li class="simple-list__item">
-                                    <a href="#" class="simple-list__link">
-                                        Контакты
-                                    </a>
-                                </li>
-                                <li class="simple-list__item">
-                                    <a href="#" class="simple-list__link">
-                                        Акции
-                                    </a>
-                                </li>
-                                <li class="simple-list__item">
-                                    <a href="#" class="simple-list__link">
-                                        Отзывы
-                                    </a>
-                                </li>
-                                <li class="simple-list__item">
-                                    <a href="#" class="simple-list__link">
-                                        Оплата и доставка
-                                    </a>
-                                </li>
-                                <li class="simple-list__item">
-                                    <a href="#" class="simple-list__link">
-                                        Вакансии
-                                    </a>
-                                </li>
-                                <li class="simple-list__item">
-                                    <a href="#" class="simple-list__link">
-                                        Гарантии
-                                    </a>
-                                </li>
-                                <li class="simple-list__item">
-                                    <a href="#" class="simple-list__link">
-                                        Блог
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-        
-                        <div class="page-footer__type-list drop-menu__col drop-menu__col--big">
-                            <div class="type-list">
-                                <span class="type-list__title">
-                                    Ангары по назначению:
-                                </span>
-        
-                                <ul class="type-list__list">
-                                    <li class="type-list__item">
-                                        <a href="#" class="type-list__link">
-                                            Сельскохозяйственные<br> ангары и постройки 
-                                        </a>
-                                    </li>
-                                    <li class="type-list__item">
-                                        <a href="#" class="type-list__link">
-                                            Складские ангары
-                                        </a>
-                                    </li>
-                                    <li class="type-list__item">
-                                        <a href="#" class="type-list__link">
-                                            Промышленные ангары
-                                        </a>
-                                    </li>
-                                    <li class="type-list__item">
-                                        <a href="#" class="type-list__link">
-                                            Ангары для техники
-                                        </a>
-                                    </li>
-                                    <li class="type-list__item">
-                                        <a href="#" class="type-list__link">
-                                            Спортивные ангары<br> и сооружения
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-        
-                             <div class="type-list">
-                                <span class="type-list__title">
-                                    Ангары по форме:
-                                </span>
-        
-                                <ul class="type-list__list">
-                                    <li class="type-list__item">
-                                        <a href="#" class="type-list__link">
-                                            Холодные ангары 
-                                        </a>
-                                    </li>
-                                    <li class="type-list__item">
-                                        <a href="#" class="type-list__link">
-                                            Теплые ангары
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-        
-                            <div class="type-list">
-                                <span class="type-list__title">
-                                    Ангары по типу:
-                                </span>
-        
-                                <ul class="type-list__list">
-                                    <li class="type-list__item">
-                                        <a href="#" class="type-list__link">
-                                            Арочные ангары
-                                        </a>
-                                    </li>
-                                    <li class="type-list__item">
-                                        <a href="#" class="type-list__link">
-                                            Прямостенные ангары
-                                        </a>
-                                    </li>
-                                    <li class="type-list__item">
-                                        <a href="#" class="type-list__link">
-                                            Двухскатные ангары
-                                        </a>
-                                    </li>
-                                    <li class="type-list__item">
-                                        <a href="#" class="type-list__link">
-                                            Бескаркасные ангары
-                                        </a>
-                                    </li>
-                                    <li class="type-list__item">
-                                        <a href="#" class="type-list__link">
-                                            Быстровозводимые ангары
-                                        </a>
-                                    </li>
-                                    <li class="type-list__item">
-                                        <a href="#" class="type-list__link">
-                                            Ангары из металлокаркаса
-                                        </a>
-                                    </li>
-                                    <li class="type-list__item">
-                                        <a href="#" class="type-list__link">
-                                            Сборно-разборные ангары
-                                        </a>
-                                    </li>
-                                    <li class="type-list__item">
-                                        <a href="#" class="type-list__link">
-                                            Ангары из сендвич панелей
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <div class="page-footer__right">
-                        <a href="#" class="page-footer__phone-link phone-link">
-                            <span>8 918 044 89 22</span>
-                            <i>Заказать звонок</i>
-                        </a>
-        
-                        <div class="page-footer__location-info">
-                            <div class="page-footer__location location">
-                                <svg aria-hidden="true" class="icon">
-                                    <use xlink:href="#loc"></use>
-                                </svg>
-                                <span class="location__text">
-                                    Город:
-                                </span>
-                                <button class="location__button" type="button">
-                                    Казань
-                                </button>
-                            </div>
-        
-                            <span class="page-footer__location-address">
-                                ул. Мухамедьярова 31А, 3&nbsp;этаж, оф. 301-305
-                            </span>
-                        </div>
-        
-                        <div class="page-footer__about info">
-                            <a href="mailto:kirstroy@gmail.com" class="info__mail">
-                                kirstroy@gmail.com
-                            </a>
-                            <span class="info__work">
-                                Пн-Пт: 09:00-18:00
-                            </span>
-                        </div>
-        
-                        <a href="#" class="page-footer__link main-button main-button--orange">
-                            <span>Калькулятор ангаров</span>
-                            <svg aria-hidden="true" class="icon">
-                                <use xlink:href="#plus"></use>
-                            </svg>
-                        </a>
-        
-                        <div class="page-footer__info page-footer__info--mobile">
-                            <span>ООО «КИРСТРОЙ»</span>
-                            <span>ИНН 6319220932</span>
-                            <span>ИНН 9728069808</span>
-                        </div>
-        
-                    </div>
+                <div class="page-footer__info">
+                  <span>ООО «КИРСТРОЙ»</span>
+                  <span>ИНН 6319220932</span>
+                  <span>ИНН 9728069808</span>
                 </div>
-            </div>
-            <div class="page-footer__bottom">
-                <div class="site-container">
-                    <span class="page-footer__copyright">
-                        © 2023 Все права защищены.
+        
+                <div class="page-footer__tooltip tooltip">
+                  <div class="tooltip__body">
+                    <span>
+                      Закажите строительство ангаров в Казани по оптимальной цене за 21 день
+                    </span>
+                  </div>
+                </div>
+              </div>
+        
+              <div class="page-footer__center">
+                <div class="page-footer__simple-list simple-list">
+                  <ul class="simple-list__list">
+                    <li class="simple-list__item">
+                      <a href="#" class="simple-list__link">
+                        Главная
+                      </a>
+                    </li>
+                    <li class="simple-list__item">
+                      <a href="#" class="simple-list__link">
+                        Услуги
+                      </a>
+                    </li>
+                    <li class="simple-list__item">
+                      <a href="#" class="simple-list__link">
+                        Наши объекты
+                      </a>
+                    </li>
+                    <li class="simple-list__item">
+                      <a href="#" class="simple-list__link">
+                        Цены
+                      </a>
+                    </li>
+                    <li class="simple-list__item">
+                      <a href="#" class="simple-list__link">
+                        О компании
+                      </a>
+                    </li>
+                    <li class="simple-list__item">
+                      <a href="#" class="simple-list__link">
+                        Контакты
+                      </a>
+                    </li>
+                    <li class="simple-list__item">
+                      <a href="#" class="simple-list__link">
+                        Акции
+                      </a>
+                    </li>
+                    <li class="simple-list__item">
+                      <a href="#" class="simple-list__link">
+                        Отзывы
+                      </a>
+                    </li>
+                    <li class="simple-list__item">
+                      <a href="#" class="simple-list__link">
+                        Оплата и доставка
+                      </a>
+                    </li>
+                    <li class="simple-list__item">
+                      <a href="#" class="simple-list__link">
+                        Вакансии
+                      </a>
+                    </li>
+                    <li class="simple-list__item">
+                      <a href="#" class="simple-list__link">
+                        Гарантии
+                      </a>
+                    </li>
+                    <li class="simple-list__item">
+                      <a href="#" class="simple-list__link">
+                        Блог
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+        
+                <div class="page-footer__type-list drop-menu__col drop-menu__col--big">
+                  <div class="type-list">
+                    <span class="type-list__title">
+                      Ангары по назначению:
                     </span>
         
-                    <a href="#" class="page-footer__policy-link">
-                        Политика конфиденциальности
-                    </a>
+                    <ul class="type-list__list">
+                      <li class="type-list__item">
+                        <a href="#" class="type-list__link">
+                          Сельскохозяйственные<br> ангары и постройки 
+                        </a>
+                      </li>
+                      <li class="type-list__item">
+                        <a href="#" class="type-list__link">
+                          Складские ангары
+                        </a>
+                      </li>
+                      <li class="type-list__item">
+                        <a href="#" class="type-list__link">
+                          Промышленные ангары
+                        </a>
+                      </li>
+                      <li class="type-list__item">
+                        <a href="#" class="type-list__link">
+                          Ангары для техники
+                        </a>
+                      </li>
+                      <li class="type-list__item">
+                        <a href="#" class="type-list__link">
+                          Спортивные ангары<br> и сооружения
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
         
-                    <a href="#" class="page-footer__policy-link">
-                        Использование материалов сайта
-                    </a>
+                  <div class="type-list">
+                    <span class="type-list__title">
+                      Ангары по форме:
+                    </span>
         
-                    <a href="#" class="page-footer__developer developer">
-                        <span>
-                            Сайт разработан:
-                        </span>
-                        <svg aria-hidden="true" class="icon">
-                            <use xlink:href="#dev"></use>
-                        </svg>
-                    </a>
+                    <ul class="type-list__list">
+                      <li class="type-list__item">
+                        <a href="#" class="type-list__link">
+                          Холодные ангары 
+                        </a>
+                      </li>
+                      <li class="type-list__item">
+                        <a href="#" class="type-list__link">
+                          Теплые ангары
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+        
+                  <div class="type-list">
+                    <span class="type-list__title">
+                      Ангары по типу:
+                    </span>
+        
+                    <ul class="type-list__list">
+                      <li class="type-list__item">
+                        <a href="#" class="type-list__link">
+                          Арочные ангары
+                        </a>
+                      </li>
+                      <li class="type-list__item">
+                        <a href="#" class="type-list__link">
+                          Прямостенные ангары
+                        </a>
+                      </li>
+                      <li class="type-list__item">
+                        <a href="#" class="type-list__link">
+                          Двухскатные ангары
+                        </a>
+                      </li>
+                      <li class="type-list__item">
+                        <a href="#" class="type-list__link">
+                          Бескаркасные ангары
+                        </a>
+                      </li>
+                      <li class="type-list__item">
+                        <a href="#" class="type-list__link">
+                          Быстровозводимые ангары
+                        </a>
+                      </li>
+                      <li class="type-list__item">
+                        <a href="#" class="type-list__link">
+                          Ангары из металлокаркаса
+                        </a>
+                      </li>
+                      <li class="type-list__item">
+                        <a href="#" class="type-list__link">
+                          Сборно-разборные ангары
+                        </a>
+                      </li>
+                      <li class="type-list__item">
+                        <a href="#" class="type-list__link">
+                          Ангары из сендвич панелей
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
+              </div>
+        
+              <div class="page-footer__right">
+                <a href="#" class="page-footer__phone-link phone-link">
+                  <span>8 918 044 89 22</span>
+                  <i>Заказать звонок</i>
+                </a>
+        
+                <div class="page-footer__location-info">
+                  <div class="page-footer__location location">
+                    <svg aria-hidden="true" class="icon">
+                      <use xlink:href="#loc"></use>
+                    </svg>
+                    <span class="location__text">
+                      Город:
+                    </span>
+                    <button class="location__button" type="button">
+                      Казань
+                    </button>
+                  </div>
+        
+                  <span class="page-footer__location-address">
+                    ул. Мухамедьярова 31А, 3&nbsp;этаж, оф. 301-305
+                  </span>
+                </div>
+        
+                <div class="page-footer__about info">
+                  <a href="mailto:kirstroy@gmail.com" class="info__mail">
+                    kirstroy@gmail.com
+                  </a>
+                  <span class="info__work">
+                    Пн-Пт: 09:00-18:00
+                  </span>
+                </div>
+        
+                <a href="#" class="page-footer__link main-button main-button--orange">
+                  <span>Калькулятор ангаров</span>
+                  <svg aria-hidden="true" class="icon">
+                    <use xlink:href="#plus"></use>
+                  </svg>
+                </a>
+        
+                <div class="page-footer__info page-footer__info--mobile">
+                  <span>ООО «КИРСТРОЙ»</span>
+                  <span>ИНН 6319220932</span>
+                  <span>ИНН 9728069808</span>
+                </div>
+        
+              </div>
             </div>
+          </div>
+          <div class="page-footer__bottom">
+            <div class="site-container">
+              <span class="page-footer__copyright">
+                © 2023 Все права защищены.
+              </span>
+        
+              <a href="#" class="page-footer__policy-link">
+                Политика конфиденциальности
+              </a>
+        
+              <a href="#" class="page-footer__policy-link">
+                Использование материалов сайта
+              </a>
+        
+              <a href="#" class="page-footer__developer developer">
+                <span>
+                  Сайт разработан:
+                </span>
+                <svg aria-hidden="true" class="icon">
+                  <use xlink:href="#dev"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
         </footer>        <style>
             .ie-placeholder {
                 z-index: 4000;
