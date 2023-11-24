@@ -78,6 +78,22 @@
     }
   }
 
+  &__error {
+    position: absolute;
+    top: calc(100%);
+    left: 0;
+    z-index: 1;
+    max-width: 100%;
+    color: var(--orange, #ff3f00);
+    font: var(--font-text-13);
+    font-weight: 600;
+    font-style: normal;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
   .parsley-errors-list {
     position: absolute;
     bottom: calc(100% + 0.1rem);
@@ -95,6 +111,13 @@
   &--bottom-error {
     .parsley-errors-list {
       bottom: 0.1rem;
+    }
+  }
+
+  &--with-error {
+    .input-box__error {
+      opacity: 1;
+      visibility: visible;
     }
   }
 }

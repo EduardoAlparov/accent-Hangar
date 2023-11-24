@@ -30,8 +30,6 @@
 
     @include  breakpoint(portrait-tablet) {
       max-width: calc(100% - (2 * var(--content-padding, 1.5rem)));
-      height: 100%;
-      max-height: 80vh;
       overflow: hidden;
     }
 
@@ -63,6 +61,11 @@
     cursor: pointer;
     transition: var(--transition);
 
+    @include  breakpoint(portrait-tablet) {
+      top: 1.5rem;
+      right: 1.5rem;
+    }
+
     .icon {
       width: 1.6rem;
       aspect-ratio: 1;
@@ -92,14 +95,23 @@
       margin-bottom: 2rem;
       font: var(--font-text-38);
       letter-spacing: -0.95px;
+
+      @include  breakpoint(portrait-tablet) {
+        margin-bottom: 1.5rem;
+      }
     }
   }
 
   &--location {
     .modal__container {
       max-width: 46rem;
-      height: 100%;
+
       max-height: 56.5rem;
+
+      @include  breakpoint(portrait-tablet) {
+        max-width: calc(100% - (2 * var(--content-padding, 1.5rem)));
+        overflow: hidden;
+      }
     }
 
     .modal__legend {
@@ -107,6 +119,9 @@
     }
 
     .modal__content {
+      @include  breakpoint(portrait-tablet) {
+        padding: 2.5rem;
+      }
     }
   }
 
@@ -122,10 +137,18 @@
   &--form {
     .modal__legend {
       margin-bottom: 4rem;
+
+      @include  breakpoint(portrait-tablet) {
+        margin-bottom: 2.5rem;
+      }
     }
 
     .modal__content {
       padding: 6rem 7rem;
+
+      @include  breakpoint(portrait-tablet) {
+        padding: 2.5rem;
+      }
     }
 
     .form-slide__col {
@@ -144,12 +167,22 @@
     
     .form-slide__col {
       flex: 1 1 calc(50% - (1.5rem / 2));
+
+      @include breakpoint(small-tablet) {
+        flex: 1 0 100%;
+      }
     }
   }
 
   &--tabs {
     .modal__container {
       padding: 3rem 0;
+
+      @include  breakpoint(portrait-tablet) {
+        height: 100%;
+        max-height: 80vh;
+      }
+  
     }
 
     .modal__content {

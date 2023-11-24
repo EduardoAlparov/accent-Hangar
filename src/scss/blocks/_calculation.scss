@@ -19,7 +19,7 @@
   &__image {
     position: relative;
     flex: 1 1 100%;
-    min-height: 50rem;
+    max-height: 50rem;
     background: linear-gradient(to right, #F6F8FA 0%, #F6F8FA 57%, transparent 57%, transparent 100%);
 
     @include  breakpoint(tablet) {

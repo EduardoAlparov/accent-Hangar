@@ -2,7 +2,7 @@
 Бойлерплейт на основе связки Gulp + Webpack с поддержкой SVG спрайтов и SCSS
 
 <details>
-  <summary>## Установка</summary>
+  <summary>Установка</summary>
 
   Установить Node JS, затем выполнить команду:
 
@@ -24,7 +24,6 @@ npm run build
 ```
 </details>
 
-The background color is `#ffffff` for light mode and `#000000` for dark mode.
 # Ссылкы на верстку:
 ## Страница - [Главная](https://eduardoalparov.github.io/accent-Hangar/).
 

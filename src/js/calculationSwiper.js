@@ -2,6 +2,7 @@ import Swiper, { Navigation, Pagination, Scrollbar } from 'swiper';
 
 export default () => {
   const calcSwiperWrapper = document.querySelectorAll('.js-calc-swiper');
+
   if(calcSwiperWrapper.length > 0) {
     calcSwiperWrapper.forEach(item => {
       const calcSwiper  = new Swiper(item, {
@@ -12,7 +13,7 @@ export default () => {
 
         breakpoints: {
           1024: {
-            autoHeight: false,
+            autoHeight: true,
           }
         },
 
@@ -20,9 +21,23 @@ export default () => {
           init: function () {
             const nextBtn = item.querySelector('.js-set-next-form');
             const prevBtn = item.querySelector('.js-set-prev-form');
+            const sizeInputs = item.querySelectorAll('.js-input-size');
 
             nextBtn.onclick = () => {
-              this.slideNext(0);
+              let validationBoolean = true;
+
+              Array.from(sizeInputs).forEach( input => {
+                if(!input.value) {
+                  validationBoolean = false;
+                  setInputError(input);
+                }
+              })
+
+              if(validationBoolean) {
+                this.slideNext(0);
+              } else {
+                return;
+              }
             }
 
             prevBtn.onclick = () => {
@@ -33,4 +48,14 @@ export default () => {
       })
     })
   }
+
+  let setInputError = (el) => {
+    if(el.closest('.input-box')) {
+      el.closest('.input-box').classList.add('input-box--with-error');
+
+      setTimeout(() => {
+        el.closest('.input-box').classList.remove('input-box--with-error');
+      }, 5000);
+    }
+   }
 }
