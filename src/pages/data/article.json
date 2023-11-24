@@ -1,5 +1,6 @@
 {
   "title": " АНГАРСТРОЙ - статья",
+  "pageContentClass": true,
   "pageHeaderClass": true,
   "breadcrumbsList": ["Главная", "О компании", "Блог", "Ангар временного хранения из металлоконструкци"],
   "imageIntroClass": false

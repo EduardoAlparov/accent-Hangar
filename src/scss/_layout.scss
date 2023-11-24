@@ -16,6 +16,11 @@
   flex-direction: column;
   align-items: stretch;
   max-width: 100%;
+  overflow: hidden;
+
+  &--overwlow-unset {
+    overflow: unset;
+  }
 }
 
 .page-main {
