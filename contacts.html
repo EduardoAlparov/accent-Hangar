@@ -1052,203 +1052,190 @@
             </div>
         </div>        <div class="modal modal--form">
           <div class="modal__container" data-target="modal-form">
-        		<form class="modal__content" acrion="#">
-        			<button class="button-reset modal__close-btn modal-close" type="button">
-        				<svg aria-hidden="true" class="icon icon-close">
-        						<use xlink:href="#cross"></use>
-        				</svg>
-        			</button>
+            <form class="modal__content" acrion="#" data-need-validation>
+              <button class="button-reset modal__close-btn modal-close" type="button">
+                <svg aria-hidden="true" class="icon icon-close">
+                  <use xlink:href="#cross"></use>
+                </svg>
+              </button>
         
-        			<div class="modal__legend">
-        				<h6>
-        					Заказать звонок
-        				</h6>
+              <div class="modal__legend">
+                <h6>
+                  Заказать звонок
+                </h6>
         
-        				<span class="modal__subtitle">
-        					Наш инженер свяжется с вами в ближайшее время для консультации
-        				</span>
-        			</div>
+                <span class="modal__subtitle">
+                  Наш инженер свяжется с вами в ближайшее время для консультации
+                </span>
+              </div>
         
-        			<div class="modal__form">
-        				<div class="form-slide__inputs-block form-slide__inputs-block--feedback">
-        						<div class="form-slide__inputs form-slide__inputs--feedback">
-        								<div class="form-slide__col">
-        									<div class="form-slide__input-wrapper">
-        										<div class="input-box">
-        											<input type="text" name="callback-user-name" id="callback-user-name" class="input-box__input" placeholder="Ваше имя" required>
-        										</div>
-        									</div>
-        								</div>
-        								<div class="form-slide__col">
-        										<div class="form-slide__input-wrapper">
-        												<div class="input-box">
-        													<input type="text" name="callback-user-phone" id="callback-user-phone" class="input-box__input" placeholder="+7 (___)-___-__-__" required>
-        												</div>
-        										</div>
-        								</div>
-        						</div>
+              <div class="modal__form">
+                <div class="form-slide__inputs-block form-slide__inputs-block--feedback">
+                  <div class="form-slide__inputs form-slide__inputs--feedback">
+                    <div class="form-slide__col">
+                      <div class="form-slide__input-wrapper">
+                        <div class="input-box">
+                          <input type="text" name="callback-user-name" id="callback-user-name" class="input-box__input js-text-input"
+                            placeholder="Ваше имя" required data-parsley-required="" data-parsley-reqtext="" autocomplete="off">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-slide__col">
+                      <div class="form-slide__input-wrapper">
+                        <div class="input-box">
+                          <input type="text" name="callback-user-phone" id="callback-user-phone" class="input-box__input js-phone-input"
+                            placeholder="+7 (___)-___-__-__" required  data-parsley-required="" data-parsley-phone="" autocomplete="off">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
         
-        						<div class="form-slide__inputs">
-        							<div class="form-slide__col">
-        								<button type="submit" class="main-button main-button--orange">
-        									<span>Оставить заявку</span>
-        									<svg aria-hidden="true" class="icon">
-        										<use xlink:href="#plus"></use>
-        									</svg>
-        								</button>
-        							</div>
+                  <div class="form-slide__inputs">
+                    <div class="form-slide__col">
+                      <button type="submit" class="main-button main-button--orange">
+                        <span>Оставить заявку</span>
+                        <svg aria-hidden="true" class="icon">
+                          <use xlink:href="#plus"></use>
+                        </svg>
+                      </button>
+                    </div>
         
-        							<div class="form-slide__col">
-        								<div class="form-slide__agreement">
-        									<span>Нажимая кнопку «Оставить заявку», вы соглашаетесь&nbsp;с&nbsp;</span>
-        									<a href="#">
-        										политикой конфиденциальности
-        									</a>
-        								</div>
-        							</div>
-        						</div>
-        				</div>
-        			</div>
-        		</form>
+                    <div class="form-slide__col">
+                      <div class="form-slide__agreement">
+                        <span>Нажимая кнопку «Оставить заявку», вы соглашаетесь&nbsp;с&nbsp;</span>
+                        <a href="#">
+                          политикой конфиденциальности
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
         
         <div class="modal modal--location">
           <div class="modal__container" data-target="modal-location">
-        		<form class="modal__content" acrion="#">
-        			<button class="button-reset modal__close-btn modal-close" type="button">
-        			    <svg aria-hidden="true" class="icon icon-close">
-                            <use xlink:href="#cross"></use>
+            <form class="modal__content" acrion="#">
+              <button class="button-reset modal__close-btn modal-close" type="button">
+                <svg aria-hidden="true" class="icon icon-close">
+                  <use xlink:href="#cross"></use>
+                </svg>
+              </button>
+        
+              <div class="modal__legend">Выбор города</div>
+        
+              <div class="modal__location-search location-search">
+                <div class="location-search__search-bar">
+                  <div class="input-box input-box--search">
+                    <input type="text" name="location-search" id="location-search-id" class="input-box__input"
+                      placeholder="Введите название города" required>
+                    <button type="submit" class="input-box__submit">
+                      <svg aria-hidden="true" class="icon icon-search">
+                        <use xlink:href="#search"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="location-search__list-wrapper">
+                  <ul class="location-search__list">
+                    <li class="location-search__item">
+                      <a href="#" class="location-search__link location-search__link--active" id="">
+                        <svg aria-hidden="true" class="icon">
+                          <use xlink:href="#loc"></use>
                         </svg>
-        			</button>
-        
-        			<div class="modal__legend">Выбор города</div>
-        
-        			<span class="modal__subtitle">
-        				Наш инженер свяжется с вами в ближайшее время для консультации
-        			</span>
-        
-        			<div class="modal__location-search location-search">
-        				<div class="location-search__search-bar">
-        					<div class="input-box input-box--search">
-        						<input type="text" name="location-search" id="location-search-id" class="input-box__input" placeholder="Введите название города" required>
-        						<button type="submit" class="input-box__submit">
-        							<svg aria-hidden="true" class="icon icon-search">
-        								<use xlink:href="#search"></use>
-        							</svg>
-        						</button>
-        					</div>
-        				</div>
-        				<div class="location-search__list-wrapper">
-        					<ul class="location-search__list">
-        						<li class="location-search__item">
-        							<a href="#" class="location-search__link location-search__link--active" id="">
-        								<svg aria-hidden="true" class="icon">
-        									<use xlink:href="#loc"></use>
-        								</svg>
-        								<span>
-        									Казань
-        								</span>
-        							</a>
-        						</li>
-        						<li class="location-search__item">
-        							<a href="#" class="location-search__link" id="">
-        								<svg aria-hidden="true" class="icon">
-        									<use xlink:href="#loc"></use>
-        								</svg>
-        								<span>
-        									Москва
-        								</span>
-        							</a>
-        						</li>
-        						<li class="location-search__item">
-        							<a href="#" class="location-search__link" id="">
-        								<svg aria-hidden="true" class="icon">
-        									<use xlink:href="#loc"></use>
-        								</svg>
-        								<span>
-        									Санкт-Петербург
-        								</span>
-        							</a>
-        						</li>
-        						<li class="location-search__item">
-        							<a href="#" class="location-search__link" id="">
-        								<svg aria-hidden="true" class="icon">
-        									<use xlink:href="#loc"></use>
-        								</svg>
-        								<span>
-        									Ростов-на-Дону
-        								</span>
-        							</a>
-        						</li>
-        						<li class="location-search__item">
-        							<a href="#" class="location-search__link" id="">
-        								<svg aria-hidden="true" class="icon">
-        									<use xlink:href="#loc"></use>
-        								</svg>
-        								<span>
-        									Москва
-        								</span>
-        							</a>
-        						</li>
-        						<li class="location-search__item">
-        							<a href="#" class="location-search__link" id="">
-        								<svg aria-hidden="true" class="icon">
-        									<use xlink:href="#loc"></use>
-        								</svg>
-        								<span>
-        									Санкт-Петербург
-        								</span>
-        							</a>
-        						</li>
-        						<li class="location-search__item">
-        							<a href="#" class="location-search__link" id="">
-        								<svg aria-hidden="true" class="icon">
-        									<use xlink:href="#loc"></use>
-        								</svg>
-        								<span>
-        									Ростов-на-Дону
-        								</span>
-        							</a>
-        						</li>
-        						<li class="location-search__item">
-        							<a href="#" class="location-search__link" id="">
-        								<svg aria-hidden="true" class="icon">
-        									<use xlink:href="#loc"></use>
-        								</svg>
-        								<span>
-        									Москва
-        								</span>
-        							</a>
-        						</li>
-        						<li class="location-search__item">
-        							<a href="#" class="location-search__link" id="">
-        								<svg aria-hidden="true" class="icon">
-        									<use xlink:href="#loc"></use>
-        								</svg>
-        								<span>
-        									Санкт-Петербург
-        								</span>
-        							</a>
-        						</li>
-        						<li class="location-search__item">
-        							<a href="#" class="location-search__link" id="">
-        								<svg aria-hidden="true" class="icon">
-        									<use xlink:href="#loc"></use>
-        								</svg>
-        								<span>
-        									Ростов-на-Дону
-        								</span>
-        							</a>
-        						</li>
-        					</ul>
-        				</div>
-        			</div>
-        		</form>
+                        <span>
+                          Казань
+                        </span>
+                      </a>
+                    </li>
+                    <li class="location-search__item">
+                      <a href="#" class="location-search__link" id="">
+                        <svg aria-hidden="true" class="icon">
+                          <use xlink:href="#loc"></use>
+                        </svg>
+                        <span>
+                          Москва
+                        </span>
+                      </a>
+                    </li>
+                    <li class="location-search__item">
+                      <a href="#" class="location-search__link" id="">
+                        <svg aria-hidden="true" class="icon">
+                          <use xlink:href="#loc"></use>
+                        </svg>
+                        <span>
+                          Санкт-Петербург
+                        </span>
+                      </a>
+                    </li>
+                    <li class="location-search__item">
+                      <a href="#" class="location-search__link" id="">
+                        <svg aria-hidden="true" class="icon">
+                          <use xlink:href="#loc"></use>
+                        </svg>
+                        <span>
+                          Ростов-на-Дону
+                        </span>
+                      </a>
+                    </li>
+                    <li class="location-search__item">
+                      <a href="#" class="location-search__link" id="">
+                        <svg aria-hidden="true" class="icon">
+                          <use xlink:href="#loc"></use>
+                        </svg>
+                        <span>
+                          Москва
+                        </span>
+                      </a>
+                    </li>
+                    <li class="location-search__item">
+                      <a href="#" class="location-search__link" id="">
+                        <svg aria-hidden="true" class="icon">
+                          <use xlink:href="#loc"></use>
+                        </svg>
+                        <span>
+                          Ростов-на-Дону
+                        </span>
+                      </a>
+                    </li>
+                    <li class="location-search__item">
+                      <a href="#" class="location-search__link" id="">
+                        <svg aria-hidden="true" class="icon">
+                          <use xlink:href="#loc"></use>
+                        </svg>
+                        <span>
+                          Москва
+                        </span>
+                      </a>
+                    </li>
+                    <li class="location-search__item">
+                      <a href="#" class="location-search__link" id="">
+                        <svg aria-hidden="true" class="icon">
+                          <use xlink:href="#loc"></use>
+                        </svg>
+                        <span>
+                          Санкт-Петербург
+                        </span>
+                      </a>
+                    </li>
+                    <li class="location-search__item">
+                      <a href="#" class="location-search__link" id="">
+                        <svg aria-hidden="true" class="icon">
+                          <use xlink:href="#loc"></use>
+                        </svg>
+                        <span>
+                          Ростов-на-Дону
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </form>
           </div>
-        </div>
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        </div>        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="js/app.js"></script>
         <script src="assets/js/backend.js"></script>
     </div>
