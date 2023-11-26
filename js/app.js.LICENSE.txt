@@ -56,4 +56,13 @@
  * @author: Jack Doyle, jack@greensock.com
 */
 
+/*!
+* Parsley.js
+* Version 2.9.2 - built Tue, Dec 10th 2019, 6:18 pm
+* http://parsleyjs.org
+* Guillaume Potier - <guillaume@wisembly.com>
+* Marc-Andre Lafortune - <petroselinum@marc-andre.ca>
+* MIT Licensed
+*/
+
 /*! lazysizes - v5.2.2 */
