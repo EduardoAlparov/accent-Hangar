@@ -1,3 +1,4 @@
+import $ from "jquery";
 import 'parsleyjs';
 import dayjs from 'dayjs';
 import customParseFormat from 'dayjs/plugin/customParseFormat';

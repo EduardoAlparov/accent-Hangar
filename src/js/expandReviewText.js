@@ -29,7 +29,7 @@ export default () => {
         })
       }
 
-      if(lineCount > lineClamp) {
+      if((lineCount - 1) > lineClamp) {
         wrapper.parentElement.classList.add('review-cart__review--with-btn');
       }
     })

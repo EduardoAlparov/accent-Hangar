@@ -2,6 +2,8 @@ import './lazyload';
 import detectTouch from './detectTouch';
 import setScrollbarWidth from './setScrollbarWidth';
 import masks from './masks';
+import validation from './validation';
+
 import accordions from './accordions';
 import { Modal } from "./Modal";
 import tabs from './tabs';
@@ -26,48 +28,51 @@ import setHeaderPadding from './setHeaderPadding';
 import certificatesSwiper from './certificatesSwiper';
 import articleSwipers from './articleSwipers';
 import pricesTabControl from './pricesTabControl';
+// import checkOverflow from './checkOverflow';
 import setActiveArticle from './setActiveArticle';
 
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', function () {
-  detectTouch();
-  setScrollbarWidth();
-  masks();
-  validation();
-  // anchorLinks();
-  accordions();
-  tabs();
-  menu();
-  fancybox();
+    detectTouch();
+    setScrollbarWidth();
+    masks();
+    validation();
+    // anchorLinks();
+    accordions();
+    tabs();
+    menu();
+    fancybox();
+    
+    headerSetting();
+    dropMenuControl();
+    mobileMenuOpen();
+    mobileMenuSwiper();
+    selectContol();
+    calculationSwiper();
+    projectsSwiper();
+    reviewsSwiper();
+    inputFileStyling();
+    stagesListSwiper();
+    expandReviewText();
+    productionSwiper();
+    setHeaderPadding();
+    certificatesSwiper();
+    articleSwipers();
+    pricesTabControl();
+    // checkOverflow();
+    setActiveArticle();
 
-  headerSetting();
-  dropMenuControl();
-  mobileMenuOpen();
-  mobileMenuSwiper();
-  selectContol();
-  calculationSwiper();
-  projectsSwiper();
-  reviewsSwiper();
-  inputFileStyling();
-  stagesListSwiper();
-  expandReviewText();
-  productionSwiper();
-  setHeaderPadding();
-  certificatesSwiper();
-  articleSwipers();
-  pricesTabControl();
-  // checkOverflow();
-  setActiveArticle();
-
-  const modal = new Modal({
-    isOpen: (modal) => {
-    },
-    isClose: (modal) => {
-    },
-  });
+    const modal = new Modal({
+        isOpen: (modal) => {
+        },
+        isClose: (modal) => {
+        },
+    });
 });
 
 window.addEventListener('load', function () {
-  document.body.classList.add('loaded');
+    document.body.classList.add('loaded');
+    ScrollTrigger.refresh();
+    setTimeout(() => document.body.classList.add('animatable'), 300);
 });
